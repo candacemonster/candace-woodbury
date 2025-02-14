@@ -2,21 +2,44 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Candace Woodbury</title>
+		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body>
-		<slot />
+		<div class="layout">
+			<!-- Mobile Menu Button -->
+			<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+			<!-- Sidebar Navigation -->
+			<aside class="sidebar">
+				<h1 class="site-title">Oh Look, A Website.</h1>
+				<nav>
+					<ul>
+						<li><a href="/">Home (Or Whatever This Is)</a></li>
+						<li><a href="/blog">Things I Wrote (Against My Better Judgment)</a></li>
+						<li><a href="/books">Books (Better Than People)</a></li>
+						<li><a href="/hikes">Mandatory Walks (For the Dogs, Not Me)</a></li>
+						<li><a href="/internet-finds">Stuff I Found (And Wish I Hadn’t)</a></li>
+					</ul>
+				</nav>
+			</aside>
+
+			<!-- Main Content Area -->
+			<main class="content">
+				<slot />
+			</main>
+		</div>
+
+		<script>
+			function toggleMenu() {
+				const sidebar = document.querySelector('.sidebar');
+				if (sidebar) {
+					sidebar.classList.toggle('active');
+				}
+			}
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
