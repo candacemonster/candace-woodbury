@@ -7,11 +7,12 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Candace Woodbury</title>
 		<link rel="stylesheet" href="/src/styles/global.css" />
+		<script type="module" src="/src/scripts/menu.js" defer></script>
 	</head>
 	<body>
 		<div class="layout">
 			<!-- Mobile Menu Button -->
-			<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+			<button class="menu-toggle">☰</button>
 
 			<!-- Sidebar Navigation -->
 			<aside class="sidebar">
@@ -32,14 +33,5 @@
 				<slot />
 			</main>
 		</div>
-
-		<script>
-			function toggleMenu() {
-				const sidebar = document.querySelector('.sidebar');
-				if (sidebar) {
-					sidebar.classList.toggle('active');
-				}
-			}
-		</script>
 	</body>
 </html>

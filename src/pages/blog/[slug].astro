@@ -1,0 +1,23 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+type BlogPost = CollectionEntry<'blog'>;
+
+// Generate static paths for blog posts
+export async function getStaticPaths() {
+    const posts: BlogPost[] = await getCollection('blog');
+
+    return posts.map((post: BlogPost) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+// Get the post data from Astro props
+const { post } = Astro.props as { post: BlogPost };
+---
+
+<h1>{post.data.title}</h1>
+<p><i>{post.data.date}</i></p>
+<p>{post.data.description}</p>
+<article>{post.body}</article>
