@@ -7,7 +7,7 @@ const posts: BlogPost[] = await getCollection('blog');
 ---
 
 <section class="blog-list">
-    <h1>Things I Wrote (Against My Better Judgment)</h1>
+    <h1>things I wrote (against my better judgment)</h1>
     <ul>
       {posts.map((post: BlogPost) => (
         <li>
@@ -19,7 +19,7 @@ const posts: BlogPost[] = await getCollection('blog');
 
   <style>
     .blog-list {
-          max-width: 700px;
+          max-width: 800px;
           margin: 0 auto;
           text-align: left;
           padding: 20px;
