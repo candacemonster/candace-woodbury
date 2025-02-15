@@ -1,3 +1,4 @@
+/* src/styles/bookshelf.css */
 /* Global Reset & Base Styles */
 * {
     box-sizing: border-box;
@@ -15,111 +16,51 @@ html, body {
     line-height: 1.7;
 }
 
-/* Layout */
-.layout {
+.bookshelf {
     display: flex;
-    height: 100vh;
-}
-
-/* Sidebar Navigation */
-.sidebar {
-    width: 260px;
-    background: #403E3D;  /* Soft dark gray */
-    color: #E3DED7;       /* Soft off-white */
-    padding: 18px;
-    padding-top: 60px;
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.site-title {
-    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .book {
+    flex: 0 1 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-title {
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.9rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1rem;
-}
-
-nav ul li {
-    margin: 12px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #E3DED7;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #E4A96B;
-}
-
-/* Main Content */
-.content {
-    flex-grow: 1;
-    max-width: 800px;
-    margin-left: 280px; /* Pushes content away from sidebar */
-    padding: 18px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns text at the top */
-}
-
-/* Blog Layout Container (for dedicated blog post pages) */
-.blog-post-layout {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    text-align: left;
-}
-
-/* Blog Post & Blog List Styling */
-.blog-list,
-.blog-post {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.blog-list h1,
-.blog-post h1 {
-    font-size: 2.2rem;
-    font-weight: 600;
+    margin: 10px 0;
     color: #2E2E2E;
-    margin-bottom: 20px;
-}
-
-/* Additional classes for post meta, description, etc. */
-.post-meta {
+  }
+  
+  .book-links {
     font-size: 0.9rem;
+    color: #403E3D;
+  }
+  
+  .book-links a {
+    text-decoration: none;
+    color: #403E3D;
+    transition: color 0.3s;
+  }
+  
+  .book-links a:hover {
+    color: #E4A96B;
+  }
+  
+  .separator {
+    margin: 0 5px;
     color: #777;
-    margin-bottom: 10px;
-}
-
-.post-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-article {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #333;
-}
+  }
 
 /* Sticky Back Arrow */
 .back-arrow {
@@ -171,20 +112,6 @@ article {
 @media screen and (max-width: 768px) {
     .layout {
         flex-direction: column;
-    }
-  
-    .sidebar {
-        position: fixed;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        background: #2C2B2A; /* Slightly darker for better contrast */
-    }
-  
-    .sidebar.active {
-        transform: translateX(0);
     }
   
     .menu-toggle {

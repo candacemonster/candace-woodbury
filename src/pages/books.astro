@@ -1,0 +1,41 @@
+---
+import BookLayout from '../layouts/BookLayout.astro';
+import Bookshelf from '../components/Bookshelf.astro';
+
+const books = [
+  {
+    title: "Book Title One",
+    image: "/images/book1.jpg",
+    bookshopUrl: "https://bookshop.org/books/book1",
+    amazonUrl: "https://amazon.com/dp/book1",
+    libraryUrl: "https://mylibrary.org/book1",
+  },
+  {
+    title: "Book Title Two",
+    image: "/images/book2.jpg",
+    bookshopUrl: "https://bookshop.org/books/book2",
+    amazonUrl: "https://amazon.com/dp/book2",
+    libraryUrl: "https://mylibrary.org/book2",
+  },
+  {
+    title: "Book Title Two",
+    image: "/images/book2.jpg",
+    bookshopUrl: "https://bookshop.org/books/book2",
+    amazonUrl: "https://amazon.com/dp/book2",
+    libraryUrl: "https://mylibrary.org/book2",
+  },
+  {
+    title: "Book Title Two",
+    image: "/images/book2.jpg",
+    bookshopUrl: "https://bookshop.org/books/book2",
+    amazonUrl: "https://amazon.com/dp/book2",
+    libraryUrl: "https://mylibrary.org/book2",
+  },
+
+  // Add additional book objects as needed
+];
+---
+
+<BookLayout title="My Bookshelf">
+  <Bookshelf books={books} />
+</BookLayout>
