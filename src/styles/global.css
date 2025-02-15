@@ -1,4 +1,4 @@
-/* 🌍 Global Reset & Base Styles */
+/* Global Reset & Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,17 +15,17 @@ html, body {
     line-height: 1.7;
 }
 
-/* 🔹 Layout */
+/* Layout */
 .layout {
     display: flex;
     height: 100vh;
 }
 
-/* 📌 Sidebar Navigation */
+/* Sidebar Navigation */
 .sidebar {
     width: 260px;
     background: #403E3D;  /* Soft dark gray */
-    color: #E3DED7;  /* Soft off-white */
+    color: #E3DED7;       /* Soft off-white */
     padding: 18px;
     padding-top: 60px;
     transition: transform 0.3s ease-in-out;
@@ -66,7 +66,7 @@ nav ul li a:hover {
     color: #E4A96B;
 }
 
-/* 🏠 Main Content */
+/* Main Content */
 .content {
     flex-grow: 1;
     max-width: 800px;
@@ -75,23 +75,53 @@ nav ul li a:hover {
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;  /* Aligns text at the top */
+    justify-content: flex-start; /* Aligns text at the top */
 }
 
-/* 📜 Blog Post Styling */
-.blog-list, .blog-post {
+/* Blog Layout Container (for dedicated blog post pages) */
+.blog-post-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+}
+
+/* Blog Post & Blog List Styling */
+.blog-list,
+.blog-post {
     max-width: 700px;
     margin: 0 auto;
     text-align: left;
 }
 
-.blog-list h1, .blog-post h1 {
+.blog-list h1,
+.blog-post h1 {
     font-size: 2.2rem;
     font-weight: 600;
     color: #2E2E2E;
     margin-bottom: 20px;
 }
 
+/* Additional classes for post meta, description, etc. */
+.post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+article {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Sticky Back Arrow */
 .back-arrow {
     position: fixed;
     bottom: 40px;
@@ -101,14 +131,14 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .back-arrow:hover {
+}
+
+.back-arrow:hover {
     transform: scale(1.2);
     color: #e47f6b;
-  }
+}
 
-/* 📱 Mobile Adjustments */
+/* Mobile Adjustments */
 .menu-toggle {
     display: none;
     position: fixed;
@@ -117,12 +147,12 @@ nav ul li a:hover {
     background: none;
     border: none;
     font-size: 28px;
-    color: #E3DED7;  /* Now it's visible */
+    color: #E3DED7; /* Visible on dark background */
     cursor: pointer;
     z-index: 1100;
 }
 
-/* 🎭 Responsive Fixes */
+/* Responsive Fixes */
 @media screen and (max-width: 768px) {
     .layout {
         flex-direction: column;

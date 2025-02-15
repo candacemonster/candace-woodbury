@@ -1,75 +1,29 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 
-// Generate static paths for blog posts
+// 1️⃣ Export getStaticPaths for the dynamic route
 export async function getStaticPaths() {
-    const posts = await getCollection('blog');
-
-    return posts.map((post) => ({
-        params: { slug: post.id },
-    }));
+  const posts: BlogPost[] = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id }, // 'id' is the filename w/o extension
+  }));
 }
 
-// Fetch the post data from Astro.params
-const post = await getCollection('blog').then((posts) =>
-    posts.find((p) => p.id === Astro.params.slug)
-);
+// 2️⃣ Find the matching post
+const { slug } = Astro.params;
+const post = (await getCollection('blog')).find((p) => p.id === slug);
 
 if (!post) {
-    throw new Error(`Post not found: ${Astro.params.slug}`);
+  throw new Error(`Post not found: ${slug}`);
 }
 ---
 
-<section class="blog-post">
-    <h1>{post.data.title}</h1>
-    <p class="post-meta"><i>{post.data.date}</i></p>
-    <p class="post-description">{post.data.description}</p>
-    <article>{post.body}</article>
-</section>
-
-<!-- Sticky Back Button -->
-<a href="/blog" class="back-arrow">&larr;</a>
-
-<style>
-    .blog-post {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: left;
-        padding: 20px;
-    }
-
-    .post-meta {
-        font-size: 0.9rem;
-        color: #777;
-        margin-bottom: 10px;
-    }
-
-    .post-description {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 20px;
-    }
-
-    article {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: #333;
-    }
-
-    .back-arrow {
-    position: fixed;
-    bottom: 40px;
-    left: 40px;
-    font-size: 24px;
-    color: #403E3D; 
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s ease-in-out;
-}
-
-.back-arrow:hover {
-    transform: scale(1.2);
-}
-</style>
+<!-- 3️⃣ Wrap everything in BlogPostLayout, pass the post's title as a prop -->
+<BlogPostLayout title={post.data.title}>
+  <!-- 4️⃣ Use a separate component to display the post content -->
+  <BlogPost post={post} />
+</BlogPostLayout>
