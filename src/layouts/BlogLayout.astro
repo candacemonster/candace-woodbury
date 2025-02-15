@@ -1,0 +1,44 @@
+---
+/* You can optionally accept a title or other props */
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title ? title + ' | ' : ''}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <div class="blog-list">
+      <!-- Main Blog Content Area -->
+      <main class="blog-list">
+        <slot />
+      </main>
+    </div>
+
+    <!-- Optional sticky back arrow for blog pages -->
+    <a href="/" class="back-arrow">&larr;</a>
+  </body>
+</html>
+
+<style>
+    .back-arrow {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    font-size: 28px;
+    color: #302e2d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .back-arrow:hover {
+    transform: scale(1.2);
+    color: #e47f6b;
+  }
+</style>

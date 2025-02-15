@@ -1,18 +1,8 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-
-type BlogPost = CollectionEntry<'blog'>;
-
-// Fetch blog posts
-const posts: BlogPost[] = await getCollection('blog');
+import BlogLayout from '../layouts/BlogLayout.astro';
+import BlogList from '../components/BlogList.astro';
 ---
 
-<h1>Things I Wrote (Against My Better Judgment)</h1>
-
-<ul>
-    {posts.map((post: BlogPost) => (
-        <li>
-            <a href={`/blog/${post.id}`}>{post.data.title}</a> - {post.data.date}
-        </li>
-    ))}
-</ul>
+<BlogLayout title="Blog">
+    <BlogList />
+</BlogLayout>

@@ -9,7 +9,7 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Lora', serif;  /* Softer, book-like reading experience */
-    font-size: 18px;
+    font-size: 16px;
     background-color: #F5F3EF; /* Soft cream background */
     color: #2E2E2E; /* Dark warm gray text */
     line-height: 1.7;
@@ -26,7 +26,8 @@ html, body {
     width: 260px;
     background: #403E3D;  /* Soft dark gray */
     color: #E3DED7;  /* Soft off-white */
-    padding: 20px;
+    padding: 18px;
+    padding-top: 60px;
     transition: transform 0.3s ease-in-out;
     position: fixed;
     left: 0;
@@ -39,9 +40,9 @@ html, body {
 
 .site-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.9rem;
 }
 
 nav ul {
@@ -70,7 +71,7 @@ nav ul li a:hover {
     flex-grow: 1;
     max-width: 800px;
     margin-left: 280px; /* Pushes content away from sidebar */
-    padding: 40px;
+    padding: 18px;
     text-align: left;
     display: flex;
     flex-direction: column;

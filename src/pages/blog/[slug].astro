@@ -5,19 +5,71 @@ type BlogPost = CollectionEntry<'blog'>;
 
 // Generate static paths for blog posts
 export async function getStaticPaths() {
-    const posts: BlogPost[] = await getCollection('blog');
+    const posts = await getCollection('blog');
 
-    return posts.map((post: BlogPost) => ({
+    return posts.map((post) => ({
         params: { slug: post.id },
-        props: { post },
     }));
 }
 
-// Get the post data from Astro props
-const { post } = Astro.props as { post: BlogPost };
+// Fetch the post data from Astro.params
+const post = await getCollection('blog').then((posts) =>
+    posts.find((p) => p.id === Astro.params.slug)
+);
+
+if (!post) {
+    throw new Error(`Post not found: ${Astro.params.slug}`);
+}
 ---
 
-<h1>{post.data.title}</h1>
-<p><i>{post.data.date}</i></p>
-<p>{post.data.description}</p>
-<article>{post.body}</article>
+<section class="blog-post">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta"><i>{post.data.date}</i></p>
+    <p class="post-description">{post.data.description}</p>
+    <article>{post.body}</article>
+</section>
+
+<!-- Sticky Back Button -->
+<a href="/blog" class="back-arrow">&larr;</a>
+
+<style>
+    .blog-post {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .post-description {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    article {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #333;
+    }
+
+    .back-arrow {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    font-size: 24px;
+    color: #403E3D; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-arrow:hover {
+    transform: scale(1.2);
+}
+</style>
