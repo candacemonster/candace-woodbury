@@ -102,6 +102,11 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.blog-post article {
+    white-space: pre-wrap;
+  }
+  
+
 /* Additional classes for post meta, description, etc. */
 .post-meta {
     font-size: 0.9rem;
