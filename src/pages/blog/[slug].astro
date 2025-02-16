@@ -15,7 +15,9 @@ export async function getStaticPaths() {
 
 // 2️⃣ Find the matching post
 const { slug } = Astro.params;
+// @ts-ignore
 const post = (await getCollection('blog')).find((p) => p.id === slug);
+
 
 if (!post) {
   throw new Error(`Post not found: ${slug}`);

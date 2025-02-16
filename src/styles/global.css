@@ -63,7 +63,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #E4A96B;
+    color: #E47F6B;
 }
 
 /* Main Content */
@@ -104,8 +104,7 @@ nav ul li a:hover {
 
 .blog-post article {
     white-space: pre-wrap;
-  }
-  
+}
 
 /* Additional classes for post meta, description, etc. */
 .post-meta {
@@ -129,7 +128,7 @@ article {
 /* Sticky Back Arrow */
 .back-arrow {
     position: fixed;
-    bottom: 70px; /* 20px above the footer on desktop */
+    bottom: 100px; /* 20px above the footer on desktop */
     left: 20px;
     font-size: 28px;
     color: #403E3D;
@@ -141,7 +140,7 @@ article {
   
 .back-arrow:hover {
     transform: scale(1.2);
-    color: #e47f6b;
+    color: #E47F6B;
 }
   
 /* Site Footer */
@@ -158,6 +157,17 @@ article {
     z-index: 900;  /* Sits below the sticky arrow */
 }
   
+.site-footer a {
+    color: inherit;        /* Inherit the footer's text color */
+    text-decoration: none; /* No underline by default */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+  
+.site-footer a:hover {
+    transform: scale(1.2);
+    color: #E47F6B;
+}
+
 /* Mobile Adjustments */
 .menu-toggle {
     display: none;
@@ -167,7 +177,7 @@ article {
     background: none;
     border: none;
     font-size: 28px;
-    color: #E3DED7; /* Visible on dark background */
+    color: #E47F6B; /* Visible on dark background */
     cursor: pointer;
     z-index: 1100;
 }
@@ -204,7 +214,7 @@ article {
   
     /* Mobile adjustments for sticky arrow and footer */
     .back-arrow {
-        bottom: 80px; /* Adjusted so it sits nicely above the footer */
+        bottom: 120px; /* Adjusted so it sits nicely above the footer */
         left: 10px;
         font-size: 22px;
     }
@@ -213,4 +223,9 @@ article {
         padding: 8px 10px;
         font-size: 0.8rem;
     }
+}
+
+/* Global Anchor Hover for Consistency (Desert Rose) */
+a:hover {
+    color: #e47f6b;
 }

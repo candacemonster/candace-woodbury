@@ -16,68 +16,69 @@ html, body {
     line-height: 1.7;
 }
 
+/* Bookshelf Container */
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
+}
   
-  .book {
+.book {
     flex: 0 1 200px;
     text-align: center;
     padding: 10px;
-  }
+}
   
-  .book-image {
+.book-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
+}
   
-  .book-title {
+.book-title {
     font-size: 1.2rem;
     margin: 10px 0;
     color: #2E2E2E;
-  }
+}
   
-  .book-links {
+.book-links {
     font-size: 0.9rem;
     color: #403E3D;
-  }
+}
   
-  .book-links a {
+.book-links a {
     text-decoration: none;
     color: #403E3D;
     transition: color 0.3s;
-  }
+}
   
-  .book-links a:hover {
-    color: #E4A96B;
-  }
+.book-links a:hover {
+    color: #E47F6B;
+}
   
-  .separator {
+.separator {
     margin: 0 5px;
     color: #777;
-  }
+}
 
 /* Sticky Back Arrow */
 .back-arrow {
     position: fixed;
-    bottom: 70px; /* 20px above the footer on desktop */
+    bottom: 100px; /* 20px above the footer on desktop */
     left: 20px;
     font-size: 28px;
     color: #403E3D;
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.2s ease-in-out;
-    z-index: 1100; /* Higher than the footer */
+    z-index: 1100;
 }
   
 .back-arrow:hover {
     transform: scale(1.2);
-    color: #e47f6b;
+    color: #E47F6B;
 }
   
 /* Site Footer */
@@ -94,6 +95,17 @@ html, body {
     z-index: 900;  /* Sits below the sticky arrow */
 }
   
+.site-footer a {
+    color: inherit;        
+    text-decoration: none; 
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+  
+.site-footer a:hover {
+    transform: scale(1.2);
+    color: #E47F6B;
+}
+
 /* Mobile Adjustments */
 .menu-toggle {
     display: none;
@@ -103,30 +115,25 @@ html, body {
     background: none;
     border: none;
     font-size: 28px;
-    color: #E3DED7; /* Visible on dark background */
+    color: #E47F6B; /* Visible on dark background */
     cursor: pointer;
     z-index: 1100;
 }
 
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
-    .layout {
+    .bookshelf {
         flex-direction: column;
+        align-items: center;
     }
   
-    .menu-toggle {
-        display: block;
+    .book {
+        width: 100%;
+        max-width: 300px;
     }
   
-    .content {
-        max-width: 100%;
-        padding: 20px;
-        margin-left: 0;
-    }
-  
-    /* Mobile adjustments for sticky arrow and footer */
     .back-arrow {
-        bottom: 80px; /* Adjusted so it sits nicely above the footer */
+        bottom: 120px; 
         left: 10px;
         font-size: 22px;
     }
@@ -135,4 +142,9 @@ html, body {
         padding: 8px 10px;
         font-size: 0.8rem;
     }
+}
+
+/* Global Anchor Hover for Consistency (Desert Rose) */
+a:hover {
+    color: #E47F6B;
 }
