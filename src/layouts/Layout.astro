@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import '../scripts/menu.js';
 ---
 <!doctype html>
 <html lang="en">
@@ -15,7 +14,6 @@ import '../scripts/menu.js';
 		<div class="layout">
 			<!-- Mobile Menu Button -->
 			<button class="menu-toggle">☰</button>
-
 			<!-- Sidebar Navigation -->
 			<aside class="sidebar">
 				<h1 class="site-title">oh look, a website.</h1>
@@ -33,6 +31,18 @@ import '../scripts/menu.js';
 			<main class="content">
 				<slot />
 			</main>
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					const sidebar = document.querySelector(".sidebar");
+					const menuButton = document.querySelector(".menu-toggle");
+			
+					if (menuButton && sidebar) {
+						menuButton.addEventListener("click", () => {
+							sidebar.classList.toggle("active");
+						});
+					}
+				});
+			</script>			
 		</div>
 	</body>
 </html>
