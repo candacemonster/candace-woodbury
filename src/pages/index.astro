@@ -1,10 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import CookieBanner from '../components/CookieBanner.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout>
+    <section>
+        <p>I’m Candace, a homebody existing somewhere between “I’ve got this” and “what the hell is this.”  
+            Life didn’t go as planned, but I assume that’s true for most people, so I try not to take it personally.  
+        </p>
+        <p>I prefer my espresso dark and my lattes made at home—by my husband, who, despite everything,  
+            continues to enable both my caffeine addiction and my questionable life choices.</p>
 
-<Layout>
-	<Welcome />
-	<CookieBanner />
-</Layout>
+            <p>I read before I write—mostly because writing is hard and reading is easier. But I write anyway.  
+            I hike because I have dogs. They demand it, and frankly, so do I—otherwise, we’d all start biting people.  
+            </p>
+            <p>This site exists because I made it. I <a href="https://github.com/candacemonster" target="_blank" rel="noopener noreferrer">code</a>—badly, but with enthusiasm.
+                What will end up on this site? Unclear. Probably a mix of my <a href="/blog">open letters and personal ruminations</a>—some fleeting,  
+                some worth holding onto. And then there’s <a href="/roast-ride-read">roast-ride-read</a>: coffee that’s either divine or tastes like burnt regret,  
+                trails that make me question my life choices, and books I’ve loved (or resented). No themes, no schedules, no content strategy.  
+                Just words, arranged into sentences, when I feel like it.  
+            </p>
+            <p>Stay, don’t stay. Browse, don’t browse. Either way, I’ll be here, drinking coffee,  
+            questioning my decisions, and silently critiquing bad typography.  
+        </p>   
+    </section>
+    <section class="online">
+        <h2>find me online</h2>
+        <ul>
+            <li>
+                <span>youtube</span>
+                <a href="https://www.youtube.com/@candacewoodbury" target="_blank" rel="noopener noreferrer">subscribe</a>
+            </li>
+            <li>
+                <span>bluesky</span>
+                <a href="https://bsky.app/profile/candacewoodbury.com" target="_blank" rel="noopener noreferrer">follow</a>
+            </li>
+            <li>
+                <span>instagram</span>
+                <a href="https://www.instagram.com/candacemonster/" target="_blank" rel="noopener noreferrer">follow</a>
+            </li>
+        </ul>
+    </section>
+</BaseLayout>
+
+
+
+
+

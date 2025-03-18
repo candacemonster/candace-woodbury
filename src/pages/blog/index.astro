@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+<BaseLayout>
+  <section class="blog-page">
+    <h1>letters & ruminations</h1>
+    <h2 class="subtitle">shared with you, against my better judgment...</h2>
+
+    <ul class="blog-list">
+      {posts.map((post: CollectionEntry<'blog'>) => (
+        <li class="blog-item">
+          <a href={`/blog/${post.slug}`} class="blog-title">{post.data.title}</a>
+          <span class="blog-date">{post.data.date}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

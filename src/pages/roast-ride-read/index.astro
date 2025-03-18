@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const posts = await getCollection('roast-ride-read');
+---
+<BaseLayout>
+  <section class="roast-ride-read-page">
+    <h1>roast. ride. read.</h1>
+    <h2 class="subtitle">a mix of caffeine, trails, and books...</h2>
+
+    <ul class="roast-ride-read-list">
+      {posts.map((post: CollectionEntry<'roast-ride-read'>) => (
+        <li class="roast-ride-read-item">
+          <a href={`/roast-ride-read/${post.id}`} class="roast-ride-read-title">{post.data.title}</a>
+          <span class="roast-ride-read-date">{post.data.date}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

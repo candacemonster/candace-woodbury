@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+const { url } = Astro;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>candace woodbury</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header />
+    <div class="layout">
+      <Sidebar currentUrl={url.pathname} />
+      <main class="container">
+        <slot />
+      </main>
+    </div>
+    <script type="module" src="/src/scripts/sidebarToggle.ts"></script>
+  </body>
+</html>
