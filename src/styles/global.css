@@ -10,6 +10,14 @@
     --max-width: 900px;
     --sidebar-width: 280px;
     --sidebar-bg: #2c2c2c;
+    --spacing-xs: 6px;
+    --spacing-sm: 10px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
+    --spacing-xxxl: 36px;
+    --spacing-max: 64px;
 }
 
 /* Reset & Base Styles */
@@ -40,14 +48,14 @@ h1 {
 
 h2 {
     font-size: var(--font-size-subheading);
-    margin-top: 24px;
-    padding-bottom: 6px;
+    margin-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xs);
     border-bottom: 2px solid var(--accent-color);
 }
 
 p {
     font-size: var(--font-size-base);
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
 }
 
 /* Links */
@@ -77,7 +85,10 @@ ul, ol {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 64px 20px;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-max);
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
 }
 
 /* Sidebar */
@@ -85,7 +96,7 @@ ul, ol {
     width: var(--sidebar-width);
     flex-shrink: 0;
     background: var(--sidebar-bg);
-    padding: 16px;
+    padding: var(--spacing-md);
     height: 100vh;
     overflow-y: auto;
     transition: transform 0.3s ease;
@@ -106,42 +117,41 @@ ul, ol {
 
 /* Sidebar Extras */
 .home-link {
-    margin-bottom: 36px;
+    margin-bottom: var(--spacing-xxxl);
 }
 
 .sidebar-section {
-    margin: 16px 0;
+    margin: var(--spacing-md) 0;
 }
 
 /* Footer */
 footer {
     margin-top: auto;
     text-align: left;
-    padding-top: 16px;
+    padding-top: var(--spacing-md);
 }
 
 /* Privacy Policy */
 .privacy-policy {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-lg);
     line-height: 1.8;
 }
 
 .privacy-policy h1 {
     text-align: left;
     font-size: 32px;
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
     text-transform: uppercase;
-
 }
 
 .privacy-policy .updated {
     text-align: left;
     font-style: italic;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     color: var(--accent-color);
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .privacy-policy h2 {
@@ -153,21 +163,21 @@ footer {
 .blog-page, .roast-ride-read-page {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-lg);
     text-align: left;
 }
 
 .blog-page h1, .roast-ride-read-page h1 {
     font-size: var(--font-size-heading);
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .blog-page .subtitle, .roast-ride-read-page .subtitle {
     font-size: var(--font-size-subheading);
     text-align: center;
     color: var(--accent-color);
-    margin-bottom: 32px;
+    margin-bottom: var(--spacing-xxl);
 }
 
 /* Blog List */
@@ -180,7 +190,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: var(--spacing-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -205,8 +215,8 @@ footer {
 /* Online Section */
 .online {
     max-width: var(--max-width);
-    margin: 40px auto;
-    padding: 32px 20px;
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-xxl) var(--spacing-lg);
     text-align: left;
 }
 
@@ -214,7 +224,7 @@ footer {
     font-size: var(--font-size-subheading);
     font-weight: bold;
     text-transform: none;
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
     color: var(--text-color);
 }
 
@@ -222,7 +232,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: var(--spacing-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-size: var(--font-size-base);
 }
@@ -231,18 +241,18 @@ footer {
 .bookmarks {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-lg);
     text-align: left;
 }
 
 .bookmarks h1 {
     font-size: var(--font-size-heading);
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
 }
 
 .bookmarks p {
     font-size: var(--font-size-base);
-    margin-bottom: 24px;
+    margin-bottom: var(--spacing-xl);
     line-height: 1.8;
 }
 
@@ -251,7 +261,7 @@ article {
     overflow-wrap: normal;
     word-break: normal;
     hyphens: auto;
-    padding: 16px;
+    padding: var(--spacing-md);
 }
 
 article img {
@@ -270,7 +280,7 @@ article pre, article code {
 .post-content {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-lg);
     font-family: var(--font-secondary);
     font-size: var(--font-size-base);
     line-height: 1.7;
@@ -279,18 +289,18 @@ article pre, article code {
 .post-content h1 {
     font-family: var(--font-primary);
     font-size: var(--font-size-heading);
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .post-content time {
     display: block;
     font-size: 0.9rem;
     color: var(--text-color);
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .post-content p {
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-md);
     font-size: var(--font-size-base);
 }
 
@@ -308,10 +318,9 @@ article pre, article code {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: var(--spacing-lg) auto;
     border-radius: 8px;
 }
-
 
 /* Desktop: Always Show Sidebar */
 @media (min-width: 769px) {
@@ -320,33 +329,33 @@ article pre, article code {
     }
 }
 
-  /* Hamburger menu (hidden on desktop, shown on mobile) */
-  .hamburger {
+/* Hamburger menu (hidden on desktop, shown on mobile) */
+.hamburger {
     display: none;
     background: none;
     border: none;
     color: white;
-    font-size: 20px; 
+    font-size: 20px;
     cursor: pointer;
-  }
+}
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        padding-top: 10px;
-        padding-left: 10px;
+        padding-top: var(--spacing-lg);
+        padding-left: var(--spacing-sm);
     }
 
     .header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 10px;
+        padding: var(--spacing-sm);
     }
 
     .logo {
-        margin-left: 16px;
+        margin-left: var(--spacing-md);
         font-size: 19.2px;
         font-weight: bold;
     }

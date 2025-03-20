@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
 import "../styles/global.css";
-
+// Remove the import here
 
 const { url } = Astro;
 ---
@@ -21,6 +21,18 @@ const { url } = Astro;
         <slot />
       </main>
     </div>
-    <script type="module" src="/src/scripts/sidebarToggle.ts"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('sidebar-toggle');
+      
+        if (sidebar && toggleButton) {
+          toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-hidden');
+            sidebar.classList.toggle('mobile-visible');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
