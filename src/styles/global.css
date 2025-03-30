@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
+
 :root {
-    --bg-color: #2a2a2a;
-    --text-color: #e0e0e0;
-    --accent-color: rgb(212, 157, 141);
-    --font-primary: 'Playfair Display', serif;
-    --font-secondary: 'Inter', sans-serif;
+    --bg-color: #1e1e1e;
+    --text-color: #dcd7cd;
+    --accent-color: #b98e6f;
+    --font-primary: 'Literata', serif;
+    --font-secondary: 'Newsreader', serif;
     --font-size-base: 16px;
     --font-size-heading: 2rem;
     --font-size-subheading: 1.5rem;
     --max-width: 900px;
     --sidebar-width: 280px;
-    --sidebar-bg: #2c2c2c;
+    --sidebar-bg: #252525;
     --spacing-xs: 6px;
     --spacing-sm: 10px;
     --spacing-md: 16px;
@@ -18,8 +20,7 @@
     --spacing-xxl: 32px;
     --spacing-xxxl: 36px;
     --spacing-max: 64px;
-}
-
+  }
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -37,11 +38,20 @@ body {
 }
 
 /* Typography */
+body, p {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
     color: var(--text-color);
+    text-transform: none;
 }
-
 h1 {
     font-size: var(--font-size-heading);
 }
@@ -50,7 +60,7 @@ h2 {
     font-size: var(--font-size-subheading);
     margin-top: var(--spacing-xl);
     padding-bottom: var(--spacing-xs);
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 p {
@@ -62,11 +72,12 @@ p {
 a {
     color: var(--accent-color);
     text-decoration: none;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-    opacity: 0.8;
+    text-decoration: underline;
+    opacity: 0.85;
 }
 
 /* Lists */
@@ -143,7 +154,7 @@ footer {
     text-align: left;
     font-size: 32px;
     margin-bottom: var(--spacing-md);
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .privacy-policy .updated {
@@ -156,7 +167,7 @@ footer {
 
 .privacy-policy h2 {
     font-size: var(--font-size-subheading);
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 /* Blog & Roast Ride Read Pages */
@@ -214,17 +225,17 @@ footer {
 
 /* Online Section */
 .online {
-    max-width: var(--max-width);
-    margin: var(--spacing-xl) auto;
-    padding: var(--spacing-xxl) var(--spacing-lg);
+    padding-top: var(--spacing-md);
     text-align: left;
 }
 
 .online h2 {
     font-size: var(--font-size-subheading);
-    font-weight: bold;
-    text-transform: none;
+    font-weight: 600;
     margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 6px;
+    text-transform: none;
     color: var(--text-color);
 }
 
@@ -233,7 +244,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
     font-size: var(--font-size-base);
 }
 
