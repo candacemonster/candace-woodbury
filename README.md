@@ -23,7 +23,7 @@ This site is:
 │   ├── pages/           # Actual website pages
 │   │   ├── index.astro  # Homepage
 │   │   ├── blog.astro   # Blog roll
-│   │   ├── books.astro  # Bookshelf page
+│   │   ├── bookmarks.astro  # Bookmarks page
 │   │   ├── privacy.astro # Privacy Policy
 │   │   ├── blog/
 │   │   │   ├── [slug].astro # Individual blog posts (dynamic)

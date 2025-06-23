@@ -24,8 +24,6 @@ if (!post) {
   <article class="post-content">
     <h1>{post.data.title}</h1>
     <time datetime={post.data.date}>{post.data.date}</time>
-    <div style="margin-top: 1rem;">
-      <pre>{post.body}</pre>
-    </div>
+    <div style="margin-top: 1rem;" set:html={post.body} />
   </article>
 </BaseLayout>
