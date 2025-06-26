@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>candacewoodbury.com – Notes</title>
+    <link>https://candacewoodbury.com</link>
+    <description>Passing thoughts, irregularly posted.</description>
+    <language>en-us</language>
+
+    <item>
+      <title>Stillness</title>
+      <link>https://candacewoodbury.com/notes/stillness.html</link>
+      <guid>https://candacewoodbury.com/notes/stillness.html</guid>
+      <pubDate>Tue, 25 Jun 2025 18:00:00 -0600</pubDate>
+    </item>
+    <item>
+      <title>Retirement</title>
+      <link>https://candacewoodbury.com/notes/retirement.html</link>
+      <guid>https://candacewoodbury.com/notes/retirement.html</guid>
+      <pubDate>Mon, 24 Jun 2025 12:00:00 -0600</pubDate>
+    </item>
+
+  </channel>
+</rss>

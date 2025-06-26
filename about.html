@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Candace Woodbury</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+<button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
+
+  <header>
+    <h1>About</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>I’ve been online long enough to know better. I used to post everywhere, convinced that someone might care. They didn’t. Now I don’t.</p>
+
+    <p>This site exists because I still believe in websites — not feeds, not apps, not the latest thing pretending not to be Twitter. Just a plain place to put things.</p>
+
+    <p>What’s here? Whatever survives. The projects I haven’t abandoned. A few notes that made it past the draft folder. Nothing optimized, monetized, or maintained with any regularity.</p>
+
+    <p>...and if you're still curious for some reason:</p>
+    <ul>
+      <li><a href="https://www.youtube.com/@candacewoodbury" target="_blank">YouTube</a> — Occasionally, I upload something instead of deleting it.</li>
+      <li><a href="mailto:hello@candacewoodbury.com">Email me</a> — if it’s worth writing, it’s worth emailing.</li>
+    </ul>
+
+   <br>
+    <p>still-running side projects (for now):</p>
+    <ul>
+      <li><a href="https://substack.com/@candacewoodbury" target="_blank">a substack of sorts</a></li>
+      <li><a href="https://journalforwellbeing.com" target="_blank">Journal for Wellbeing</a></li>
+      <li><a href="https://roastrideread.com" target="_blank">Roast Ride Read</a></li>
+      <li><a href="https://desertdriftemporium.com" target="_blank">Desert Drift Emporium</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>No newsletter. No promises. No urgency. You're welcome.</p>
+  </footer>
+
+  <script>
+  const savedMode = localStorage.getItem("color-mode");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  function applyMode(mode) {
+    document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
+    if (mode === "dark") {
+      document.body.classList.add("dark-mode");
+    } else if (mode === "light") {
+      document.body.classList.add("light-mode");
+    } else {
+      if (prefersDark) {
+        document.body.classList.add("auto-dark");
+      }
+    }
+  }
+
+  // On load
+  applyMode(savedMode || "auto");
+
+  function toggleMode() {
+    const current = localStorage.getItem("color-mode") || "auto";
+    const next = current === "auto" ? "light"
+                : current === "light" ? "dark"
+                : "auto";
+    localStorage.setItem("color-mode", next);
+    applyMode(next);
+  }
+</script>
+</body>
+</html>

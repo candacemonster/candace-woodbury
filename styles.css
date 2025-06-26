@@ -1,0 +1,191 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  background-color: #fdfaf7;
+  color: #2e2e2e;
+  line-height: 1.75;
+  text-align: left;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Layout */
+header, main, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  padding-top: 32px;
+}
+
+/* Typography */
+h1, h2 {
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+time {
+  display: block;
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 1.75em;
+}
+
+a {
+  color: #b67275;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists, Sections, Nav */
+nav {
+  margin-bottom: 5px;
+}
+
+nav a {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+section.welcome p + p,
+main p + p {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+  font-size: 14px;
+  color: #7a7a7a;
+  border-top: 1px solid #e6e2dd;
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Responsive Typography */
+@media (min-width: 960px) {
+  body {
+    font-size: 19px;
+    padding: 40px;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Dark Mode — manually toggled */
+.dark-mode {
+  background-color: #1d1d1d;
+  color: #e6e6e6;
+}
+
+.dark-mode h1,
+.dark-mode h2 {
+  color: #f2f2f2;
+}
+
+.dark-mode a {
+  color: #e7a1a4;
+}
+
+.dark-mode footer {
+  color: #aaaaaa;
+  border-top: 1px solid #444;
+}
+
+/* Light Mode — manually toggled */
+.light-mode {
+  background-color: #fdfaf7;
+  color: #2e2e2e;
+}
+
+.light-mode h1,
+.light-mode h2 {
+  color: #2c2c2c;
+}
+
+.light-mode a {
+  color: #b67275;
+}
+
+.light-mode footer {
+  color: #7a7a7a;
+  border-top: 1px solid #e6e2dd;
+}
+
+/* Auto Mode — follows system preference */
+.auto-dark {
+  background-color: #1d1d1d;
+  color: #e6e6e6;
+}
+
+.auto-dark h1,
+.auto-dark h2 {
+  color: #f2f2f2;
+}
+
+.auto-dark a {
+  color: #e7a1a4;
+}
+
+.auto-dark footer {
+  color: #aaaaaa;
+  border-top: 1px solid #444;
+}

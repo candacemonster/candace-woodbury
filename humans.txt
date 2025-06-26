@@ -1,0 +1,11 @@
+/* TEAM */
+Creator: Candace Woodbury
+Site: https://candacewoodbury.com
+Philosophy: Minimal. Quiet. Honest.
+
+/* THANKS */
+Coffee. Stillness. Those who choose silence.
+
+/* TECHNOLOGY */
+Built with: HTML, CSS, and calm.
+Hosting: GitHub Pages

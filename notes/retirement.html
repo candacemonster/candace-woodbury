@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retiring from the Internet (Again)</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+<button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
+
+  <main>
+    <h1>Retiring from the Internet (Again)</h1>
+    <time datetime="2025-06-22">June 22, 2025</time>
+
+    <article>
+      <p>I’ve left the internet before. Sometimes with a dramatic goodbye, other times quietly, like sneaking out of a party when no one is looking. And still — I return. A post here, a project there. Just a toe back in the stream.</p>
+
+      <p>This time feels different. Not angry or tired, just done. The noise is too loud. The pressure to be seen too constant. The self I bring online too fragmented from the one I know offline.</p>
+
+      <p>Maybe this is a season. Maybe it’s permanent. Either way, I’m letting go again — not as a rejection, but as an offering. A bit of peace returned to the world.</p>
+
+      <p>If I reappear, I hope it’s quieter. If I don’t, I hope it’s because the silence has finally become enough.</p>
+
+      <p><a href="/">← Back to Home</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Saved to the static. –c</p>
+  </footer>
+
+<script>
+  const savedMode = localStorage.getItem("color-mode");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  function applyMode(mode) {
+    document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
+    if (mode === "dark") {
+      document.body.classList.add("dark-mode");
+    } else if (mode === "light") {
+      document.body.classList.add("light-mode");
+    } else {
+      if (prefersDark) {
+        document.body.classList.add("auto-dark");
+      }
+    }
+  }
+
+  // On load
+  applyMode(savedMode || "auto");
+
+  function toggleMode() {
+    const current = localStorage.getItem("color-mode") || "auto";
+    const next = current === "auto" ? "light"
+                : current === "light" ? "dark"
+                : "auto";
+    localStorage.setItem("color-mode", next);
+    applyMode(next);
+  }
+</script>
+
+</body>
+</html>
