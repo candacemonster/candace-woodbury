@@ -8,20 +8,20 @@
   <meta property="og:description" content="Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://candacewoodbury.com">
-  <meta property="og:image" content="https://candacewoodbury.com/assets/favicon.svg">
+  <meta property="og:image" content="/assets/favicon.svg">
   <title>Candace Woodbury</title>
   <link rel="stylesheet" href="/styles.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 </head>
 <body>
-<button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
+  <button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
 
   <header>
     <h1>candace woodbury</h1>
     <nav>
-      <a href="index.html">home</a>
-      <a href="about.html">about</a>
+      <a href="/index.html">home</a>
+      <a href="/pages/about.html">about</a>
     </nav>
   </header>
 
@@ -35,8 +35,8 @@
     <section class="notes">
       <h2>letters, notes & ruminations</h2>
       <ul>
-        <li><a href="notes/stillness.html">on silence (and why i prefer it)</a></li>
-        <li><a href="notes/retirement.html">retiring from the internet (again)</a></li>
+        <li><a href="/pages/notes/stillness.html">on silence (and why i prefer it)</a></li>
+        <li><a href="/pages/notes/retirement.html">retiring from the internet (again)</a></li>
       </ul>
     </section>
   </main>
@@ -45,35 +45,33 @@
     <p>Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.</p>
   </footer>
 
-<script>
-  const savedMode = localStorage.getItem("color-mode");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  <script>
+    const savedMode = localStorage.getItem("color-mode");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  function applyMode(mode) {
-    document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
-    if (mode === "dark") {
-      document.body.classList.add("dark-mode");
-    } else if (mode === "light") {
-      document.body.classList.add("light-mode");
-    } else {
-      if (prefersDark) {
-        document.body.classList.add("auto-dark");
+    function applyMode(mode) {
+      document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
+      if (mode === "dark") {
+        document.body.classList.add("dark-mode");
+      } else if (mode === "light") {
+        document.body.classList.add("light-mode");
+      } else {
+        if (prefersDark) {
+          document.body.classList.add("auto-dark");
+        }
       }
     }
-  }
 
-  // On load
-  applyMode(savedMode || "auto");
+    applyMode(savedMode || "auto");
 
-  function toggleMode() {
-    const current = localStorage.getItem("color-mode") || "auto";
-    const next = current === "auto" ? "light"
-                : current === "light" ? "dark"
-                : "auto";
-    localStorage.setItem("color-mode", next);
-    applyMode(next);
-  }
-</script>
-
+    function toggleMode() {
+      const current = localStorage.getItem("color-mode") || "auto";
+      const next = current === "auto" ? "light"
+                  : current === "light" ? "dark"
+                  : "auto";
+      localStorage.setItem("color-mode", next);
+      applyMode(next);
+    }
+  </script>
 </body>
 </html>

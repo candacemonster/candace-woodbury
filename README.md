@@ -10,12 +10,12 @@ Built with plain HTML and CSS — not because it’s clever, but because it’s 
 
 A small, quiet corner of the internet.
 
-There are no life hacks here, no productivity pyramids, no exhortations to *smash the button*. This exists because disappearing completely didn’t feel quite right.
+There are no life hacks here. No productivity pyramids. No exhortations to *smash the button*. This exists because disappearing entirely didn’t feel quite right.
 
-It may include:
+You might find:
 
 - The occasional note, posted irregularly  
-- A list of projects that haven’t collapsed (yet)  
+- A list of still-breathing side projects  
 - Sentences I don’t entirely hate  
 
 ---
@@ -34,12 +34,13 @@ It may include:
 candacewoodbury/
 ├── assets/
 │ └── favicon.svg
-├── notes/
-│ ├── retirement.html
-│ └── stillness.html
+├── pages/
+│ ├── about.html
+│ ├── notes/
+│ │ ├── retirement.html
+│ │ └── stillness.html
 ├── .gitignore
 ├── 404.html
-├── about.html
 ├── CNAME
 ├── humans.txt
 ├── index.html
@@ -50,48 +51,71 @@ candacewoodbury/
 └── styles.css
 
 
+- `index.html`: Home  
+- `pages/`: Static pages and notes  
+- `styles.css`: Global styles (supports dark/light mode)  
+- No JS except a single-line theme toggle  
+
 ---
 
 ### Maintenance
 
-- Edit HTML files directly in VS Code or GitHub’s web editor  
-- Add new notes under `notes/` and link them from `index.html`  
-- Update `notes.xml` and `sitemap.xml` manually when new content is added  
-- No frameworks, no dependencies, no build process  
-- Keep it human, readable, and quiet  
+- Edit HTML in VS Code or GitHub’s web editor  
+- Add notes to `pages/notes/`  
+- Link new notes manually from `index.html`  
+- Update `notes.xml` and `sitemap.xml` manually  
+- Keep everything human-readable and intentionally quiet  
 
 ---
 
 ### Hosting
 
-This site is hosted with GitHub Pages.  
-Custom domain is managed via `CNAME`.  
-No tracking, no analytics, no database, and no JavaScript required.  
-Updates are manual and intentional.
+- Hosted via GitHub Pages  
+- Custom domain defined in `CNAME`  
+- No tracking, no analytics, no cookie warnings  
+- No CMS, no CDN, no dependencies  
+- Just HTML and CSS, on purpose  
 
 ---
 
 ### Metadata
 
-Basic metadata is included in each page for improved link previews:
+Each page includes minimal metadata for basic SEO and link previews:
 
 - `description`, `og:title`, `og:description`, `og:image`, etc.  
-- RSS feed available at: `/notes.xml`  
-- `humans.txt` available at: `/humans.txt`
+- Atom-style feed at `/notes.xml`  
+- `humans.txt` because it still matters  
 
 ---
 
-### License
+### Accessibility
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
-You are welcome to reuse or adapt the code and structure with or without attribution.  
-All original content remains © Candace Woodbury.
+- Text-based and fully navigable without JavaScript  
+- Responsive layout with semantic HTML  
+- Theme toggle for dark/light preferences  
+- Tested for keyboard navigation and screen reader basics  
 
 ---
 
-### Author
+### Local Preview (Optional)
 
-Candace Woodbury  
-[https://candacewoodbury.com](https://candacewoodbury.com)
+You can preview the site locally by opening `index.html` in a browser.  
+No server or build step required.  
+
+License
+This project is licensed under the MIT License.
+Reuse or adapt the code freely, with or without attribution.
+All original writing remains © Candace Woodbury.
+
+Author
+Candace Woodbury
+https://candacewoodbury.com
 
 Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.
+
+Contributors
+None. That’s kind of the point.
+
+Support
+No tips, no sponsors, no affiliate links.
+If you found something here worth sitting with, that’s enough.

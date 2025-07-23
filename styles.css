@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: inherit;
 }
 
 html, body {
@@ -10,37 +11,152 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr min(720px, 90%) 1fr;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
   background-color: #fdfaf7;
   color: #2e2e2e;
   line-height: 1.75;
-  text-align: left;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Layout */
-header, main, footer {
-  max-width: 720px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
+body > * {
+  grid-column: 2;
 }
 
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 20px;
+}
+
+header h1 {
+  font-weight: 200;
+  font-size: 2rem;
+  color: inherit;
+  text-transform: lowercase;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  font-size: 16px;
+  color: #b67275;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Grid */
 main {
-  flex: 1;
-  padding-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 32px 20px;
+}
+
+/* Welcome Section */
+section.welcome {
+  display: grid;
+  grid-template-areas:
+    "line1"
+    "line2"
+    "line3";
+  gap: 1.5rem;
+}
+
+section.welcome p:nth-child(1) { grid-area: line1; }
+section.welcome p:nth-child(2) { grid-area: line2; }
+section.welcome p:nth-child(3) { grid-area: line3; }
+
+section.welcome p + p {
+  margin-top: 0;
+}
+
+/* Notes Section */
+section.notes h2 {
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: inherit;
+}
+
+section.notes ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+section.notes li {
+  margin: 0;
+}
+
+section.notes a {
+  color: #b67275;
+  text-decoration: none;
+}
+
+section.notes a:hover {
+  text-decoration: underline;
+}
+
+/* Images - Kinfolk-style */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  display: block;
+  transition: filter 0.3s;
+}
+
+img.float-left {
+  float: left;
+  width: 50%;
+  margin: 1.5rem 2rem 1.5rem 0;
+  shape-outside: ellipse(50% 50% at 50% 50%);
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+img.float-right {
+  float: right;
+  width: 50%;
+  margin: 1.5rem 0 1.5rem 2rem;
+  shape-outside: ellipse(50% 50% at 50% 50%);
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+/* Clear floats on parent paragraphs */
+p::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Typography */
 h1, h2 {
   font-weight: 200;
   margin-bottom: 20px;
-  color: #2c2c2c;
+  color: inherit;
+}
+
+p {
+  margin-bottom: 1.75em;
+}
+
+main p + p {
+  margin-top: 20px;
 }
 
 time {
@@ -48,47 +164,17 @@ time {
   font-size: 0.9em;
   color: #888;
   margin-bottom: 2rem;
-}
-
-p {
-  margin-bottom: 1.75em;
+  transition: color 0.3s;
 }
 
 a {
   color: #b67275;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Lists, Sections, Nav */
-nav {
-  margin-bottom: 5px;
-}
-
-nav a {
-  margin-right: 10px;
-  font-size: 16px;
-}
-
-section {
-  margin-bottom: 25px;
-}
-
-section.welcome p + p,
-main p + p {
-  margin-top: 20px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 12px;
 }
 
 /* Footer */
@@ -96,17 +182,17 @@ footer {
   font-size: 14px;
   color: #7a7a7a;
   border-top: 1px solid #e6e2dd;
-  padding-top: 16px;
+  padding: 16px 20px 40px;
   margin-top: 40px;
   text-align: left;
-  margin-bottom: 0;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 /* Responsive Typography */
 @media (min-width: 960px) {
   body {
     font-size: 19px;
-    padding: 40px;
+    padding: 40px 0;
   }
 
   nav a {
@@ -115,6 +201,17 @@ footer {
 
   footer {
     font-size: 15px;
+  }
+
+  section.welcome {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "line1 line2"
+      "line3 line3";
+  }
+
+  section.notes ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -130,7 +227,7 @@ footer {
   color: inherit;
 }
 
-/* Dark Mode — manually toggled */
+/* Dark Mode */
 .dark-mode {
   background-color: #1d1d1d;
   color: #e6e6e6;
@@ -142,7 +239,7 @@ footer {
 }
 
 .dark-mode a {
-  color: #e7a1a4;
+  color: #ffb3b5;
 }
 
 .dark-mode footer {
@@ -150,7 +247,19 @@ footer {
   border-top: 1px solid #444;
 }
 
-/* Light Mode — manually toggled */
+.dark-mode time {
+  color: #aaa;
+}
+
+.dark-mode .mode-toggle {
+  color: #e6e6e6;
+}
+
+.dark-mode img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Light Mode */
 .light-mode {
   background-color: #fdfaf7;
   color: #2e2e2e;
@@ -170,7 +279,19 @@ footer {
   border-top: 1px solid #e6e2dd;
 }
 
-/* Auto Mode — follows system preference */
+.light-mode time {
+  color: #888;
+}
+
+.light-mode .mode-toggle {
+  color: #2e2e2e;
+}
+
+.light-mode img {
+  filter: none;
+}
+
+/* Auto Dark Mode (system preference) */
 .auto-dark {
   background-color: #1d1d1d;
   color: #e6e6e6;
@@ -182,10 +303,56 @@ footer {
 }
 
 .auto-dark a {
-  color: #e7a1a4;
+  color: #ffb3b5;
 }
 
 .auto-dark footer {
   color: #aaaaaa;
   border-top: 1px solid #444;
+}
+
+.auto-dark time {
+  color: #aaa;
+}
+
+.auto-dark .mode-toggle {
+  color: #e6e6e6;
+}
+
+.auto-dark img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Optional: Auto-mode fallback using system preference */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode):not(.dark-mode) {
+    background-color: #1d1d1d;
+    color: #e6e6e6;
+  }
+
+  body:not(.light-mode):not(.dark-mode) h1,
+  body:not(.light-mode):not(.dark-mode) h2 {
+    color: #f2f2f2;
+  }
+
+  body:not(.light-mode):not(.dark-mode) a {
+    color: #ffb3b5;
+  }
+
+  body:not(.light-mode):not(.dark-mode) footer {
+    color: #aaaaaa;
+    border-top: 1px solid #444;
+  }
+
+  body:not(.light-mode):not(.dark-mode) time {
+    color: #aaa;
+  }
+
+  body:not(.light-mode):not(.dark-mode) .mode-toggle {
+    color: #e6e6e6;
+  }
+
+  body:not(.light-mode):not(.dark-mode) img {
+    filter: brightness(1.1) contrast(1.05);
+  }
 }

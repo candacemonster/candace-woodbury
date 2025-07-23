@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work With Me — Candace Woodbury</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Intentional consulting for people who need clarity, not clutter.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+
+  <button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
+
+  <header>
+    <h1>Work With Me</h1>
+    <nav>
+      <a href="/index.html">home</a>
+      <a href="/pages/about.html">about</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <p>I help people and small teams get clearer, calmer, and more confident in how they run things. My style is minimalist and intentional. I don't bring in tools you don’t need. I don’t run at a frantic pace. I ask good questions, and I help you get unstuck — then I step back so you can keep going.</p>
+
+      <p>Most of the time, you already know what needs to change. You just need a sounding board, a second set of eyes, or someone to help you shape the way forward. That’s where I come in — for a bit, not forever.</p>
+    </section>
+
+    <section>
+      <h2>Mini-Engagements (2–4 Weeks)</h2>
+      <p>One clear goal. A few short sessions. Then you move forward — with less noise and more clarity.</p>
+      <p><strong>Includes:</strong> discovery, guidance, review, and a week of light support</p>
+      <p><strong>Investment:</strong> $1,250–$1,500</p>
+    </section>
+
+    <section>
+      <h2>Strategy & Setup Sessions</h2>
+      <p>One focused 90-minute session to work through a decision, system, or shift — then a week of async support while you implement.</p>
+      <p><strong>Investment:</strong> $475–$650</p>
+    </section>
+
+    <section>
+      <h2>Hourly Support</h2>
+      <p>Quick consults, fast fixes, walk-throughs. No minimums, no mess.</p>
+      <p><strong>Rate:</strong> $150/hour — billed in 30-minute blocks</p>
+    </section>
+
+    <section>
+      <h2>3-Hour Bundle</h2>
+      <p>For teams in motion or solo folks mid-pivot. Use it in one go or spread it out.</p>
+      <p><strong>Bundle:</strong> $425 flat</p>
+    </section>
+
+    <section>
+      <h2>Platform Support</h2>
+      <p>I’m a <a href="https://www.shopify.com/partners/service-partners" target="_blank">Shopify Service Partner</a> and also work with Webflow, Fourthwall, Beehive, and GitHub Pages.</p>
+      <p>If you're launching or cleaning something up, I can help. No pitch decks. No “Have you considered a rebrand?” energy.</p>
+    </section>
+
+    <section>
+      <h2>Tools I Know Well</h2>
+      <p>Booking systems, ecomm platforms, email tools, automations, analytics, CRMs, live chat, helpdesks, light scripting, and a little code when needed.</p>
+      <p>If you’re wondering “Can she work with ___?” — probably. Ask me.</p>
+      <p>Ongoing student of <a href="https://www.shecodes.io/graduates/54828-candace-woodbury" target="_blank">SheCodes</a>. Always tinkering.</p>
+    </section>
+
+    <section>
+      <h2>What You Can Expect</h2>
+      <p>No retainers. No launch babysitting. No task board micromanagement. Just short, intentional sprints. You get what you need, then move on — lighter and clearer.</p>
+      <p><strong>Every project starts with a 30-minute intro call.</strong></p>
+    </section>
+
+    <section>
+      <h2>Let’s Talk</h2>
+      <p>If you're feeling stuck, swamped, or quietly ready to shift something — email me.</p>
+      <p><strong>Email:</strong> <a href="mailto:studio@candacewoodbury.com">studio@candacewoodbury.com</a><br>
+      <strong>Location:</strong> Mountain West (available remote or with notice)</p>
+      <p><a href="https://cal.com/candacewoodbury/30min?overlayCalendar=true" target="_blank">→ Book a call</a></p>
+    </section>
+
+    <section>
+      <h2>Already Working With Me?</h2>
+      <p>Use your private link to schedule more time. Need to adjust scope, timing, or support? Just reach out.</p>
+      <p>All invoices are digital and payable by card or ACH. Happy to send anything you need for your records (W9, contract, etc.).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Studio Drift · Candace Woodbury Consulting · Operated under Desert Drift Holdings</p>
+  </footer>
+
+  <script>
+    const savedMode = localStorage.getItem("color-mode");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    function applyMode(mode) {
+      document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
+      if (mode === "dark") {
+        document.body.classList.add("dark-mode");
+      } else if (mode === "light") {
+        document.body.classList.add("light-mode");
+      } else {
+        if (prefersDark) {
+          document.body.classList.add("auto-dark");
+        }
+      }
+    }
+
+    applyMode(savedMode || "auto");
+
+    function toggleMode() {
+      const current = localStorage.getItem("color-mode") || "auto";
+      const next = current === "auto" ? "light"
+                  : current === "light" ? "dark"
+                  : "auto";
+      localStorage.setItem("color-mode", next);
+      applyMode(next);
+    }
+  </script>
+</body>
+</html>
