@@ -16,10 +16,11 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
   background-color: #fdfaf7;
-  color: #2e2e2e;
+  color: #2b2b2b;
   line-height: 1.75;
   min-height: 100vh;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.2s, color 0.2s;
+  list-style: none;
 }
 
 body > * {
@@ -31,17 +32,18 @@ header {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: baseline;
-  gap: 1rem;
+  gap: 16px;
   padding: 20px;
 }
 
 header h1 {
   font-weight: 200;
-  font-size: 2rem;
-  color: inherit;
+  font-size: 32px;
+  color: #2e222c;
   text-transform: lowercase;
 }
 
+/* Main navigation */
 nav {
   display: flex;
   gap: 10px;
@@ -49,19 +51,22 @@ nav {
 
 nav a {
   font-size: 16px;
-  color: #b67275;
+  color: #b05b6b;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
+  color: #a1475a;
   text-decoration: underline;
+  outline: none;
 }
 
 /* Main Grid */
 main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 48px;
   padding: 32px 20px;
 }
 
@@ -72,7 +77,7 @@ section.welcome {
     "line1"
     "line2"
     "line3";
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 section.welcome p:nth-child(1) { grid-area: line1; }
@@ -86,15 +91,15 @@ section.welcome p + p {
 /* Notes Section */
 section.notes h2 {
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 19px;
   margin-bottom: 16px;
-  color: inherit;
+  color: #2e222c;
 }
 
 section.notes ul {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 16px;
   list-style: none;
   padding: 0;
 }
@@ -104,19 +109,26 @@ section.notes li {
 }
 
 section.notes a {
-  color: #b67275;
+  color: #b05b6b;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-section.notes a:hover {
+section.notes a:hover, section.notes a:focus {
+  color: #a1475a;
   text-decoration: underline;
+  outline: none;
+}
+
+li {
+  list-style: none;
 }
 
 /* Images - Kinfolk-style */
 img {
   max-width: 100%;
   height: auto;
-  margin: 2rem 0;
+  margin: 32px 0;
   display: block;
   transition: filter 0.3s;
 }
@@ -124,7 +136,7 @@ img {
 img.float-left {
   float: left;
   width: 50%;
-  margin: 1.5rem 2rem 1.5rem 0;
+  margin: 24px 32px 24px 0;
   shape-outside: ellipse(50% 50% at 50% 50%);
   clip-path: ellipse(50% 50% at 50% 50%);
 }
@@ -132,7 +144,7 @@ img.float-left {
 img.float-right {
   float: right;
   width: 50%;
-  margin: 1.5rem 0 1.5rem 2rem;
+  margin: 24px 0 24px 32px;
   shape-outside: ellipse(50% 50% at 50% 50%);
   clip-path: ellipse(50% 50% at 50% 50%);
 }
@@ -148,11 +160,11 @@ p::after {
 h1, h2 {
   font-weight: 200;
   margin-bottom: 20px;
-  color: inherit;
+  color: #2e222c;
 }
 
 p {
-  margin-bottom: 1.75em;
+  margin-bottom: 28.00px;
 }
 
 main p + p {
@@ -161,31 +173,51 @@ main p + p {
 
 time {
   display: block;
-  font-size: 0.9em;
-  color: #888;
-  margin-bottom: 2rem;
-  transition: color 0.3s;
+  font-size: 14.40px;
+  color: #888484;
+  margin-bottom: 32px;
+  transition: color 0.2s;
 }
 
 a {
-  color: #b67275;
+  color: #b05b6b;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-a:hover {
+a:hover, a:focus {
+  color: #a1475a;
   text-decoration: underline;
+  outline: none;
+}
+
+/* Keyboard focus style for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #b05b6b;
+  outline-offset: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px; /* Adjust gap as needed */
+  align-items: start;
+}
+.projects-grid ul {
+  margin: 0;
+  padding-left: 19.20px;
+  list-style: none;
 }
 
 /* Footer */
 footer {
   font-size: 14px;
-  color: #7a7a7a;
+  color: #888484;
   border-top: 1px solid #e6e2dd;
   padding: 16px 20px 40px;
   margin-top: 40px;
   text-align: left;
-  transition: color 0.3s, border-color 0.3s;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 /* Responsive Typography */
@@ -215,144 +247,33 @@ footer {
   }
 }
 
-/* Mode Toggle Button */
-.mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  color: inherit;
-}
-
-/* Dark Mode */
-.dark-mode {
-  background-color: #1d1d1d;
-  color: #e6e6e6;
-}
-
-.dark-mode h1,
-.dark-mode h2 {
-  color: #f2f2f2;
-}
-
-.dark-mode a {
-  color: #ffb3b5;
-}
-
-.dark-mode footer {
-  color: #aaaaaa;
-  border-top: 1px solid #444;
-}
-
-.dark-mode time {
-  color: #aaa;
-}
-
-.dark-mode .mode-toggle {
-  color: #e6e6e6;
-}
-
-.dark-mode img {
-  filter: brightness(1.1) contrast(1.05);
-}
-
-/* Light Mode */
-.light-mode {
-  background-color: #fdfaf7;
-  color: #2e2e2e;
-}
-
-.light-mode h1,
-.light-mode h2 {
-  color: #2c2c2c;
-}
-
-.light-mode a {
-  color: #b67275;
-}
-
-.light-mode footer {
-  color: #7a7a7a;
-  border-top: 1px solid #e6e2dd;
-}
-
-.light-mode time {
-  color: #888;
-}
-
-.light-mode .mode-toggle {
-  color: #2e2e2e;
-}
-
-.light-mode img {
-  filter: none;
-}
-
-/* Auto Dark Mode (system preference) */
-.auto-dark {
-  background-color: #1d1d1d;
-  color: #e6e6e6;
-}
-
-.auto-dark h1,
-.auto-dark h2 {
-  color: #f2f2f2;
-}
-
-.auto-dark a {
-  color: #ffb3b5;
-}
-
-.auto-dark footer {
-  color: #aaaaaa;
-  border-top: 1px solid #444;
-}
-
-.auto-dark time {
-  color: #aaa;
-}
-
-.auto-dark .mode-toggle {
-  color: #e6e6e6;
-}
-
-.auto-dark img {
-  filter: brightness(1.1) contrast(1.05);
-}
-
-/* Optional: Auto-mode fallback using system preference */
+/* Automatic dark mode, follows user’s system/device preference */
 @media (prefers-color-scheme: dark) {
-  body:not(.light-mode):not(.dark-mode) {
-    background-color: #1d1d1d;
-    color: #e6e6e6;
+  body {
+    background-color: #17151b;
+    color: #e5e5e3;
   }
 
-  body:not(.light-mode):not(.dark-mode) h1,
-  body:not(.light-mode):not(.dark-mode) h2 {
-    color: #f2f2f2;
+  h1, h2, section.notes h2, header h1 {
+    color: #efdee8;
   }
 
-  body:not(.light-mode):not(.dark-mode) a {
-    color: #ffb3b5;
+  a, nav a, section.notes a {
+    color: #ffb3c1;
   }
 
-  body:not(.light-mode):not(.dark-mode) footer {
-    color: #aaaaaa;
+  a:hover, a:focus, nav a:hover, nav a:focus, section.notes a:hover, section.notes a:focus {
+    color: #e68d99;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  footer, time {
+    color: #b1a9b3;
     border-top: 1px solid #444;
   }
 
-  body:not(.light-mode):not(.dark-mode) time {
-    color: #aaa;
-  }
-
-  body:not(.light-mode):not(.dark-mode) .mode-toggle {
-    color: #e6e6e6;
-  }
-
-  body:not(.light-mode):not(.dark-mode) img {
-    filter: brightness(1.1) contrast(1.05);
+  img {
+    filter: brightness(1.08) contrast(1.04);
   }
 }

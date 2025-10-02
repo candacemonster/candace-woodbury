@@ -3,29 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A small, quiet corner of the internet. No branding, no hustle. Just passing thoughts.">
-  <meta property="og:title" content="candacewoodbury.com">
-  <meta property="og:description" content="Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://candacewoodbury.com">
-  <meta property="og:image" content="/assets/favicon.svg">
+  <meta name="description" content="A small, quiet corner of the internet. No branding, no hustle. Just passing thoughts." />
+  <meta property="og:title" content="candacewoodbury.com" />
+  <meta property="og:description" content="Writing quietly. Nothing to sell. No mailing list. Just passing thoughts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://candacewoodbury.com" />
+  <meta property="og:image" content="/assets/favicon.svg" />
+  <link rel="canonical" href="https://candacewoodbury.com" />
   <title>Candace Woodbury</title>
   <link rel="stylesheet" href="/styles.css" />
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 </head>
 <body>
-  <button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
-
   <header>
     <h1>candace woodbury</h1>
-    <nav>
-      <a href="/index.html">home</a>
+    <nav role="navigation">
+      <a href="/index.html" aria-current="page">home</a>
       <a href="/pages/about.html">about</a>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section class="welcome">
       <p>This space is small on purpose.</p>
       <p>I’ve let go of most things: platforms, posts, newsletters, metrics. What’s left is this — a page, a voice, some notes. No promises, no schedule, no performance.</p>
@@ -33,7 +32,7 @@
     </section>
 
     <section class="notes">
-      <h2>letters, notes & ruminations</h2>
+      <h2>letters, notes &amp; ruminations</h2>
       <ul>
         <li><a href="/pages/notes/stillness.html">on silence (and why i prefer it)</a></li>
         <li><a href="/pages/notes/retirement.html">retiring from the internet (again)</a></li>
@@ -44,34 +43,5 @@
   <footer>
     <p>Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.</p>
   </footer>
-
-  <script>
-    const savedMode = localStorage.getItem("color-mode");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    function applyMode(mode) {
-      document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
-      if (mode === "dark") {
-        document.body.classList.add("dark-mode");
-      } else if (mode === "light") {
-        document.body.classList.add("light-mode");
-      } else {
-        if (prefersDark) {
-          document.body.classList.add("auto-dark");
-        }
-      }
-    }
-
-    applyMode(savedMode || "auto");
-
-    function toggleMode() {
-      const current = localStorage.getItem("color-mode") || "auto";
-      const next = current === "auto" ? "light"
-                  : current === "light" ? "dark"
-                  : "auto";
-      localStorage.setItem("color-mode", next);
-      applyMode(next);
-    }
-  </script>
 </body>
 </html>

@@ -3,90 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About Candace Woodbury — a soft place to land on the internet.">
-  <meta property="og:title" content="About — Candace Woodbury">
-  <meta property="og:description" content="What’s here? Whatever survives.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://candacewoodbury.com/pages/about.html">
-  <meta property="og:image" content="/assets/favicon.svg">
+  <meta name="description" content="About Candace Woodbury — a soft place to land on the internet." />
+  <meta property="og:title" content="About — Candace Woodbury" />
+  <meta property="og:description" content="What’s here? Whatever survives." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://candacewoodbury.com/pages/about.html" />
+  <meta property="og:image" content="/assets/favicon.svg" />
+  <link rel="canonical" href="https://candacewoodbury.com/pages/about.html" />
   <title>About — Candace Woodbury</title>
   <link rel="stylesheet" href="/styles.css" />
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 </head>
 <body>
-  <button class="mode-toggle" onclick="toggleMode()">🌓 Toggle</button>
-
   <header>
     <h1>About</h1>
-    <nav>
+    <nav role="navigation">
       <a href="/index.html">home</a>
       <a href="/pages/about.html" aria-current="page">about</a>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section class="welcome">
-      <p><img src="/assets/favicon.svg" alt="Soft symbol" class="float-left" /></p>
-
+      <p>
+        <img src="/assets/favicon.svg" alt="Candace Woodbury's soft digital symbol" class="float-left" loading="lazy" />
+      </p>
       <p>I’ve been online long enough to know better. I used to post everywhere, convinced that someone might care. They didn’t. Now I don’t.</p>
-
       <p>This site exists because I still believe in websites — not feeds, not apps, not the latest thing pretending not to be Twitter. Just a plain place to put things.</p>
-
       <p>What’s here? Whatever survives. The projects I haven’t abandoned. A few notes that made it past the draft folder. Nothing optimized, monetized, or maintained with any regularity.</p>
-
       <div>
         <p>...and if you're still curious for some reason:</p>
         <ul>
-          <li><a href="https://www.youtube.com/@candacewoodbury" target="_blank">YouTube</a> — Occasionally, I upload something instead of deleting it.</li>
-          <li><a href="mailto:hello@candacewoodbury.com">Email me</a> — if it’s worth writing, it’s worth emailing.</li>
+          <li>
+            <a href="https://www.youtube.com/@candacewoodbury" target="_blank">youtube</a> — occasionally, I upload something instead of deleting it.
+          </li>
+          <li>
+            <a href="mailto:hello@candacewoodbury.com">email me</a> — if it’s worth writing, it’s worth emailing.
+          </li>
         </ul>
       </div>
+    </section>
 
-<div>
-      <p>still-running side projects (for now):</p>
-      <ul>
-        <li><a href="https://desertdriftemporium.com" target="_blank">Desert Drift Emporium</a></li>
-        <li><a href="https://roastrideread.com" target="_blank">roast. ride. read.</a></li>
-        <li><a href="https://candidnook.com" target="_blank">candid nook</a></li>
-        <li><a href="https://substack.com/@candacewoodbury" target="_blank">candace’s substack</a></li>
-      </ul>
-</div>
-
+    <section class="side-projects">
+      <h2>still-running side projects (for now):</h2>
+      <div class="projects-grid">
+        <ul>
+          <li><a href="#" target="_blank">desert drift holdings</a></li>
+          <li><a href="https://desertdriftemporium.com" target="_blank">desert drift emporium</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://journal.roastrideread.com" target="_blank">roast. ride. read.</a></li>
+          <li><a href="https://candidnook.com" target="_blank">candid nook</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>No newsletter. No promises. No urgency. You're welcome.</p>
   </footer>
-
-  <script>
-    const savedMode = localStorage.getItem("color-mode");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    function applyMode(mode) {
-      document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
-      if (mode === "dark") {
-        document.body.classList.add("dark-mode");
-      } else if (mode === "light") {
-        document.body.classList.add("light-mode");
-      } else {
-        if (prefersDark) {
-          document.body.classList.add("auto-dark");
-        }
-      }
-    }
-
-    applyMode(savedMode || "auto");
-
-    function toggleMode() {
-      const current = localStorage.getItem("color-mode") || "auto";
-      const next = current === "auto" ? "light"
-                  : current === "light" ? "dark"
-                  : "auto";
-      localStorage.setItem("color-mode", next);
-      applyMode(next);
-    }
-  </script>
 </body>
 </html>
