@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>candacewoodbury.com – Notes</title>
     <link>https://candacewoodbury.com</link>
     <description>Passing thoughts, irregularly posted.</description>
     <language>en-us</language>
+    <atom:link href="https://candacewoodbury.com/notes.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Oct 2025 18:07:00 -0600</lastBuildDate>
 
     <item>
       <title>Stillness</title>
-      <link>https://candacewoodbury.com/notes/stillness.html</link>
-      <guid>https://candacewoodbury.com/notes/stillness.html</guid>
+      <link>https://candacewoodbury.com/pages/notes/stillness.html</link>
+      <guid>https://candacewoodbury.com/pages/notes/stillness.html</guid>
+      <description>On the comfort and necessity of silence in a noisy world.</description>
       <pubDate>Tue, 25 Jun 2025 18:00:00 -0600</pubDate>
+      <author>hello@candacewoodbury.com (Candace Woodbury)</author>
     </item>
     <item>
       <title>Retirement</title>
-      <link>https://candacewoodbury.com/notes/retirement.html</link>
-      <guid>https://candacewoodbury.com/notes/retirement.html</guid>
+      <link>https://candacewoodbury.com/pages/notes/retirement.html</link>
+      <guid>https://candacewoodbury.com/pages/notes/retirement.html</guid>
+      <description>Thoughts on stepping back from the internet (again).</description>
       <pubDate>Mon, 24 Jun 2025 12:00:00 -0600</pubDate>
+      <author>hello@candacewoodbury.com (Candace Woodbury)</author>
     </item>
-
   </channel>
 </rss>

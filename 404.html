@@ -3,36 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not Found</title>
+  <meta name="robots" content="noindex" />
+  <title>Page Not Found — Candace Woodbury</title>
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-
-  <meta http-equiv="refresh" content="3; url=/" />
-  <style>
-    main {
-      padding: 2rem;
-      max-width: 600px;
-      margin: 4rem auto;
-      text-align: left;
-    }
-
-    p {
-      margin-bottom: 1.5em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
-  <main>
-    <h1>This page wandered off.</h1>
-    <p>It’s probably gone for good — I’ve been tidying things up.</p>
-    <p>You’ll be taken to the homepage in a moment. Or if you’re the impatient sort, <a href="/">go there now</a>.</p>
+  <main style="max-width:600px; margin:4rem auto; padding:2rem;">
+    <h1 style="margin-bottom:1.5em;">This page wandered off.</h1>
+    <p style="margin-bottom:1.5em;">It’s probably gone for good — I’ve been tidying things up.</p>
+    <p style="margin-bottom:1.5em;">
+      You’ll be taken to the homepage in a moment. Or if you’re the impatient sort, 
+      <a href="/" style="color:#b05b6b; text-decoration:underline;">go there now</a>.
+    </p>
   </main>
-
   <script>
     setTimeout(() => {
       window.location.href = "/";

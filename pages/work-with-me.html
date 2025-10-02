@@ -10,23 +10,36 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 </head>
 <body>
-
-  <button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
-
   <header>
     <h1>Work With Me</h1>
-    <nav>
+    <nav role="navigation">
       <a href="/index.html">home</a>
       <a href="/pages/about.html">about</a>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <section class="welcome">
       <p>I help people and small teams get clearer, calmer, and more confident in how they run things. My style is minimalist and intentional. I don't bring in tools you don’t need. I don’t run at a frantic pace. I ask good questions, and I help you get unstuck — then I step back so you can keep going.</p>
-
       <p>Most of the time, you already know what needs to change. You just need a sounding board, a second set of eyes, or someone to help you shape the way forward. That’s where I come in — for a bit, not forever.</p>
     </section>
+
+    <section>
+      <h2>Who I Typically Help</h2>
+      <p>I work best with small teams, founders, solo operators, creators, or non-profits who want to simplify and clarify their workflows without drama. If you prefer straight talk, calm processes, and honest feedback, you’ll probably find it’s a good fit.</p>
+    </section>
+
+    <section>
+      <h2>How We’ll Work</h2>
+      <ol>
+        <li>We start with a conversation about where you are and what you need.</li>
+        <li>We set a goal, schedule a session (or two), and I help you get unstuck.</li>
+        <li>Light, direct support via email while you implement changes.</li>
+        <li>Hand-off and next steps—no obligations, no follow-ups unless you want them.</li>
+      </ol>
+    </section>
+
+    <!-- The rest remains unchanged -->
 
     <section>
       <h2>Mini-Engagements (2–4 Weeks)</h2>
@@ -36,7 +49,7 @@
     </section>
 
     <section>
-      <h2>Strategy & Setup Sessions</h2>
+      <h2>Strategy &amp; Setup Sessions</h2>
       <p>One focused 90-minute session to work through a decision, system, or shift — then a week of async support while you implement.</p>
       <p><strong>Investment:</strong> $475–$650</p>
     </section>
@@ -55,7 +68,7 @@
 
     <section>
       <h2>Platform Support</h2>
-      <p>I’m a <a href="https://www.shopify.com/partners/service-partners" target="_blank">Shopify Service Partner</a> and also work with Webflow, Fourthwall, Beehive, and GitHub Pages.</p>
+      <p>I’m a <a href="https://www.shopify.com/partners/service-partners" target="_blank" rel="noopener">Shopify Service Partner</a> and also work with Webflow, Fourthwall, Beehive, and GitHub Pages.</p>
       <p>If you're launching or cleaning something up, I can help. No pitch decks. No “Have you considered a rebrand?” energy.</p>
     </section>
 
@@ -63,7 +76,7 @@
       <h2>Tools I Know Well</h2>
       <p>Booking systems, ecomm platforms, email tools, automations, analytics, CRMs, live chat, helpdesks, light scripting, and a little code when needed.</p>
       <p>If you’re wondering “Can she work with ___?” — probably. Ask me.</p>
-      <p>Ongoing student of <a href="https://www.shecodes.io/graduates/54828-candace-woodbury" target="_blank">SheCodes</a>. Always tinkering.</p>
+      <p>Ongoing student of <a href="https://www.shecodes.io/graduates/54828-candace-woodbury" target="_blank" rel="noopener">SheCodes</a>. Always tinkering.</p>
     </section>
 
     <section>
@@ -77,7 +90,7 @@
       <p>If you're feeling stuck, swamped, or quietly ready to shift something — email me.</p>
       <p><strong>Email:</strong> <a href="mailto:studio@candacewoodbury.com">studio@candacewoodbury.com</a><br>
       <strong>Location:</strong> Mountain West (available remote or with notice)</p>
-      <p><a href="https://cal.com/candacewoodbury/30min?overlayCalendar=true" target="_blank">→ Book a call</a></p>
+      <p><a href="https://cal.com/candacewoodbury/30min?overlayCalendar=true" target="_blank" rel="noopener">→ Book a call</a></p>
     </section>
 
     <section>
@@ -90,34 +103,5 @@
   <footer>
     <p>© 2025 Studio Drift · Candace Woodbury Consulting · Operated under Desert Drift Holdings</p>
   </footer>
-
-  <script>
-    const savedMode = localStorage.getItem("color-mode");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    function applyMode(mode) {
-      document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
-      if (mode === "dark") {
-        document.body.classList.add("dark-mode");
-      } else if (mode === "light") {
-        document.body.classList.add("light-mode");
-      } else {
-        if (prefersDark) {
-          document.body.classList.add("auto-dark");
-        }
-      }
-    }
-
-    applyMode(savedMode || "auto");
-
-    function toggleMode() {
-      const current = localStorage.getItem("color-mode") || "auto";
-      const next = current === "auto" ? "light"
-                  : current === "light" ? "dark"
-                  : "auto";
-      localStorage.setItem("color-mode", next);
-      applyMode(next);
-    }
-  </script>
 </body>
 </html>
