@@ -4,12 +4,21 @@
     <loc>https://candacewoodbury.com/</loc>
   </url>
   <url>
-    <loc>https://candacewoodbury.com/about.html</loc>
+    <loc>https://candacewoodbury.com/pages/about.html</loc>
   </url>
   <url>
-    <loc>https://candacewoodbury.com/notes/retirement.html</loc>
+    <loc>https://candacewoodbury.com/pages/projects.html</loc>
   </url>
   <url>
-    <loc>https://candacewoodbury.com/notes/stillness.html</loc>
+    <loc>https://candacewoodbury.com/pages/work-with-me.html</loc>
+  </url>
+  <url>
+    <loc>https://candacewoodbury.com/pages/notes/</loc>
+  </url>
+  <url>
+    <loc>https://candacewoodbury.com/pages/notes/retirement.html</loc>
+  </url>
+  <url>
+    <loc>https://candacewoodbury.com/pages/notes/stillness.html</loc>
   </url>
 </urlset>

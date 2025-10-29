@@ -1,15 +1,17 @@
 # TEAM
 Creator: Candace Woodbury
 Site: https://candacewoodbury.com
-Philosophy: Minimal. Quiet. Honest.
+Philosophy: Minimal. Quiet. Not here to optimize your funnel.
 Contact: hello@candacewoodbury.com
 
 # THANKS
-Coffee. Stillness. Those who choose silence.
+Powered by coffee, silence, and stubborn independence.
+Shout-out to people who delete more than they post.
 
 # TECHNOLOGY
-Built with: HTML, CSS, and calm.
-Hosting: GitHub Pages
+Built with: HTML, CSS, and the default human attention span.
+Hosting: GitHub Pages. Uptime may exceed ambition.
 
 # GREETINGS
-Welcome, human. No algorithms, no hustle—just words and a good cup of coffee.
+Welcome, human. No AI, no nudges, no “Hi there! Can I help you?” popups.
+Just words and caffeination. If you found this file, you’re probably real.

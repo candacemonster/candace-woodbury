@@ -11,57 +11,70 @@
   <meta property="og:image" content="/assets/favicon.svg" />
   <link rel="canonical" href="https://candacewoodbury.com/pages/about.html" />
   <title>About — Candace Woodbury</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/css/about.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <header>
-    <h1>About</h1>
+    <h1>about</h1>
     <nav role="navigation">
-      <a href="/index.html">home</a>
+      <a href="/index.html" aria-label="Home">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="vertical-align: middle;">
+          <path d="M3 8.7L10 3l7 5.7V16a1 1 0 0 1-1 1h-4v-4H8v4H4a1 1 0 0 1-1-1V8.7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </svg>
+      </a>
       <a href="/pages/about.html" aria-current="page">about</a>
+      <a href="/pages/notes/">notes</a>
+      <a href="/pages/projects.html">projects</a>
     </nav>
   </header>
 
   <main role="main">
     <section class="welcome">
-      <p>
-        <img src="/assets/favicon.svg" alt="Candace Woodbury's soft digital symbol" class="float-left" loading="lazy" />
-      </p>
       <p>I’ve been online long enough to know better. I used to post everywhere, convinced that someone might care. They didn’t. Now I don’t.</p>
       <p>This site exists because I still believe in websites — not feeds, not apps, not the latest thing pretending not to be Twitter. Just a plain place to put things.</p>
       <p>What’s here? Whatever survives. The projects I haven’t abandoned. A few notes that made it past the draft folder. Nothing optimized, monetized, or maintained with any regularity.</p>
       <div>
         <p>...and if you're still curious for some reason:</p>
         <ul>
-          <li>
-            <a href="https://www.youtube.com/@candacewoodbury" target="_blank">youtube</a> — occasionally, I upload something instead of deleting it.
-          </li>
-          <li>
-            <a href="mailto:hello@candacewoodbury.com">email me</a> — if it’s worth writing, it’s worth emailing.
-          </li>
+          <li>I’m Candace. I write code, mostly poorly.</li>
+          <li>I drink too much coffee and ride my bike in the desert.</li>
+          <li>I prefer silence, solitude, and slow things.</li>
+          <li>I’m allergic to hustle, urgency, and anything requiring a sign-up.</li>
         </ul>
       </div>
-    </section>
+      <div class="icon-links">
+  <a href="https://www.youtube.com/@candacewoodbury" target="_blank" aria-label="YouTube">
+    <span class="icon-bg"><i data-lucide="youtube"></i></span>
+  </a>
+  <a href="https://www.instagram.com/@candacemonster" target="_blank" aria-label="Instagram">
+    <span class="icon-bg"><i data-lucide="instagram"></i></span>
+  </a>
+  <a href="https://www.linkedin.com/in/candacewoodbury/" target="_blank" aria-label="LinkedIn">
+    <span class="icon-bg"><i data-lucide="linkedin"></i></span>
+  </a>
+  <a href="https://github.com/candacemonster" target="_blank" aria-label="Github">
+    <span class="icon-bg"><i data-lucide="github"></i></span>
+  </a>
+  <a href="mailto:hello@candacewoodbury.com" aria-label="Email">
+    <span class="icon-bg"><i data-lucide="mail"></i></span>
+  </a>
+</div>
 
-    <section class="side-projects">
-      <h2>still-running side projects (for now):</h2>
-      <div class="projects-grid">
-        <ul>
-          <li><a href="#" target="_blank">desert drift holdings</a></li>
-          <li><a href="https://desertdriftemporium.com" target="_blank">desert drift emporium</a></li>
-        </ul>
-        <ul>
-          <li><a href="https://journal.roastrideread.com" target="_blank">roast. ride. read.</a></li>
-          <li><a href="https://candidnook.com" target="_blank">candid nook</a></li>
-        </ul>
-      </div>
     </section>
   </main>
 
   <footer>
     <p>No newsletter. No promises. No urgency. You're welcome.</p>
   </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    lucide.createIcons();
+  });
+</script>
+
 </body>
 </html>

@@ -3,31 +3,32 @@
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue.svg)](https://pages.github.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A minimalist personal site for someone with no interest in branding, optimizing, or monetizing their personality.
+A minimalist site, maintained (sporadically) by someone allergic to branding, optimization, and digital hustle.
 
-Built with plain HTML and CSS—because it's enough.
+Built with plain HTML and CSS. No frameworks, no pipelines, no “growth hacks.” That’s intentional.
 
 ---
 
 ## What This Is
 
-A small, quiet corner of the internet.
+A small, quiet, intentionally undramatic corner of the internet.
 
-There are no life hacks here. No productivity pyramids. No call to *smash the button*. This exists because disappearing entirely didn’t feel quite right.
+There are no life hacks. No productivity pyramids. No “join the tribe” buttons. This exists because disappearing entirely felt overdramatic.
 
 You might find:
-- The occasional note, posted irregularly
-- A list of still-breathing side projects
-- Sentences I don’t entirely hate
+- The occasional note (posted irregularly, edited liberally, deleted quietly)
+- A listing of side projects yet to be abandoned
+- Sentences I almost like
 
 ---
 
 ## What This Isn’t
 
-- A blog (please)
+- A blog (please, no)
 - A startup
-- A personal brand
+- “Personal brand” territory
 - A funnel, pipeline, or ecosystem
+- An AI productivity tool (or any other sin)
 
 ---
 
@@ -35,12 +36,19 @@ You might find:
 
 candacewoodbury/
 ├── assets/
-│ └── favicon.svg
+│   └── favicon.svg
+├── css/
+│   ├── about.css
+│   ├── notes.css
+│   ├── projects.css
+│   └── work-with-me.css
 ├── pages/
-│ ├── about.html
-│ └── notes/
-│ ├── retirement.html
-│ └── stillness.html
+│   ├── about.html
+│   ├── projects.html
+│   ├── notes/
+│   │   ├── index.html
+│   │   ├── retirement.html
+│   │   └── stillness.html
 ├── .gitignore
 ├── 404.html
 ├── CNAME
@@ -52,54 +60,55 @@ candacewoodbury/
 ├── sitemap.xml
 └── styles.css
 
-
 - `index.html`: Home
-- `pages/`: Static pages and notes
-- `styles.css`: Global styles (automatic dark/light mode via OS preferences)
-- No JS except a single-line redirect on the 404 page
+- `/pages/`: Static pages for about, notes, projects, etc.
+- `/pages/notes/`: Each note is a single HTML file—no markdown, no build step
+- All CSS is custom, written by hand. No CSS-in-JS, no vendor lock-in.
+- Tiny sprinkles of JavaScript (literally a redirect on 404, Lucide icons loader)
+- No CMS. No database. No search.
 
 ---
 
 ## Maintenance
 
-- Edit HTML in VS Code or GitHub’s web editor
-- Add notes to `/pages/notes/`
-- Link new notes manually from `index.html`
-- Update `notes.xml` and `sitemap.xml` manually
-- Keep everything human-readable and intentionally quiet
+- Edit HTML/CSS in VS Code or GitHub’s web UI
+- Add notes: drop HTML files in `/pages/notes/`
+- Link new notes manually on notes index
+- Update `notes.xml` (RSS) and `sitemap.xml` as needed
+- Keep it simple, quiet, and as human-readable as possible
 
 ---
 
 ## Hosting & Metadata
 
-- Hosted via GitHub Pages
+- Hosted on GitHub Pages
 - Custom domain defined in `CNAME`
-- Minimal metadata for SEO/link previews (`description`, `og:title`, `og:description`, etc.)
-- Atom feed at `/notes.xml`
-- No tracking, no analytics, no cookie warnings
-- Just HTML and CSS
+- Minimal SEO (`description`, `og:title`, original favicon)
+- Atom-compatible RSS at `/notes.xml`
+- No analytics, tracking, cookie banners, or email pop-ups
 
 ---
 
 ## Accessibility
 
-- Text-based, fully navigable without JavaScript
-- Responsive layout with semantic HTML
-- Automatic dark/light mode via `prefers-color-scheme`
-- Tested for keyboard navigation and screen reader basics
+- Pure semantic HTML, keyboard accessible everywhere
+- Light/dark mode via OS `prefers-color-scheme`
+- No critical content behind JavaScript or dynamic loading
+- Regularly previewed with VoiceOver and keyboard nav
 
 ---
 
 ## Local Preview
 
-Just open `index.html` in a browser. No server or build step required.
+Just open `index.html` in your browser.  
+No server, build tool, or special incantation required.
 
 ---
 
 ## License
 
 MIT License  
-Reuse or adapt the code freely, with or without attribution.  
+Reuse or adapt any of the HTML/CSS as you like, with or without attribution.  
 All original writing remains © Candace Woodbury.
 
 ---
@@ -107,19 +116,19 @@ All original writing remains © Candace Woodbury.
 ## Author
 
 Candace Woodbury  
-https://candacewoodbury.com
+[https://candacewoodbury.com](https://candacewoodbury.com)
 
-Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.
+Sardonic by nature. Writing quietly. No newsletter, no sponsors, no affiliate links. Moving on.
 
 ---
 
 ## Contributors
 
-None—and that’s kind of the point.
+None. This is by design.
 
 ---
 
 ## Support
 
-No tips, no sponsors, no affiliate links.  
-If you found something here worth sitting with, that’s enough.
+There’s no Patreon, tip jar, “Buy Me a Coffee” widget, or NFT.  
+If you found something meaningful here, hang on to that feeling for yourself.

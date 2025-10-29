@@ -4,17 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
-  <title>Page Not Found — Candace Woodbury</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <title>404 — Candace Woodbury</title>
+  <link rel="stylesheet" href="/css/about.css" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <style>
+    main {
+      min-height: 60vh;
+      max-width: 520px;
+      margin: 7vw auto 0 auto;
+      padding: 42px 2vw 36px 2vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    main h1 {
+      font-family: 'Space Grotesk', monospace, sans-serif;
+      color: var(--headline);
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-transform: lowercase;
+      margin-bottom: 0.82em;
+      text-align: center;
+    }
+    main p {
+      color: var(--body);
+      font-size: 1.18rem;
+      max-width: 480px;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    main a {
+      color: var(--accent);
+      font-family: 'Space Grotesk', monospace, sans-serif;
+      border-bottom: 2px dotted var(--accent);
+      transition: color 0.17s, border-color 0.17s;
+      text-decoration: none;
+    }
+    main a:hover,
+    main a:focus {
+      color: var(--headline);
+      border-bottom: 2px solid var(--headline);
+    }
+    .emoji {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      display: block;
+      text-align: center;
+      opacity: 0.57;
+    }
+    @media (max-width: 700px) {
+      main { max-width: 99vw; padding: 32px 0 24px 0; }
+      main h1 { font-size: 2rem; }
+      main p { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-  <main style="max-width:600px; margin:4rem auto; padding:2rem;">
-    <h1 style="margin-bottom:1.5em;">This page wandered off.</h1>
-    <p style="margin-bottom:1.5em;">It’s probably gone for good — I’ve been tidying things up.</p>
-    <p style="margin-bottom:1.5em;">
-      You’ll be taken to the homepage in a moment. Or if you’re the impatient sort, 
-      <a href="/" style="color:#b05b6b; text-decoration:underline;">go there now</a>.
+  <main>
+    <span class="emoji">🕳️</span>
+    <h1>404: page not found</h1>
+    <p>This page ghosted. It’s either lost, deleted, or never existed in the first place.</p>
+    <p>If you were looking for something important… well, that’s unfortunate.</p>
+    <p>
+      Redirecting home in a moment.<br>
+      Or <a href="/">click here if patience isn’t your thing</a>.
     </p>
   </main>
   <script>

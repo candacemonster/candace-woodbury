@@ -4,63 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>on silence (and why i prefer it)</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/css/notes.css" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <meta name="description" content="On silence (and why I prefer it) — a note by Candace Woodbury" />
 </head>
 <body>
-<button class="mode-toggle" onclick="toggleMode()" id="modeToggle">🌓 Toggle</button>
+  <header>
+    <h1>notes</h1>
+    <nav role="navigation">
+      <a href="/index.html" aria-label="Home">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="vertical-align: middle;">
+          <path d="M3 8.7L10 3l7 5.7V16a1 1 0 0 1-1 1h-4v-4H8v4H4a1 1 0 0 1-1-1V8.7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </svg>
+      </a>
+      <a href="/pages/about.html">about</a>
+      <a href="/pages/notes/" aria-current="page">notes</a>
+      <a href="/pages/projects.html">projects</a>
+    </nav>
+  </header>
 
   <main>
-    <h1>on silence (and why i prefer it)</h1>
-    <time datetime="2025-06-20">June 20, 2025</time>
-
-<article>
-  <p>There was a time I filled every quiet moment — podcasts while walking, playlists while cleaning, messages and updates always whispering (or shouting) in the background. But lately, I’ve come to prefer the hush.</p>
-
-  <p>Silence isn’t empty. It’s full — of presence, breath, memory. It’s where the noise settles and the real things surface.</p>
-
-  <p>When I’m quiet, I notice more. I feel more. I remember who I am when no one’s watching or liking or refreshing.</p>
-
-  <p>This isn’t a manifesto. Just a margin note from a slower life. I don’t know what comes next — only that it will arrive more gently if I’m listening for it.</p>
-
-  <p><a href="/">← Back to Home</a></p>
-</article>
-
+    <section class="notes-blurb" style="margin-bottom:38px;">
+      <h2>on silence (and why i prefer it)</h2>
+      <time datetime="2025-06-20" style="font-size:14px; color:var(--dim-gray); opacity:0.8; display:block; margin-bottom:13px;">June 20, 2025</time>
+    </section>
+    <section class="note-card">
+      <article>
+        <p>There was a time I filled every quiet moment — podcasts while walking, playlists while cleaning, messages and updates always whispering (or shouting) in the background. But lately, I’ve come to prefer the hush.</p>
+        <p>Silence isn’t empty. It’s full — of presence, breath, memory. It’s where the noise settles and the real things surface.</p>
+        <p>When I’m quiet, I notice more. I feel more. I remember who I am when no one’s watching or liking or refreshing.</p>
+        <p>This isn’t a manifesto. Just a margin note from a slower life. I don’t know what comes next — only that it will arrive more gently if I’m listening for it.</p>
+        <p><a href="/pages/notes/">← Back to Notes</a></p>
+      </article>
+    </section>
   </main>
 
   <footer>
     <p>Marked here for no one in particular. -c</p>
   </footer>
-
-<script>
-  const savedMode = localStorage.getItem("color-mode");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  function applyMode(mode) {
-    document.body.classList.remove("light-mode", "dark-mode", "auto-dark");
-    if (mode === "dark") {
-      document.body.classList.add("dark-mode");
-    } else if (mode === "light") {
-      document.body.classList.add("light-mode");
-    } else {
-      if (prefersDark) {
-        document.body.classList.add("auto-dark");
-      }
-    }
-  }
-
-  // On load
-  applyMode(savedMode || "auto");
-
-  function toggleMode() {
-    const current = localStorage.getItem("color-mode") || "auto";
-    const next = current === "auto" ? "light"
-                : current === "light" ? "dark"
-                : "auto";
-    localStorage.setItem("color-mode", next);
-    applyMode(next);
-  }
-</script>
-
 </body>
 </html>

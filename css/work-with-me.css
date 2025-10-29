@@ -1,0 +1,218 @@
+:root {
+  --dim-gray: #777471;
+  --dark-chestnut: #967462;
+  --coffee: #705546;
+  --black-olive: #373935;
+  --background: #373935;
+  --headline: #967462;
+  --nav-link: #777471;
+  --nav-link-hover: #967462;
+  --body: #F3F2F1;
+  --accent: #705546;
+  --footer: #777471;
+}
+
+body {
+  background: var(--background);
+  color: var(--body);
+  font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+nav.main-nav {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+nav.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+nav.main-nav li {
+  display: flex;
+  align-items: center;
+}
+nav.main-nav a {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 18px;
+  color: var(--nav-link);
+  letter-spacing: 1.5px;
+  text-transform: lowercase;
+  border-bottom: 2px solid transparent;
+  transition: color 0.14s, border-color 0.18s;
+  display: flex;
+  align-items: center;
+}
+nav.main-nav a svg {
+  margin-right: 7px;
+  min-width: 20px;
+  min-height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+nav.main-nav a:hover,
+nav.main-nav a:focus {
+  color: var(--nav-link-hover);
+  border-bottom: 2px solid var(--accent);
+  outline: none;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  margin-top: 74px;
+  margin-bottom: 38px;
+  max-width: 540px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.intro h1 {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-weight: 700;
+  color: var(--headline);
+  font-size: 46px;
+  text-transform: lowercase;
+  margin-bottom: 38px;
+  letter-spacing: 2px;
+  transform: rotate(-2.3deg);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.intro h1::after {
+  content: "";
+  position: absolute;
+  left: 20px; bottom: -18px;
+  width: 280px;
+  height: 9px;
+  background: linear-gradient(90deg, var(--accent) 40%, transparent 100%);
+  opacity: 0.43;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.intro p {
+  margin: 24px 0 24px 0;
+  font-size: 19px;
+  color: var(--body);
+  z-index: 1;
+  text-align: left;
+  width: 100%;
+  max-width: 520px;
+}
+
+main > section {
+  margin-bottom: 38px;
+  max-width: 540px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: left;
+}
+
+main > section h2 {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-weight: 700;
+  color: var(--headline);
+  font-size: 23px;
+  text-transform: lowercase;
+  letter-spacing: 1.5px;
+  margin: 34px 0 10px 0;
+  text-align: left;
+}
+
+a, a[href^="mailto:"] {
+  color: var(--nav-link);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: color 0.14s, border-color 0.18s;
+}
+a:hover, a:focus, a[href^="mailto:"]:hover, a[href^="mailto:"]:focus {
+  color: var(--nav-link-hover);
+  border-bottom: 2px solid var(--accent);
+}
+
+ul {
+  margin-left: 18px;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: var(--footer);
+  opacity: 0.4;
+  border-top: 1px solid var(--accent);
+  padding: 56px 0 16px 0;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  nav.main-nav ul {
+    gap: 16px;
+  }
+  main {
+    padding: 0 3vw;
+  }
+  .intro {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 100vw;
+    padding: 0;
+  }
+  .intro h1 {
+    font-size: 29px;
+    margin-bottom: 28px;
+  }
+  .intro h1::after {
+    left: 7vw;
+    width: 70vw;
+  }
+  .intro p {
+    font-size: 16px;
+    max-width: 98vw;
+  }
+  main > section {
+    max-width: 99vw;
+    padding: 0 6vw;
+  }
+  main > section h2 {
+    font-size: 19px;
+    margin: 28px 0 8px 0;
+  }
+  ul {
+    margin-left: 6vw;
+    margin-bottom: 14px;
+  }
+  footer {
+    font-size: 12px;
+    padding: 44px 0 10px 0;
+  }
+}

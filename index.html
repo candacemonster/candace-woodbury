@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A small, quiet corner of the internet. No branding, no hustle. Just passing thoughts." />
+  <meta name="description" content="A small, intentionally insignificant corner of the internet. No branding. No hustle. Just passing irritants, disguised as thoughts." />
   <meta property="og:title" content="candacewoodbury.com" />
   <meta property="og:description" content="Writing quietly. Nothing to sell. No mailing list. Just passing thoughts." />
   <meta property="og:type" content="website" />
@@ -11,37 +11,46 @@
   <meta property="og:image" content="/assets/favicon.svg" />
   <link rel="canonical" href="https://candacewoodbury.com" />
   <title>Candace Woodbury</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap">
+  <link rel="stylesheet" href="/css/index.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes.xml" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 </head>
 <body>
-  <header>
-    <h1>candace woodbury</h1>
-    <nav role="navigation">
-      <a href="/index.html" aria-current="page">home</a>
-      <a href="/pages/about.html">about</a>
-    </nav>
-  </header>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li>
+        <a href="/index.html" aria-label="Home" aria-current="page">
+          <!-- Simple Home SVG icon -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="vertical-align: middle;">
+            <path d="M3 8.7L10 3l7 5.7V16a1 1 0 0 1-1 1h-4v-4H8v4H4a1 1 0 0 1-1-1V8.7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          </svg>
+        </a>
+      </li>
+      <li><a href="/pages/about.html">about</a></li>
+      <li><a href="/pages/notes/">notes</a></li>
+      <li><a href="/pages/projects.html">projects</a></li>
 
-  <main role="main">
-    <section class="welcome">
-      <p>This space is small on purpose.</p>
-      <p>I’ve let go of most things: platforms, posts, newsletters, metrics. What’s left is this — a page, a voice, some notes. No promises, no schedule, no performance.</p>
-      <p>Sometimes I write. Sometimes I don’t. When I do, I leave a letter here like a pressed flower in a book I almost gave away.</p>
-    </section>
+      <li><a href="mailto:hello@candacewoodbury.com">connect</a></li>
+    </ul>
+  </nav>
 
-    <section class="notes">
-      <h2>letters, notes &amp; ruminations</h2>
-      <ul>
-        <li><a href="/pages/notes/stillness.html">on silence (and why i prefer it)</a></li>
-        <li><a href="/pages/notes/retirement.html">retiring from the internet (again)</a></li>
-      </ul>
+  <main>
+    <section class="intro">
+      <h1>candace woodbury</h1>
+      <p>
+        This may look like a personal website, but really, it's just a holding pen for unmonetizable thoughts.<br>
+        No branding, no engagement hacks, no pop-ups, and—mercifully—no calls to action.
+      </p>
+      <p>
+        If you’re hoping for a manifesto, you’ll have to look elsewhere. (There are plenty.)<br>
+        Here: only a few notes, some context, and the faint hum of existential detachment.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>Writing quietly. Nothing to sell. No mailing list. Just passing thoughts.</p>
+    <p>Writing quietly. Nothing to sell. No mailing list. <br> Just passing thoughts.</p>
   </footer>
 </body>
 </html>
