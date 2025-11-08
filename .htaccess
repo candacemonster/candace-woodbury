@@ -1,0 +1,6 @@
+# Permanent redirects (301) to homepage
+
+Redirect 301 /pages/notes/ https://candacewoodbury.com/
+Redirect 301 /pages/notes/stillness.html https://candacewoodbury.com/
+Redirect 301 /pages/notes/retirement.html https://candacewoodbury.com/
+Redirect 301 /pages/projects.html https://candacewoodbury.com/
