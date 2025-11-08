@@ -4,3 +4,14 @@ Redirect 301 /pages/notes/ https://candacewoodbury.com/
 Redirect 301 /pages/notes/stillness.html https://candacewoodbury.com/
 Redirect 301 /pages/notes/retirement.html https://candacewoodbury.com/
 Redirect 301 /pages/projects.html https://candacewoodbury.com/
+
+# Redirect old work-with-me URL to new contract-work page
+
+Redirect 301 /pages/work-with-me.html https://candacewoodbury.com/pages/contract-work.html
+
+<Files "med.html">
+AuthType Basic
+AuthName "Emergency Access"
+AuthUserFile /absolute/path/to/.htpasswd
+Require valid-user
+</Files>

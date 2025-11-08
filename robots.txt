@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /pages/contract-work.html
+Disallow: /pages/med.html
+Sitemap: https://candacewoodbury.com/sitemap.xml

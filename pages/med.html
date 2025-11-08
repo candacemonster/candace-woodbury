@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emergency Medical Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Emergency medical information for Candace Woodbury"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/med.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  </head>
+  <body>
+    <!-- Password Protection Screen -->
+    <div id="password-screen">
+      <div class="password-container">
+        <h1>Emergency Access</h1>
+        <p>Enter 4-digit code from bracelet:</p>
+        <input
+          type="password"
+          id="password-input"
+          maxlength="4"
+          pattern="[0-9]*"
+          inputmode="numeric"
+          autocomplete="off"
+          autofocus
+        />
+        <p id="error-message" class="error hidden">
+          Incorrect code. Try again.
+        </p>
+      </div>
+    </div>
+
+    <!-- Protected Content (hidden until password entered) -->
+    <div id="protected-content" class="hidden">
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li>
+            <a href="/index.html" aria-label="Home">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                style="vertical-align: middle"
+              >
+                <path
+                  d="M3 8.7L10 3l7 5.7V16a1 1 0 0 1-1 1h-4v-4H8v4H4a1 1 0 0 1-1-1V8.7z"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  fill="none"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <section class="intro">
+          <h1>Emergency Medical Information</h1>
+          <p class="alert">Time-sensitive information for first responders</p>
+        </section>
+
+        <section class="content">
+          <h2>Personal Information</h2>
+          <ul class="info-list">
+            <li><strong>Name:</strong> Candace Woodbury</li>
+            <li><strong>Date of Birth:</strong> [YOUR DOB]</li>
+            <li><strong>Blood Type:</strong> [YOUR BLOOD TYPE]</li>
+            <li><strong>Height:</strong> [YOUR HEIGHT]</li>
+            <li><strong>Weight:</strong> [YOUR WEIGHT]</li>
+          </ul>
+        </section>
+
+        <section class="content">
+          <h2>Emergency Contacts</h2>
+          <ul class="info-list">
+            <li><strong>Primary Contact:</strong> [NAME] — [PHONE NUMBER]</li>
+            <li><strong>Secondary Contact:</strong> [NAME] — [PHONE NUMBER]</li>
+            <li>
+              <strong>Primary Care Physician:</strong> [DR. NAME] — [PHONE
+              NUMBER]
+            </li>
+          </ul>
+        </section>
+
+        <section class="content critical">
+          <h2>⚠️ Allergies</h2>
+          <ul class="info-list">
+            <li>[List any drug allergies or write "None known"]</li>
+            <li>[List any food allergies or environmental allergies]</li>
+          </ul>
+        </section>
+
+        <section class="content critical">
+          <h2>⚠️ Current Medications</h2>
+          <ul class="info-list">
+            <li>[Medication name, dosage, frequency]</li>
+            <li>[Add more as needed or write "None"]</li>
+          </ul>
+        </section>
+
+        <section class="content">
+          <h2>Medical Conditions</h2>
+          <ul class="info-list">
+            <li>
+              [List any chronic conditions, past surgeries, or relevant medical
+              history]
+            </li>
+            <li>[Write "None" if not applicable]</li>
+          </ul>
+        </section>
+
+        <section class="content">
+          <h2>Insurance Information</h2>
+          <ul class="info-list">
+            <li><strong>Provider:</strong> [INSURANCE COMPANY]</li>
+            <li><strong>Policy Number:</strong> [POLICY #]</li>
+            <li><strong>Group Number:</strong> [GROUP #]</li>
+          </ul>
+        </section>
+
+        <section class="content">
+          <h2>Additional Notes</h2>
+          <p>
+            [Any other relevant information for emergency responders: preferred
+            hospital, medical directives, etc.]
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>Last updated: [DATE] • For emergency use only</p>
+      </footer>
+    </div>
+
+    <script>
+      // Change this to your 4-digit password
+      const CORRECT_PASSWORD = "0385"; // ⚠️ CHANGE THIS TO YOUR ACTUAL 4-DIGIT CODE
+
+      const passwordScreen = document.getElementById("password-screen");
+      const protectedContent = document.getElementById("protected-content");
+      const passwordInput = document.getElementById("password-input");
+      const errorMessage = document.getElementById("error-message");
+
+      // Check if already authenticated in this session
+      if (sessionStorage.getItem("medAccess") === "granted") {
+        showContent();
+      }
+
+      passwordInput.addEventListener("input", function () {
+        if (this.value.length === 4) {
+          checkPassword(this.value);
+        }
+      });
+
+      passwordInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter" && this.value.length === 4) {
+          checkPassword(this.value);
+        }
+      });
+
+      function checkPassword(input) {
+        if (input === CORRECT_PASSWORD) {
+          sessionStorage.setItem("medAccess", "granted");
+          showContent();
+        } else {
+          errorMessage.classList.remove("hidden");
+          passwordInput.value = "";
+          passwordInput.classList.add("error-shake");
+          setTimeout(() => {
+            passwordInput.classList.remove("error-shake");
+            errorMessage.classList.add("hidden");
+          }, 2000);
+        }
+      }
+
+      function showContent() {
+        passwordScreen.style.display = "none";
+        protectedContent.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
