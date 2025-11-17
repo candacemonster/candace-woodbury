@@ -14,9 +14,9 @@
       :root {
         --main-bg: #d4c9b4; /* Irish Cream */
         --button-bg: #25330f; /* Spruce */
-        --button-hover: #b78c56; /* Vintage Gold */
+        --button-hover: #4a5a3a; /* Lighter olive for accessibility */
         --headline: #25330f; /* Spruce */
-        --text: #25330f; /* Spruce */
+        --text: #1a1a1a; /* Darker for better contrast */
         --accent: #741102; /* Cranberry */
       }
 
@@ -28,6 +28,8 @@
         background: var(--main-bg);
         color: var(--text);
         font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
         min-height: 100vh;
         margin: 0;
         display: flex;
@@ -37,9 +39,9 @@
       }
 
       main {
-        max-width: 540px;
+        max-width: 580px;
         width: 100%;
-        padding: 40px 20px;
+        padding: 48px 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -48,9 +50,9 @@
       }
 
       .emoji {
-        font-size: 64px;
+        font-size: 72px; /* Slightly larger */
         line-height: 1;
-        margin-bottom: 24px;
+        margin-bottom: 28px; /* More space */
         display: block;
         opacity: 0.5;
       }
@@ -58,20 +60,32 @@
       main h1 {
         font-family: "Space Grotesk", monospace, sans-serif;
         color: var(--headline);
-        font-size: 42px;
+        font-size: 48px; /* Larger heading */
         font-weight: 700;
         text-transform: lowercase;
-        margin-bottom: 24px;
-        letter-spacing: 2px;
+        margin-bottom: 28px; /* More space */
+        letter-spacing: 2.5px; /* Increased spacing */
         transform: rotate(-1.5deg);
+      }
+
+      /* Minimal accent line */
+      main h1::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--headline), transparent);
+        margin: 1.5rem auto 0;
+        opacity: 0.4;
+        transform: rotate(1.5deg); /* Counter-rotate */
       }
 
       main p {
         color: var(--text);
         font-size: 18px;
-        line-height: 1.65;
-        max-width: 500px;
-        margin-bottom: 18px;
+        line-height: 1.7; /* Increased line height */
+        max-width: 520px;
+        margin-bottom: 20px; /* More space between paragraphs */
       }
 
       main a {
@@ -79,7 +93,7 @@
         font-family: "Space Grotesk", monospace, sans-serif;
         font-weight: 700;
         border-bottom: 2px solid var(--accent);
-        transition: color 0.13s, border-color 0.13s;
+        transition: color 0.3s ease, border-color 0.3s ease;
         text-decoration: none;
         letter-spacing: 0.5px;
       }
@@ -91,27 +105,61 @@
         outline: none;
       }
 
+      /* Keyboard focus state */
+      main a:focus-visible {
+        outline: 2px solid var(--headline);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+
       .timer {
-        font-size: 14px;
+        font-size: 15px; /* Slightly larger */
         color: var(--text);
-        opacity: 0.6;
-        margin-top: 32px;
+        opacity: 0.65; /* More visible */
+        margin-top: 36px; /* More space */
         font-style: italic;
+        line-height: 1.6;
       }
 
       @media (max-width: 600px) {
         main {
           max-width: 100vw;
-          padding: 32px 16px;
+          padding: 36px 20px;
         }
-        main h1 {
-          font-size: 28px;
-        }
-        main p {
-          font-size: 15px;
-        }
+        
         .emoji {
-          font-size: 48px;
+          font-size: 56px;
+          margin-bottom: 20px;
+        }
+        
+        main h1 {
+          font-size: 32px; /* Larger on mobile */
+          margin-bottom: 20px;
+          letter-spacing: 2px;
+        }
+        
+        main p {
+          font-size: 16px; /* Slightly larger */
+          line-height: 1.65;
+        }
+        
+        .timer {
+          font-size: 14px;
+          margin-top: 28px;
+        }
+      }
+
+      /* High contrast mode support */
+      @media (prefers-contrast: high) {
+        :root {
+          --text: #000;
+        }
+      }
+
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        main a {
+          transition: none;
         }
       }
     </style>

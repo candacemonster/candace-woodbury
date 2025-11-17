@@ -1,11 +1,11 @@
 :root {
   --main-bg: #d4c9b4; /* Irish Cream */
   --button-bg: #25330f; /* Spruce */
-  --button-hover: #b78c56; /* Vintage Gold */
+  --button-hover: #4a5a3a; /* Lighter olive for accessibility */
   --headline: #25330f; /* Spruce */
-  --text: #25330f; /* Spruce */
+  --text: #1a1a1a; /* Darker for better contrast */
   --accent: #741102; /* Cranberry */
-  --footer: #929079; /* Eucalyptus */
+  --footer: #6b6952; /* Darker for accessibility */
   --link: #741102; /* Cranberry for links */
 }
 
@@ -13,6 +13,8 @@ body {
   background: var(--main-bg);
   color: var(--text);
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -21,14 +23,14 @@ body {
 
 /* Navigation */
 nav.main-nav {
-  margin-top: 32px;
+  margin-top: 36px; /* Increased spacing */
   display: flex;
   justify-content: center;
 }
 
 nav.main-nav ul {
   display: flex;
-  gap: 28px;
+  gap: 32px; /* Increased gap */
   list-style: none;
   padding: 0;
   align-items: center;
@@ -46,7 +48,7 @@ nav.main-nav a {
   letter-spacing: 1.5px;
   text-transform: lowercase;
   border-bottom: 2px solid transparent;
-  transition: color 0.13s, border-color 0.14s;
+  transition: color 0.3s ease, border-color 0.3s ease;
   display: flex;
   align-items: center;
   padding: 3px 7px 3px 0;
@@ -68,19 +70,26 @@ nav.main-nav a:focus {
   outline: none;
 }
 
+/* Keyboard focus state */
+nav.main-nav a:focus-visible {
+  outline: 2px solid var(--headline);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 /* Main Content */
 main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 60px 20px;
+  padding: 48px 24px 72px 24px; /* Increased padding */
 }
 
 .intro {
-  margin-top: 32px;
-  margin-bottom: 48px;
-  max-width: 580px;
+  margin-top: 36px; /* Increased spacing */
+  margin-bottom: 56px; /* More space */
+  max-width: 620px; /* Slightly wider */
   width: 100%;
   text-align: center;
 }
@@ -89,58 +98,70 @@ main {
   font-family: "Space Grotesk", monospace, sans-serif;
   font-weight: 700;
   color: var(--headline);
-  font-size: 40px;
+  font-size: 48px; /* Larger heading */
   text-transform: lowercase;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+  margin-bottom: 28px; /* More space */
+  letter-spacing: 2.5px; /* Increased spacing */
   transform: rotate(-1.8deg);
+}
+
+/* Minimal accent line */
+.intro h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--headline), transparent);
+  margin: 1.5rem auto 0;
+  opacity: 0.4;
+  transform: rotate(1.8deg); /* Counter-rotate */
 }
 
 .intro p {
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.7; /* Increased line height */
   color: var(--text);
   margin: 0 auto;
-  max-width: 540px;
+  max-width: 560px;
 }
 
 /* Content Sections */
 .content {
-  max-width: 580px;
+  max-width: 620px; /* Slightly wider */
   width: 100%;
-  margin-bottom: 42px;
+  margin-bottom: 48px; /* More space between sections */
 }
 
 .content h2 {
   font-family: "Space Grotesk", monospace, sans-serif;
   font-weight: 700;
   color: var(--headline);
-  font-size: 26px;
+  font-size: 28px; /* Slightly larger */
   text-transform: lowercase;
-  margin-bottom: 18px;
-  letter-spacing: 1.5px;
+  margin-bottom: 20px; /* More space */
+  letter-spacing: 1.8px;
 }
 
 .content p {
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.7; /* Increased line height */
   color: var(--text);
-  margin-bottom: 20px;
+  margin-bottom: 24px; /* More space */
 }
 
 .content ul {
   list-style: none;
   padding-left: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 24px 0; /* More bottom margin */
 }
 
 .content ul li {
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.8; /* Increased for readability */
   color: var(--text);
-  padding-left: 20px;
+  padding-left: 24px; /* More indent space */
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 14px; /* More space between items */
 }
 
 .content ul li::before {
@@ -154,7 +175,8 @@ main {
 .content a {
   color: var(--link);
   text-decoration: underline;
-  transition: color 0.13s;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Slightly heavier for emphasis */
 }
 
 .content a:hover,
@@ -163,53 +185,99 @@ main {
   outline: none;
 }
 
+/* Keyboard focus state */
+.content a:focus-visible {
+  outline: 2px solid var(--headline);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* Footer */
 footer {
   flex-shrink: 0;
   width: 100%;
   text-align: center;
-  font-size: 13px;
+  font-size: 13px; /* Slightly larger */
   color: var(--footer);
-  opacity: 0.6;
-  border-top: 1px solid var(--button-bg);
-  padding: 26px 0 16px 0;
-  letter-spacing: 1px;
+  opacity: 0.75; /* More visible */
+  border-top: 1px solid rgba(37, 51, 15, 0.2);
+  padding: 32px 0 20px 0; /* More padding */
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 0.5rem 0;
 }
 
 /* Responsive Mobile */
 @media (max-width: 600px) {
+  nav.main-nav {
+    margin-top: 24px;
+  }
+  
   nav.main-nav ul {
-    gap: 16px;
+    gap: 20px;
   }
+  
   main {
-    padding: 20px 12px 40px 12px;
+    padding: 28px 16px 48px 16px;
   }
+  
   .intro {
-    margin-top: 20px;
-    margin-bottom: 32px;
+    margin-top: 24px;
+    margin-bottom: 40px;
   }
+  
   .intro h1 {
-    font-size: 27px;
+    font-size: 32px; /* Larger on mobile */
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .intro p {
+    font-size: 16px; /* Slightly larger */
+    line-height: 1.65;
+  }
+  
+  .content {
+    margin-bottom: 36px;
+  }
+  
+  .content h2 {
+    font-size: 24px; /* Larger */
     margin-bottom: 16px;
   }
-  .intro p {
-    font-size: 15px;
-  }
-  .content {
-    margin-bottom: 32px;
-  }
-  .content h2 {
-    font-size: 22px;
-    margin-bottom: 14px;
-  }
+  
   .content p {
-    font-size: 15px;
+    font-size: 16px; /* Slightly larger */
+    line-height: 1.65;
   }
+  
   .content ul li {
-    font-size: 15px;
+    font-size: 16px; /* Larger for readability */
+    line-height: 1.7;
+    margin-bottom: 12px;
   }
+  
   footer {
-    font-size: 11px;
-    padding: 15px 0 6px 0;
+    font-size: 12px;
+    padding: 20px 0 12px 0;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text: #000;
+    --footer: #4a4a4a;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  nav.main-nav a,
+  .content a {
+    transition: none;
   }
 }

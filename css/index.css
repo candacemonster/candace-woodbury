@@ -1,17 +1,19 @@
 :root {
   --main-bg: #d4c9b4; /* Irish Cream */
   --button-bg: #25330f; /* Spruce */
-  --button-hover: #b78c56; /* Vintage Gold */
+  --button-hover: #4a5a3a; /* Lighter olive for better accessibility */
   --headline: #25330f; /* Spruce */
-  --text: #25330f; /* Spruce */
+  --text: #1a1a1a; /* Darker for better contrast/readability */
   --button-text: #fff; /* White */
-  --footer: #929079; /* Eucalyptus */
+  --footer: #6b6952; /* Darker for accessibility */
 }
 
 body {
   background: var(--main-bg);
   color: var(--text);
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -27,15 +29,16 @@ main {
   justify-content: center;
   margin-bottom: 0;
   width: 100%;
+  padding: 2rem 1rem;
 }
 
 /* Intro */
 .intro {
   margin-top: 56px;
-  margin-bottom: 42px;
-  max-width: 540px;
+  margin-bottom: 48px; /* Increased spacing */
+  max-width: 580px; /* Slightly wider for breathing room */
   width: 98vw;
-  padding: 0 10px;
+  padding: 0 20px; /* More padding */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,22 +49,35 @@ main {
   font-family: "Space Grotesk", monospace, sans-serif;
   font-weight: 700;
   color: var(--headline);
-  font-size: 40px;
+  font-size: 48px; /* Larger, bolder presence */
   text-transform: lowercase;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+  margin-bottom: 24px; /* More space below heading */
+  letter-spacing: 3px; /* Increased letter spacing */
   transform: rotate(-2deg);
   text-align: center;
 }
 
+/* Minimal accent line - subtle visual break */
+.intro h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--headline), transparent);
+  margin: 1.5rem auto 0;
+  opacity: 0.4;
+  transform: rotate(2deg); /* Counter-rotate for interest */
+}
+
 .intro p {
-  margin: 0 0 15px 0;
+  margin: 0 0 18px 0;
   font-size: 18px;
+  font-weight: 400; /* Explicitly lighter than heading */
   color: var(--text);
   text-align: center;
   width: 100%;
-  max-width: 530px;
-  line-height: 1.6;
+  max-width: 560px;
+  line-height: 1.7; /* Increased line height for readability */
 }
 
 /* Button Links Section */
@@ -71,7 +87,7 @@ main {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px; /* Increased gap between buttons */
   align-items: center;
 }
 
@@ -79,8 +95,8 @@ main {
   background: var(--button-bg);
   color: var(--button-text);
   text-align: center;
-  min-width: 280px;
-  padding: 16px 0 16px 0;
+  min-width: 300px; /* Slightly wider */
+  padding: 18px 32px; /* More generous padding */
   border-radius: 17px;
   font-size: 18px;
   font-family: "Space Grotesk", monospace, sans-serif;
@@ -88,7 +104,7 @@ main {
   box-shadow: 0 2px 12px 0 rgba(36, 36, 36, 0.06),
     0 1.5px 4.5px 0 rgba(182, 139, 99, 0.04);
   border: none;
-  transition: background 0.13s, color 0.13s, transform 0.12s, box-shadow 0.16s;
+  transition: all 0.3s ease; /* Smoother, unified transition */
   cursor: pointer;
   text-decoration: none;
   display: block;
@@ -98,11 +114,17 @@ main {
 .button:hover,
 .button:focus {
   background: var(--button-hover);
-  color: var(--button-bg);
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 5px 12px 0 rgba(36, 36, 36, 0.11),
-    0 3px 11px 0 rgba(182, 139, 99, 0.1);
+  color: var(--button-text); /* Keep text white on hover */
+  transform: translateY(-3px) scale(1.02); /* Subtle lift */
+  box-shadow: 0 6px 16px 0 rgba(36, 36, 36, 0.12),
+    0 4px 12px 0 rgba(37, 51, 15, 0.15);
   outline: none;
+}
+
+/* Keyboard focus state for accessibility */
+.button:focus-visible {
+  outline: 2px solid var(--headline);
+  outline-offset: 4px;
 }
 
 /* Footer */
@@ -110,15 +132,20 @@ footer {
   flex-shrink: 0;
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px; /* Slightly larger */
   color: var(--footer);
-  opacity: 0.6;
-  border-top: 1px solid var(--button-bg);
-  padding: 26px 0 16px 0;
-  letter-spacing: 1px;
+  opacity: 0.75; /* More visible */
+  border-top: 1px solid rgba(37, 51, 15, 0.2);
+  padding: 32px 0 20px 0; /* More padding */
+  letter-spacing: 0.5px;
+  line-height: 1.6; /* Better readability */
   position: relative;
   z-index: 0;
   background: transparent;
+}
+
+footer p {
+  margin: 0.5rem 0;
 }
 
 /* Responsive tweaks for mobile */
@@ -126,27 +153,58 @@ footer {
   main {
     padding: 0 2vw;
   }
+  
   .intro {
-    margin-top: 27px;
-    margin-bottom: 25px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     max-width: 100vw;
-    padding: 0;
+    padding: 0 16px;
   }
+  
   .intro h1 {
-    font-size: 27px;
-    margin-bottom: 13px;
+    font-size: 32px; /* Larger than before on mobile */
+    margin-bottom: 16px;
+    letter-spacing: 2px;
   }
+  
   .intro p {
-    font-size: 15px;
+    font-size: 16px; /* Slightly larger for mobile readability */
     max-width: 99vw;
+    line-height: 1.6;
   }
+  
+  .links ul {
+    gap: 18px;
+  }
+  
   .links .button {
     min-width: 280px;
-    font-size: 15.5px;
-    padding: 12px 0 12px 0;
+    font-size: 16px;
+    padding: 14px 24px;
   }
+  
   footer {
-    font-size: 11px;
-    padding: 15px 0 6px 0;
+    font-size: 12px;
+    padding: 20px 0 12px 0;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text: #000;
+    --footer: #4a4a4a;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+  
+  .button:hover,
+  .button:focus {
+    transform: none;
   }
 }
