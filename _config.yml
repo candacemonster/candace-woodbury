@@ -1,0 +1,44 @@
+# Site settings
+title: Candace Woodbury
+description: Customer Success Manager, Writer, Outdoor Enthusiast
+url: "https://candacewoodbury.com"
+baseurl: ""
+
+# Author
+author:
+  name: Candace Woodbury
+  email: hello@candacewoodbury.com
+  linkedin: candacewoodbury
+  youtube: your-youtube-handle
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: Connect
+    url: /pages/connect
+  - title: Creatives
+    url: /pages/creatives
+  - title: Field Notes
+    url: /blog
+  - title: Gear
+    url: /pages/gear
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .jekyll-cache
+
+sass:
+  style: compressed
+  sass_dir: _sass

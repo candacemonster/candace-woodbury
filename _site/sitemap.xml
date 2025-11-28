@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/blog/2025/07/15/dog-boots-that-didnt-suck/</loc>
+<lastmod>2025-07-15T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/2025/07/20/the-waters-right-there/</loc>
+<lastmod>2025-07-20T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/2025/09/27/autumn-equinox-monitor-tan/</loc>
+<lastmod>2025-09-27T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/2025/11/05/high-point-trail-last-stretch/</loc>
+<lastmod>2025-11-05T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/pages/connect</loc>
+</url>
+<url>
+<loc>http://localhost:4000/pages/creatives</loc>
+</url>
+<url>
+<loc>http://localhost:4000/pages/gear</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+</urlset>

@@ -1,102 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Modern digital apathy, neatly compiled. Five links. Zero hustle. Enjoy."
-    />
-    <meta property="og:title" content="Candace Woodbury" />
-    <meta
-      property="og:description"
-      content="Field notes, mild contempt, scattered links."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://candacewoodbury.com" />
-    <meta property="og:image" content="/assets/favicon.svg" />
-    <link rel="canonical" href="https://candacewoodbury.com" />
-    <title>Candace Woodbury</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap"
-    />
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  </head>
-  <body>
-    <main>
-      <section class="intro">
-        <h1>candace woodbury</h1>
-        <p>
-          Minimal effort. Maximum detachment.<br />
-          No pop-ups, no platitudes, no digital epiphanies. Just five buttons
-          for whoever is left using the open web.<br />
-          Is this what authenticity looks like? Unlikely.
-        </p>
-      </section>
-      <section class="links">
-        <ul>
-          <li>
-            <a
-              href="/pages/about.html"
-              class="button"
-              title="About, contact... direct all existential questions here."
-            >
-              Who, What, Why
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/candacewoodbury"
-              target="_blank"
-              rel="noopener"
-              class="button"
-              title="LinkedIn: Witness the joy of business formalities."
-            >
-              Professional Obligation
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.shecodes.io/graduates/54828-candace-woodbury"
-              target="_blank"
-              rel="noopener"
-              class="button"
-              title="SheCodes: Yes, I finished the tutorials."
-            >
-              Proof of Effort
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="button"
-              title="Newsletter: Under consideration. Remain on standby."
-            >
-              Eventually, Perhaps
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://journal.roastrideread.com"
-              target="_blank"
-              rel="noopener"
-              class="button"
-              title="Field Notes: Mildly interesting dispatches."
-            >
-              Occasionally Updated
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>
-        No sales. No shouting. No urgency. <br />
-        If that disappoints you, congratulations on your optimism.
-      </p>
-      <p>©2025 Candace Woodbury</p>
-    </footer>
-  </body>
-</html>
+---
+layout: home
+title: Home
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>candace</h1>
+    <p>helping systems behave, then going outside to recover.</p>
+    <p class="tagline">soft plans, long hikes, decent coffee.</p>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="container">
+    <div class="card-grid">
+      <div class="card">
+        <h3>connect</h3>
+        <p>email, linkedin, and youtube. that’s it.</p>
+        <a href="{{ '/pages/connect' | relative_url }}" class="btn">connect</a>
+      </div>
+      
+      <div class="card">
+        <h3>creatives</h3>
+        <p>books, code, and slow-burn side projects.</p>
+        <a href="{{ '/pages/creatives' | relative_url }}" class="btn">creatives</a>
+      </div>
+      
+      <div class="card">
+        <h3>field notes</h3>
+        <p>brief reports from real days: screens, mountains, and the miles between.</p>
+        <a href="{{ '/blog' | relative_url }}" class="btn">field notes</a>
+      </div>
+      
+      <div class="card">
+        <h3>gear</h3>
+        <p>things i actually use: work, trail, coffee.</p>
+        <a href="{{ '/pages/gear' | relative_url }}" class="btn">gear</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-posts">
+  <div class="container">
+    <h2>recent field notes</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit:3 %}
+      <article>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">read more</a>
+      </article>
+      {% endfor %}
+    </ul>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ '/blog' | relative_url }}" class="btn">all field notes</a>
+    </div>
+  </div>
+</section>

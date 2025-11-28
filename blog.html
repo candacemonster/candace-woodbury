@@ -1,0 +1,39 @@
+---
+layout: page
+title: Field Notes
+permalink: /blog/
+---
+
+<div class="blog-intro">
+  <p>field notes from real days: work, travel, clinics, and the in‑between miles.</p>
+</div>
+
+<div class="post-list">
+  {% for post in site.posts %}
+  <article class="post-preview">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      {% if post.tags %}
+      <span class="post-tags">
+        {% for tag in post.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </p>
+    
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    {% endif %}
+    
+    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+  </article>
+  {% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<div class="no-posts">
+  <p>quiet for now. the notes will catch up.</p>
+</div>
+{% endif %}

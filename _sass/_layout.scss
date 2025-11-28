@@ -1,0 +1,816 @@
+@import 'variables';
+
+// Header & Navigation
+.site-header {
+  background-color: rgba($color-background, 0.95);
+  padding: $spacing-md 0;
+  border-bottom: 1px solid rgba($color-border, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-sm 0;
+  }
+}
+
+.site-title {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 400;
+  color: $color-text;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  list-style: none;
+  
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+    
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-background;
+      padding: $spacing-lg;
+      gap: $spacing-md;
+      align-items: flex-start;
+      overflow-y: auto;
+    }
+  }
+  
+  a {
+    color: $color-text-light;
+    font-weight: 400;
+    font-size: $font-size-small;
+    letter-spacing: 0.3px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-primary;
+      transition: width 0.2s ease;
+    }
+    
+    &:hover, &.active {
+      color: $color-primary;
+      
+      &::after {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 20px;
+    }
+  }
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-xs;
+  z-index: 101;
+  
+  @media (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-text;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+}
+
+// Hero / Landing Section
+.hero {
+  text-align: center;
+  padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 10vw, 6rem);
+  
+  h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    margin-bottom: $spacing-md;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  
+  p {
+    font-size: clamp(18px, 2.5vw, 20px);
+    color: $color-text-light;
+    max-width: 700px;
+    margin: 0 auto $spacing-sm;
+    line-height: 1.6;
+  }
+  
+  .tagline {
+    font-style: italic;
+    font-size: clamp(16px, 2vw, 18px);
+    color: $color-accent;
+  }
+}
+
+// Card Grid - No boxes, just flowing content
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: $spacing-lg 0;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s ease;
+  position: relative;
+  
+  &:hover {
+    transform: translateX(4px);
+    
+    h3 {
+      color: $color-accent;
+    }
+    
+    &::before {
+      width: 40px;
+    }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-primary;
+    transition: width 0.3s ease;
+  }
+  
+  h3 {
+    color: $color-primary;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    font-weight: 400;
+    font-size: clamp(20px, 2.5vw, 24px);
+    transition: color 0.2s ease;
+  }
+  
+  p {
+    color: $color-text-light;
+    line-height: 1.8;
+    margin-bottom: $spacing-md;
+  }
+  
+  .btn {
+    margin-top: $spacing-xs;
+  }
+}
+
+// Section Spacing
+.intro-section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.recent-posts {
+  padding: clamp(4rem, 10vw, 7rem) 0;
+  margin-top: clamp(3rem, 8vw, 5rem);
+  border-top: 1px solid rgba($color-border, 0.5);
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    color: $color-primary;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 36px);
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: $color-primary;
+      margin: $spacing-md auto 0;
+    }
+  }
+}
+
+// Blog Posts - More organic
+.post-list {
+  list-style: none;
+  
+  article {
+    padding: clamp(2rem, 5vw, 3rem) 0;
+    border-bottom: 1px solid rgba($color-border, 0.3);
+    transition: padding-left 0.2s ease;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    &:hover {
+      padding-left: $spacing-sm;
+    }
+    
+    h3, h2 {
+      margin-bottom: $spacing-xs;
+      font-weight: 400;
+      
+      a {
+        color: $color-text;
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.post-meta {
+  font-size: $font-size-small;
+  color: $color-text-light;
+  margin-bottom: $spacing-sm;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.post-excerpt {
+  color: $color-text-light;
+  line-height: 1.8;
+  margin: $spacing-sm 0;
+}
+
+.read-more {
+  color: $color-primary;
+  font-weight: 400;
+  font-size: $font-size-small;
+  display: inline-block;
+  position: relative;
+  
+  &::after {
+    content: '→';
+    margin-left: 6px;
+    transition: margin-left 0.2s ease;
+  }
+  
+  &:hover {
+    color: $color-accent;
+    
+    &::after {
+      margin-left: 12px;
+    }
+  }
+}
+
+// Page styling
+.page {
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  
+  .page-header {
+    margin-bottom: clamp(3rem, 8vw, 5rem);
+    
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      color: $color-primary;
+      font-weight: 300;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background-color: $color-primary;
+      }
+    }
+  }
+  
+  .page-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// Post styling
+.post {
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  
+  .post-header {
+    margin-bottom: clamp(3rem, 8vw, 5rem);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      color: $color-text;
+      margin-bottom: $spacing-md;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+  
+  .post-content {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: clamp(17px, 2vw, 19px);
+    line-height: 1.8;
+    
+    h2, h3, h4 {
+      margin-top: clamp(2.5rem, 6vw, 3.5rem);
+      margin-bottom: $spacing-md;
+      font-weight: 400;
+    }
+    
+    h2 {
+      position: relative;
+      padding-bottom: $spacing-sm;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background-color: $color-primary;
+      }
+    }
+    
+    img {
+      margin: $spacing-lg 0;
+      width: 100%;
+      height: auto;
+    }
+    
+    blockquote {
+      border-left: 2px solid $color-primary;
+      padding-left: $spacing-md;
+      margin: $spacing-lg 0;
+      color: $color-text-light;
+      font-style: italic;
+    }
+  }
+  
+  .post-footer {
+    max-width: 720px;
+    margin: clamp(4rem, 8vw, 6rem) auto 0;
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba($color-border, 0.5);
+  }
+}
+
+.post-navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-lg;
+  
+  a {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s ease;
+    color: $color-text-light;
+    
+    &:hover {
+      color: $color-primary;
+      transform: translateX(4px);
+    }
+    
+    &.prev-post:hover {
+      transform: translateX(-4px);
+    }
+    
+    &.next-post {
+      text-align: right;
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  background-color: transparent;
+  color: $color-text-light;
+  padding: clamp(3rem, 6vw, 4rem) 0 $spacing-lg;
+  margin-top: clamp(6rem, 12vw, 10rem);
+  text-align: center;
+  border-top: 1px solid rgba($color-border, 0.5);
+  
+  a {
+    color: $color-primary;
+    
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  
+  p {
+    font-size: $font-size-small;
+  }
+}
+
+.site-content {
+  min-height: calc(100vh - 300px);
+}
+
+// Blog intro
+.blog-intro {
+  max-width: 700px;
+  margin: 0 auto clamp(3rem, 8vw, 5rem);
+  font-size: clamp(18px, 2.5vw, 20px);
+  color: $color-text-light;
+  font-style: italic;
+  line-height: 1.7;
+  text-align: center;
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid rgba($color-border, 0.3);
+}
+
+.post-preview {
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  border-bottom: 1px solid rgba($color-border, 0.3);
+  transition: padding-left 0.2s ease;
+  
+  &:hover {
+    padding-left: $spacing-sm;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  h2 {
+    margin-bottom: $spacing-xs;
+    font-weight: 400;
+    
+    a {
+      color: $color-text;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.post-tags {
+  margin-left: $spacing-sm;
+  display: inline-flex;
+  gap: $spacing-xs;
+  flex-wrap: wrap;
+  
+  .tag {
+    display: inline-block;
+    background-color: transparent;
+    color: $color-accent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 14px;
+    font-style: normal;
+    
+    &::before {
+      content: '#';
+      opacity: 0.5;
+    }
+  }
+}
+
+.no-posts {
+  text-align: center;
+  padding: clamp(4rem, 10vw, 6rem) 0;
+  color: $color-text-light;
+  font-style: italic;
+}
+
+// ============================================
+// GEAR PAGE LAYOUT – SECTIONS, NOT BOXES
+// ============================================
+
+// gear page layout – sections + aligned rows
+
+.gear-sections {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.5rem, 4vw, 3rem);
+  margin-top: 2rem;
+}
+
+.gear-category {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gear-category h2 {
+  font-size: clamp(22px, 2.6vw, 26px);
+  margin-bottom: 0.75rem;
+  color: $color-primary;
+  font-weight: 400;
+}
+
+.gear-group {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba($color-border, 0.7);
+}
+
+.gear-group:first-of-type {
+  margin-top: 0.75rem;
+  border-top: none;
+  padding-top: 0;
+}
+
+.gear-group h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+  color: $color-text-light;
+}
+
+/* gear rows */
+
+.gear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gear-item {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.35fr) minmax(0, 1fr) auto;
+  column-gap: 1rem;
+  align-items: baseline;
+  padding: 0.15rem 0;
+}
+
+.gear-item + .gear-item {
+  border-top: 1px solid rgba($color-border, 0.4);
+  margin-top: 0.15rem;
+  padding-top: 0.3rem;
+}
+
+.gear-name {
+  font-weight: 400;
+  color: $color-text;
+}
+
+.gear-name a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba($color-primary, 0.3);
+}
+
+.gear-name a:hover {
+  border-bottom-color: rgba($color-primary, 0.8);
+}
+
+.gear-note {
+  color: $color-text-light;
+  font-size: 0.95rem;
+}
+
+.gear-rating {
+  font-size: 0.8rem;
+  color: $color-text-light;
+  white-space: nowrap;
+}
+
+/* responsive tweaks for small screens */
+
+@media (max-width: 650px) {
+  .gear-item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.1rem;
+  }
+
+  .gear-rating {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+}
+
+
+// ============================================
+// COMPREHENSIVE MOBILE RESPONSIVENESS
+// ============================================
+
+// Small mobile devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .hero {
+    padding: clamp(2rem, 8vw, 3rem) 0;
+    
+    h1 {
+      font-size: clamp(28px, 8vw, 36px);
+      line-height: 1.2;
+    }
+    
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 6vw, 3rem);
+  }
+  
+  .card {
+    h3 {
+      font-size: 20px;
+    }
+  }
+  
+  .site-nav {
+    padding: 0;
+  }
+  
+  .recent-posts h2 {
+    font-size: 24px;
+  }
+  
+  .post-header h1,
+  .page-header h1 {
+    font-size: 26px;
+  }
+  
+  .post-content,
+  .page-content {
+    font-size: 17px;
+  }
+  
+  .gear-section {
+    padding: 1.25rem 1rem;
+  }
+  
+  .gear-section h2 {
+    font-size: 18px;
+  }
+  
+  .gear-section h3 {
+    font-size: 13px;
+  }
+}
+
+// Medium devices (tablets, 576px to 768px)
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 42px);
+  }
+}
+
+// Large tablets and small desktops (768px to 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Touch device optimizations
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-links a,
+  .read-more {
+    padding: 8px 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .mobile-menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .card:hover,
+  .post-list article:hover,
+  .post-preview:hover {
+    transform: none;
+    padding-left: 0;
+  }
+}
+
+// Landscape mobile phones
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero {
+    padding: clamp(1.5rem, 4vh, 2.5rem) 0;
+  }
+  
+  .site-header {
+    padding: 0.75rem 0;
+  }
+  
+  .recent-posts,
+  .intro-section {
+    padding: clamp(2rem, 5vh, 3rem) 0;
+  }
+}
+
+// Ultra-wide displays (desktops larger than 1400px)
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .post-content,
+  .page-content {
+    max-width: 800px;
+  }
+  
+  .hero h1 {
+    font-size: 56px;
+  }
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer,
+  .mobile-menu-toggle,
+  .btn {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+// Reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .card::before,
+  .post-header h1::after,
+  .page-header h1::after {
+    height: 3px;
+  }
+  
+  .site-header {
+    border-bottom-width: 2px;
+  }
+}

@@ -1,0 +1,98 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-sm;
+  color: $color-text;
+  letter-spacing: -0.02em;
+}
+
+h1 { 
+  font-size: clamp(32px, 5vw, $font-size-xlarge);
+  font-weight: 400;
+}
+
+h2 { 
+  font-size: clamp(24px, 4vw, $font-size-large); 
+  font-weight: 400;
+}
+
+h3 { 
+  font-size: clamp(20px, 3vw, 22px); 
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+p {
+  margin-bottom: $spacing-sm;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0;
+  background-color: transparent;
+  color: $color-primary;
+  border: none;
+  font-weight: 400;
+  font-size: $font-size-small;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &::after {
+    content: '→';
+    margin-left: 8px;
+    display: inline-block;
+    transition: margin-left 0.2s ease;
+  }
+  
+  &:hover {
+    color: $color-accent;
+    
+    &::after {
+      margin-left: 14px;
+    }
+  }
+}
