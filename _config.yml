@@ -1,15 +1,15 @@
 # Site settings
-title: Candace Woodbury
-description: Customer Success Manager, Writer, Outdoor Enthusiast
+title: candace woodbury
+description: customer success manager, dog & outdoor enthusiast
 url: "https://candacewoodbury.com"
 baseurl: ""
 
 # Author
 author:
-  name: Candace Woodbury
+  name: candace woodbury
   email: hello@candacewoodbury.com
   linkedin: candacewoodbury
-  youtube: your-youtube-handle
+  youtube: candacewoodbury
 
 # Build settings
 markdown: kramdown
@@ -23,13 +23,13 @@ plugins:
 
 # Navigation
 navigation:
-  - title: Connect
+  - title: connect
     url: /pages/connect
-  - title: Creatives
+  - title: creatives
     url: /pages/creatives
-  - title: Field Notes
+  - title: field notes
     url: /blog
-  - title: Gear
+  - title: gear
     url: /pages/gear
 
 # Exclude from build

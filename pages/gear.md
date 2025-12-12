@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Gear
+title: gear
 permalink: /pages/gear
 ---
 
@@ -16,7 +16,7 @@ gear that's actually used.
         <li class="gear-item">
           <span class="gear-name">
             <a href="https://www.profitec-espresso.com/en/products/pro300" target="_blank" rel="noopener">
-              Profitec Pro 300
+              profitec pro 300
             </a>
           </span>
           <span class="gear-note">espresso drama. mostly my husband's domain.</span>
@@ -25,7 +25,7 @@ gear that's actually used.
         <li class="gear-item">
           <span class="gear-name">
             <a href="https://coffee.ceado.com/en/products/26-on-demand/16-e5p" target="_blank" rel="noopener">
-              Ceado E5P
+              ceado e5p
             </a>
           </span>
           <span class="gear-note">uniform grinds, quiet, financially rude.</span>
@@ -39,12 +39,16 @@ gear that's actually used.
         <li class="gear-item">
           <span class="gear-name">ceramic mugs</span>
           <span class="gear-note">some fit cup holders. standards: low.</span>
-          <span class="gear-rating">★★★★☆</span>
+          <span class="gear-rating">★★★★★</span>
         </li>
         <li class="gear-item">
-          <span class="gear-name">beans</span>
-          <span class="gear-note">anything without burnt sadness flavor.</span>
-          <span class="gear-rating">varies</span>
+          <span class="gear-name">
+          <a href="https://www.pinkelephantcoffee.com/products/wayfarer-espresso?variant=43666229494056" target="_blank" rel="noopener">
+          beans</a></span>
+          <span class="gear-note">currently sipping: 
+          <a href="https://www.pinkelephantcoffee.com/products/wayfarer-espresso?variant=43666229494056" target="_blank" rel="noopener">
+          wayfarer from the elephant</a>.</span>
+          <span class="gear-rating">★★★★☆</span>
         </li>
       </ul>
     </div>
@@ -54,7 +58,7 @@ gear that's actually used.
         <li class="gear-item">
           <span class="gear-name">aero press</span>
           <span class="gear-note">fits next to the dog treats. crucial.</span>
-          <span class="gear-rating">★★★☆☆</span>
+          <span class="gear-rating">★★★★☆</span>
         </li>
         <li class="gear-item">
           <span class="gear-name">bean canister</span>

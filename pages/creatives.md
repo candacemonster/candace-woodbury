@@ -1,22 +1,32 @@
 ---
 layout: page
-title: Creatives
+title: creatives
 permalink: /pages/creatives
 ---
 
-projects that live somewhere between “for fun” and “mildly serious.”
+things i make when i should probably be resting instead.
+
 
 ## candidnook
 [bookshop.org/shop/candidnook](https://bookshop.org/shop/candidnook)  
-my corner of bookshop.org. good books, no hustle culture required.
+shop my stacks to quietly fund indie bookstores and my reading habit. honestly, a pretty gentle vice.
 
-## shecodes
-[shecodes profile](https://www.shecodes.io/graduates/54828-candace-woodbury)  
-where i write code, learn things, and occasionally break the layout on purpose.
+
+## making things
+[shecodes](https://www.shecodes.io/graduates/54828-candace-woodbury)  
+small projects, gentle chaos, and the occasional intentional broken layout.
+
+[side quests](/pages/side-quests)  
+stray ideas, micro-tools, and “this might be overkill” experiments.  
+
+[side quests with ai](/pages/side-quests-ai)  
+where i let the bots assist, then ship only what survives.
+
 
 ## studio drift (coming)
-not public yet, but it’s happening.
+slow-building space for future work. not public yet, on purpose.
+
 
 ---
 
-most things start as notes, drafts, or half-finished ideas. these are the ones that made it out into the world.
+most things stay in drafts. these are the ones that wandered out anyway.

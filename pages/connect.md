@@ -1,23 +1,28 @@
 ---
 layout: page
-title: Connect
+title: connect
 permalink: /pages/connect
 ---
 
-trying to keep my online life streamlined. here's where i actually show up.
+if we actually know each other, text or call. everyone else, use the links below.
+
 
 ## email
 [hello@candacewoodbury.com](mailto:hello@candacewoodbury.com){:target="_blank" rel="noopener"}  
-best way to reach me. i'll reply when i have the energy and something useful to say.
+best way to reach me. replies are thoughtful, not instant.
+
 
 ## linkedin
 [linkedin.com/in/candacewoodbury](https://linkedin.com/in/candacewoodbury){:target="_blank" rel="noopener"}  
-for work, career things, and the occasional "yes, i'm still alive" update.
+for work, career experiments, and the occasional “still alive, thanks for asking.”
+
 
 ## youtube
-[https://www.youtube.com/@candacewoodbury](https://www.youtube.com/@candacewoodbury){:target="_blank" rel="noopener"}  
-slowly becoming a real thing. emphasis on slowly.
+[@candacewoodbury](https://www.youtube.com/@candacewoodbury){:target="_blank" rel="noopener"}  
+slow, imperfect, and increasingly less hypothetical.
+
+
 
 ---
 
-no twitter, no tiktok, no "find me everywhere." this is enough.
+no twitter. no tiktok. no “every platform, all the time.” this is plenty.

@@ -7,7 +7,7 @@ Redirect 301 /pages/projects.html https://candacewoodbury.com/
 
 # Redirect old work-with-me URL to new contract-work page
 
-Redirect 301 /pages/work-with-me.html https://candacewoodbury.com/pages/contract-work.html
+Redirect 301 /pages/work-with-me.html https://candacewoodbury.com/
 
 <Files "med.html">
 AuthType Basic
