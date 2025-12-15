@@ -1,4 +1,4 @@
-@use "variables" as v;
+@import "variables";
 
 * {
   margin: 0;
@@ -11,11 +11,11 @@ html {
 }
 
 body {
-  font-family: v.$font-primary;
-  font-size: v.$font-size-base;
-  line-height: v.$line-height-base;
-  color: v.$color-text;
-  background-color: v.$color-background;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,19 +27,19 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  line-height: v.$line-height-tight;
-  margin-bottom: v.$spacing-sm; // 16px
-  color: v.$color-text;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-sm; // 16px
+  color: $color-text;
   letter-spacing: -0.02em;
 }
 
 h1 { 
-  font-size: clamp(32px, 5vw, v.$font-size-xlarge); // 40px max
+  font-size: clamp(32px, 5vw, $font-size-xlarge); // 40px max
   font-weight: 400;
 }
 
 h2 { 
-  font-size: clamp(24px, 4vw, v.$font-size-large);  // 24px max
+  font-size: clamp(24px, 4vw, $font-size-large);  // 24px max
   font-weight: 400;
 }
 
@@ -48,17 +48,17 @@ h3 {
 }
 
 a {
-  color: v.$color-primary;
+  color: $color-primary;
   text-decoration: none;
   transition: color 0.2s ease, opacity 0.2s ease;
   
   &:hover {
-    color: v.$color-accent;
+    color: $color-accent;
   }
 }
 
 p {
-  margin-bottom: v.$spacing-sm; // 16px
+  margin-bottom: $spacing-sm; // 16px
 }
 
 img {
@@ -78,10 +78,10 @@ img {
   display: inline-block;
   padding: 0;
   background-color: transparent;
-  color: v.$color-primary;
+  color: $color-primary;
   border: none;
   font-weight: 400;
-  font-size: v.$font-size-small;
+  font-size: $font-size-small;
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
   position: relative;
@@ -94,7 +94,7 @@ img {
   }
   
   &:hover {
-    color: v.$color-accent;
+    color: $color-accent;
     
     &::after {
       margin-left: 14px;

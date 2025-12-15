@@ -1,29 +1,29 @@
-@use "variables" as v;
+@import "variables";
 
 // Header & Navigation
 .site-header {
-  background-color: rgba(v.$color-background, 0.95);
-  padding: 24px 0; // was v.$spacing-md (32px) → slightly tighter
-  border-bottom: 1px solid rgba(v.$color-border, 0.3);
+  background-color: rgba($color-background, 0.95);
+  padding: 24px 0; // was $spacing-md (32px) → slightly tighter
+  border-bottom: 1px solid rgba($color-border, 0.3);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
   
-  @media (max-width: v.$breakpoint-mobile) {
-    padding: v.$spacing-sm 0; // 16px
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-sm 0; // 16px
   }
 }
 
 .site-title {
   font-size: clamp(20px, 3vw, 24px);
   font-weight: 200;
-  color: v.$color-text;
+  color: $color-text;
   text-decoration: none;
   letter-spacing: -0.02em;
   
   &:hover {
-    color: v.$color-primary;
+    color: $color-primary;
   }
 }
 
@@ -38,7 +38,7 @@
   gap: clamp(16px, 3vw, 40px); // 1rem→16px, 2.5rem→40px
   list-style: none;
   
-  @media (max-width: v.$breakpoint-mobile) {
+  @media (max-width: $breakpoint-mobile) {
     display: none;
     
     &.active {
@@ -49,18 +49,18 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: v.$color-background;
-      padding: v.$spacing-lg; // 56px
-      gap: v.$spacing-md;     // 32px
+      background-color: $color-background;
+      padding: $spacing-lg; // 56px
+      gap: $spacing-md;     // 32px
       align-items: flex-start;
       overflow-y: auto;
     }
   }
   
   a {
-    color: v.$color-text-light;
+    color: $color-text-light;
     font-weight: 400;
-    font-size: v.$font-size-small;
+    font-size: $font-size-small;
     letter-spacing: 0.3px;
     position: relative;
     
@@ -71,20 +71,20 @@
       left: 0;
       width: 0;
       height: 1px;
-      background-color: v.$color-primary;
+      background-color: $color-primary;
       transition: width 0.2s ease;
     }
     
     &:hover,
     &.active {
-      color: v.$color-primary;
+      color: $color-primary;
       
       &::after {
         width: 100%;
       }
     }
     
-    @media (max-width: v.$breakpoint-mobile) {
+    @media (max-width: $breakpoint-mobile) {
       font-size: 20px;
     }
   }
@@ -95,10 +95,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: v.$spacing-xs; // 8px
+  padding: $spacing-xs; // 8px
   z-index: 101;
   
-  @media (max-width: v.$breakpoint-mobile) {
+  @media (max-width: $breakpoint-mobile) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +108,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background-color: v.$color-text;
+    background-color: $color-text;
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -122,7 +122,7 @@
   
   h1 {
     font-size: clamp(36px, 6vw, 56px);
-    margin-bottom: 24px; // was v.$spacing-md (32px) → tighter
+    margin-bottom: 24px; // was $spacing-md (32px) → tighter
     font-weight: 300;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -130,16 +130,16 @@
   
   p {
     font-size: clamp(18px, 2.5vw, 20px);
-    color: v.$color-text-light;
+    color: $color-text-light;
     max-width: 700px;
-    margin: 0 auto v.$spacing-sm; // 16px
+    margin: 0 auto $spacing-sm; // 16px
     line-height: 1.6;
   }
   
   .tagline {
     font-style: italic;
     font-size: clamp(16px, 2vw, 18px);
-    color: v.$color-accent;
+    color: $color-accent;
   }
 }
 
@@ -148,7 +148,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: clamp(32px, 5vw, 56px); // 2rem→32px, 4rem→64px
-  margin: v.$spacing-lg 0;     // 56px
+  margin: $spacing-lg 0;       // 56px
 }
 
 .card {
@@ -162,7 +162,7 @@
     transform: translateX(4px);
     
     h3 {
-      color: v.$color-accent;
+      color: $color-accent;
     }
     
     &::before {
@@ -177,27 +177,27 @@
     left: 0;
     width: 24px;
     height: 2px;
-    background-color: v.$color-primary;
+    background-color: $color-primary;
     transition: width 0.3s ease;
   }
   
   h3 {
-    color: v.$color-primary;
-    margin-top: v.$spacing-sm;    // 16px
-    margin-bottom: v.$spacing-sm; // 16px
+    color: $color-primary;
+    margin-top: $spacing-sm;    // 16px
+    margin-bottom: $spacing-sm; // 16px
     font-weight: 400;
     font-size: clamp(20px, 2.5vw, 24px);
     transition: color 0.2s ease;
   }
   
   p {
-    color: v.$color-text-light;
+    color: $color-text-light;
     line-height: 1.8;
-    margin-bottom: v.$spacing-md; // 32px
+    margin-bottom: $spacing-md; // 32px
   }
   
   .btn {
-    margin-top: v.$spacing-xs;    // 8px
+    margin-top: $spacing-xs;    // 8px
   }
 }
 
@@ -209,12 +209,12 @@
 .recent-posts {
   padding: clamp(64px, 10vw, 112px) 0; // 4rem, 7rem
   margin-top: clamp(48px, 8vw, 80px);  // 3rem, 5rem
-  border-top: 1px solid rgba(v.$color-border, 0.5);
+  border-top: 1px solid rgba($color-border, 0.5);
   
   h2 {
     text-align: center;
-    margin-bottom: v.$spacing-xl; // 80px – can drop to v.$spacing-lg if still too airy
-    color: v.$color-primary;
+    margin-bottom: $spacing-xl; // 80px
+    color: $color-primary;
     font-weight: 400;
     font-size: clamp(28px, 4vw, 36px);
     
@@ -223,8 +223,8 @@
       display: block;
       width: 60px;
       height: 2px;
-      background-color: v.$color-primary;
-      margin: v.$spacing-md auto 0; // 32px
+      background-color: $color-primary;
+      margin: $spacing-md auto 0; // 32px
     }
   }
 }
@@ -235,7 +235,7 @@
   
   article {
     padding: clamp(32px, 5vw, 48px) 0; // 2rem, 3rem
-    border-bottom: 1px solid rgba(v.$color-border, 0.3);
+    border-bottom: 1px solid rgba($color-border, 0.3);
     transition: padding-left 0.2s ease;
     
     &:last-child {
@@ -243,20 +243,20 @@
     }
     
     &:hover {
-      padding-left: v.$spacing-sm; // 16px
+      padding-left: $spacing-sm; // 16px
     }
     
     h3,
     h2 {
-      margin-bottom: v.$spacing-xs; // 8px
+      margin-bottom: $spacing-xs; // 8px
       font-weight: 400;
       
       a {
-        color: v.$color-text;
+        color: $color-text;
         transition: color 0.2s ease;
         
         &:hover {
-          color: v.$color-primary;
+          color: $color-primary;
         }
       }
     }
@@ -264,23 +264,23 @@
 }
 
 .post-meta {
-  font-size: v.$font-size-small;
-  color: v.$color-text-light;
-  margin-bottom: v.$spacing-sm; // 16px
+  font-size: $font-size-small;
+  color: $color-text-light;
+  margin-bottom: $spacing-sm; // 16px
   font-style: italic;
   font-weight: 300;
 }
 
 .post-excerpt {
-  color: v.$color-text-light;
+  color: $color-text-light;
   line-height: 1.8;
-  margin: v.$spacing-sm 0; // 16px
+  margin: $spacing-sm 0; // 16px
 }
 
 .read-more {
-  color: v.$color-primary;
+  color: $color-primary;
   font-weight: 400;
-  font-size: v.$font-size-small;
+  font-size: $font-size-small;
   display: inline-block;
   position: relative;
   
@@ -291,7 +291,7 @@
   }
   
   &:hover {
-    color: v.$color-accent;
+    color: $color-accent;
     
     &::after {
       margin-left: 12px;
@@ -308,7 +308,7 @@
     
     h1 {
       font-size: clamp(32px, 5vw, 48px);
-      color: v.$color-primary;
+      color: $color-primary;
       font-weight: 300;
       position: relative;
       display: inline-block;
@@ -320,7 +320,7 @@
         left: 0;
         width: 80px;
         height: 2px;
-        background-color: v.$color-primary;
+        background-color: $color-primary;
       }
     }
   }
@@ -343,8 +343,8 @@
     
     h1 {
       font-size: clamp(28px, 5vw, 42px);
-      color: v.$color-text;
-      margin-bottom: 24px; // was v.$spacing-md (32px) → tighter
+      color: $color-text;
+      margin-bottom: 24px; // was $spacing-md (32px) → tighter
       font-weight: 400;
       line-height: 1.2;
     }
@@ -360,13 +360,13 @@
     h3,
     h4 {
       margin-top: clamp(40px, 6vw, 56px); // 2.5rem→40px, 3.5rem→56px
-      margin-bottom: v.$spacing-md;       // 32px
+      margin-bottom: $spacing-md;       // 32px
       font-weight: 400;
     }
     
     h2 {
       position: relative;
-      padding-bottom: v.$spacing-sm; // 16px
+      padding-bottom: $spacing-sm; // 16px
       
       &::after {
         content: '';
@@ -375,21 +375,21 @@
         left: 0;
         width: 50px;
         height: 1px;
-        background-color: v.$color-primary;
+        background-color: $color-primary;
       }
     }
     
     img {
-      margin: v.$spacing-lg 0; // 56px
+      margin: $spacing-lg 0; // 56px
       width: 100%;
       height: auto;
     }
     
     blockquote {
-      border-left: 2px solid v.$color-primary;
-      padding-left: v.$spacing-md; // 32px
-      margin: v.$spacing-lg 0;     // 56px
-      color: v.$color-text-light;
+      border-left: 2px solid $color-primary;
+      padding-left: $spacing-md; // 32px
+      margin: $spacing-lg 0;     // 56px
+      color: $color-text-light;
       font-style: italic;
     }
   }
@@ -397,25 +397,25 @@
   .post-footer {
     max-width: 720px;
     margin: clamp(64px, 8vw, 96px) auto 0; // 4rem, 6rem
-    padding-top: v.$spacing-lg;           // 56px
-    border-top: 1px solid rgba(v.$color-border, 0.5);
+    padding-top: $spacing-lg;              // 56px
+    border-top: 1px solid rgba($color-border, 0.5);
   }
 }
 
 .post-navigation {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: v.$spacing-lg; // 56px
+  gap: $spacing-lg; // 56px
   
   a {
     padding: 0;
     background-color: transparent;
     border: none;
     transition: all 0.2s ease;
-    color: v.$color-text-light;
+    color: $color-text-light;
     
     &:hover {
-      color: v.$color-primary;
+      color: $color-primary;
       transform: translateX(4px);
     }
     
@@ -432,22 +432,22 @@
 // Footer
 .site-footer {
   background-color: transparent;
-  color: v.$color-text-light;
-  padding: clamp(48px, 6vw, 64px) 0 v.$spacing-lg; // 3rem, 4rem, 56px
-  margin-top: clamp(96px, 12vw, 160px);            // 6rem, 10rem
+  color: $color-text-light;
+  padding: clamp(48px, 6vw, 64px) 0 $spacing-lg; // 3rem, 4rem, 56px
+  margin-top: clamp(96px, 12vw, 160px);          // 6rem, 10rem
   text-align: center;
-  border-top: 1px solid rgba(v.$color-border, 0.5);
+  border-top: 1px solid rgba($color-border, 0.5);
   
   a {
-    color: v.$color-primary;
+    color: $color-primary;
     
     &:hover {
-      color: v.$color-accent;
+      color: $color-accent;
     }
   }
   
   p {
-    font-size: v.$font-size-small;
+    font-size: $font-size-small;
   }
 }
 
@@ -460,21 +460,21 @@
   max-width: 700px;
   margin: 0 auto clamp(48px, 8vw, 80px); // 3rem, 5rem
   font-size: clamp(18px, 2.5vw, 20px);
-  color: v.$color-text-light;
+  color: $color-text-light;
   font-style: italic;
   line-height: 1.7;
   text-align: center;
-  padding-bottom: v.$spacing-lg; // 56px
-  border-bottom: 1px solid rgba(v.$color-border, 0.3);
+  padding-bottom: $spacing-lg; // 56px
+  border-bottom: 1px solid rgba($color-border, 0.3);
 }
 
 .post-preview {
   padding: clamp(32px, 5vw, 48px) 0; // 2rem, 3rem
-  border-bottom: 1px solid rgba(v.$color-border, 0.3);
+  border-bottom: 1px solid rgba($color-border, 0.3);
   transition: padding-left 0.2s ease;
   
   &:hover {
-    padding-left: v.$spacing-sm; // 16px
+    padding-left: $spacing-sm; // 16px
   }
   
   &:last-child {
@@ -482,29 +482,29 @@
   }
   
   h2 {
-    margin-bottom: v.$spacing-xs; // 8px
+    margin-bottom: $spacing-xs; // 8px
     font-weight: 400;
     
     a {
-      color: v.$color-text;
+      color: $color-text;
       
       &:hover {
-        color: v.$color-primary;
+        color: $color-primary;
       }
     }
   }
 }
 
 .post-tags {
-  margin-left: v.$spacing-sm; // 16px
+  margin-left: $spacing-sm; // 16px
   display: inline-flex;
-  gap: v.$spacing-xs;         // 8px
+  gap: $spacing-xs;         // 8px
   flex-wrap: wrap;
   
   .tag {
     display: inline-block;
     background-color: transparent;
-    color: v.$color-accent;
+    color: $color-accent;
     padding: 0;
     border-radius: 0;
     font-size: 14px;
@@ -520,7 +520,7 @@
 .no-posts {
   text-align: center;
   padding: clamp(64px, 10vw, 96px) 0; // 4rem, 6rem
-  color: v.$color-text-light;
+  color: $color-text-light;
   font-style: italic;
 }
 
@@ -542,14 +542,14 @@
 .gear-category h2 {
   font-size: clamp(22px, 2.6vw, 26px);
   margin-bottom: 12px; // 0.75rem
-  color: v.$color-primary;
+  color: $color-primary;
   font-weight: 400;
 }
 
 .gear-group {
   margin-top: 24px;  // 1.5rem
   padding-top: 16px; // 1rem
-  border-top: 1px solid rgba(v.$color-border, 0.7);
+  border-top: 1px solid rgba($color-border, 0.7);
 }
 
 .gear-group:first-of-type {
@@ -563,7 +563,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 9.6px; // 0.6rem
-  color: v.$color-text-light;
+  color: $color-text-light;
 }
 
 // gear rows
@@ -582,33 +582,33 @@
 }
 
 .gear-item + .gear-item {
-  border-top: 1px solid rgba(v.$color-border, 0.4);
+  border-top: 1px solid rgba($color-border, 0.4);
   margin-top: 2.4px;  // 0.15rem
   padding-top: 4.8px; // 0.3rem
 }
 
 .gear-name {
   font-weight: 400;
-  color: v.$color-text;
+  color: $color-text;
 }
 
 .gear-name a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(v.$color-primary, 0.3);
+  border-bottom: 1px solid rgba($color-primary, 0.3);
 }
 
 .gear-name a:hover {
-  border-bottom-color: rgba(v.$color-primary, 0.8);
+  border-bottom-color: rgba($color-primary, 0.8);
 }
 
 .gear-note {
-  color: v.$color-text-light;
+  color: $color-text-light;
   font-size: 15.2px; // 0.95rem
 }
 
 .gear-rating {
   font-size: 12.8px; // 0.8rem
-  color: v.$color-text-light;
+  color: $color-text-light;
   white-space: nowrap;
 }
 
