@@ -37,6 +37,12 @@ occasionally.
 
 even less occasionally.
 
+## instagram
+
+[@candaceinthewild_](https://www.instagram.com/candaceinthewild_/){:target="_blank" rel="noopener"}
+
+more than the others, but still not much.
+
 ---
 
-i have the socials. instagram and tiktok too. but i'm not really on them. if you want to actually talk to me, email or text.
+i have the socials. mostly on instagram and x if i'm honest. tiktok exists somewhere, but i don't remember the last time i checked it. if you want to actually talk to me, email or text.
