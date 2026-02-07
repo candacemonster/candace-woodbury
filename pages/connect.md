@@ -25,4 +25,18 @@ slow, imperfect, and increasingly less hypothetical.
 
 ---
 
-no twitter. no tiktok. no “every platform, all the time.” this is plenty.
+## x
+
+[@candaceafter40](https://x.com/candaceafter40){:target="_blank" rel="noopener"}
+
+occasionally.
+
+## facebook
+
+[candaceafter40](https://www.facebook.com/profile.php?id=61586385055437){:target="_blank" rel="noopener"}
+
+even less occasionally.
+
+---
+
+i have the socials. instagram and tiktok too. but i'm not really on them. if you want to actually talk to me, email or text.
