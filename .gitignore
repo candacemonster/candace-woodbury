@@ -1,24 +1,24 @@
-# build output
-dist/
+# Jekyll build output
+_site/
 
-# generated types
-.astro/
+# Jekyll cache
+.jekyll-cache/
+.jekyll-metadata
 
-# dependencies
-node_modules/
+# Sass cache
+.sass-cache/
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Ruby / Bundler
+*.gem
+.bundle/
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
 
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
+# macOS
 .DS_Store
 
-# jetbrains setting folder
-.idea/
+# Environment variables
+.env
+.env.production
