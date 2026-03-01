@@ -8,4 +8,4 @@ bundle exec jekyll serve
 bundle exec jekyll clean
 bundle exec jekyll serve
 
-hello@candacewoodbury.com
+hello [at] candacewoodbury [dot] com
