@@ -1,0 +1,31 @@
+---
+layout: page
+title: essays
+permalink: /essays/
+---
+
+<div class="hero">
+  <h1>Essays</h1>
+  <p class="subtitle">longer reflections on systems, technology, and the human experience.</p>
+</div>
+
+<div class="post-list">
+  {% for post in site.categories.essays %}
+    <article class="post-item">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <div class="post-meta">
+        {{ post.date | date: "%B %d, %Y" }}
+      </div>
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
+      </div>
+      <a href="{{ post.url | relative_url }}" class="read-more">read more →</a>
+    </article>
+  {% endfor %}
+</div>
+
+{% if site.categories.essays.size == 0 %}
+  <p class="text-center text-muted">No essays yet. Check back soon!</p>
+{% endif %}
