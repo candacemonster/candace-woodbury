@@ -1,6 +1,6 @@
 # Site settings
 title: candace woodbury
-description: customer success manager, dog & outdoor enthusiast
+description: field notes, gear lists, and essays by candace woodbury
 url: "https://candacewoodbury.com"
 baseurl: ""
 
@@ -38,6 +38,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - .jekyll-cache
+    - .htaccess
 
 sass:
   style: compressed
