@@ -1,5 +1,6 @@
 @import "variables";
 
+// ─── Global Resets ──────────────────────────────────────────────────────────
 * {
   margin: 0;
   padding: 0;
@@ -8,96 +9,217 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 15px;
+  }
 }
 
 body {
   font-family: $font-primary;
   font-size: $font-size-base;
+  font-weight: $font-weight-regular;
   line-height: $line-height-base;
   color: $color-text;
   background-color: $color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
+// ─── Typography ──────────────────────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: $font-weight-light;
   line-height: $line-height-tight;
-  margin-bottom: $spacing-sm; // 16px
+  letter-spacing: $letter-spacing-tight;
   color: $color-text;
-  letter-spacing: -0.02em;
+  margin-bottom: $spacing-md;
 }
 
-h1 { 
-  font-size: clamp(32px, 5vw, $font-size-xlarge); // 40px max
-  font-weight: 400;
+h1 {
+  font-size: $font-size-xxl;
+  margin-bottom: $spacing-lg;
+  
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-xl;
+  }
 }
 
-h2 { 
-  font-size: clamp(24px, 4vw, $font-size-large);  // 24px max
-  font-weight: 400;
+h2 {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-md;
+  
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-large;
+  }
 }
 
-h3 { 
-  font-size: clamp(20px, 3vw, 22px); 
+h3 {
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+h4 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+h5, h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+p {
+  margin-bottom: $spacing-md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {
   color: $color-primary;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
-  
+  border-bottom: 1px solid transparent;
+  transition: all $transition-base;
+
   &:hover {
-    color: $color-accent;
+    color: $color-primary-light;
+    border-bottom-color: currentColor;
   }
 }
 
-p {
-  margin-bottom: $spacing-sm; // 16px
+strong, b {
+  font-weight: $font-weight-bold;
 }
 
+em, i {
+  font-style: italic;
+}
+
+small {
+  font-size: $font-size-small;
+  color: $color-text-light;
+}
+
+blockquote {
+  padding-left: $spacing-md;
+  margin: $spacing-lg 0;
+  border-left: 3px solid $color-primary-light;
+  font-family: $font-serif;
+  font-size: $font-size-md;
+  font-style: italic;
+  color: $color-text-light;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.9em;
+  background: $color-surface;
+  padding: 2px 6px;
+  border-radius: $radius-sm;
+  color: $color-primary;
+}
+
+pre {
+  background: $color-surface;
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  overflow-x: auto;
+  margin: $spacing-md 0;
+  
+  code {
+    background: transparent;
+    padding: 0;
+    color: $color-text;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: $spacing-xl 0;
+}
+
+// ─── Lists ───────────────────────────────────────────────────────────────────
+ul, ol {
+  margin: 0 0 $spacing-md $spacing-md;
+  
+  li {
+    margin-bottom: $spacing-xs;
+    padding-left: $spacing-xs;
+  }
+}
+
+// ─── Images & Media ────────────────────────────────────────────────────────
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: $radius-md;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 clamp(24px, 5vw, 48px); // 1.5rem→24px, 3rem→48px
-  width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0;
-  background-color: transparent;
-  color: $color-primary;
-  border: none;
-  font-weight: 400;
-  font-size: $font-size-small;
-  letter-spacing: 0.3px;
-  transition: all 0.2s ease;
-  position: relative;
+figure {
+  margin: $spacing-lg 0;
   
-  &::after {
-    content: '→';
-    margin-left: 8px;
-    display: inline-block;
-    transition: margin-left 0.2s ease;
+  img {
+    margin-bottom: $spacing-sm;
   }
+  
+  figcaption {
+    font-size: $font-size-small;
+    color: $color-text-light;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+// ─── Interactive Elements ─────────────────────────────────────────────────────
+button, .btn {
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-primary;
+  color: $color-card;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: all $transition-base;
+  letter-spacing: $letter-spacing-wide;
+  text-transform: uppercase;
+  font-size: $font-size-small;
   
   &:hover {
-    color: $color-accent;
-    
-    &::after {
-      margin-left: 14px;
-    }
+    background-color: $color-primary-light;
+    transform: translateY(-1px);
+    box-shadow: $shadow-soft;
   }
 }
+
+input, textarea {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  padding: $spacing-sm;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-card;
+  color: $color-text;
+  transition: border-color $transition-base;
+  
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+}
+
+// ─── Utility Classes ──────────────────────────────────────────────────────────
+.text-center { text-align: center; }
+.text-muted { color: $color-text-light; }
+.uppercase { text-transform: uppercase; letter-spacing: $letter-spacing-wide; }
