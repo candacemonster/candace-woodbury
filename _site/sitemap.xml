@@ -26,6 +26,9 @@
 <loc>http://localhost:4000/pages/creatives</loc>
 </url>
 <url>
+<loc>http://localhost:4000/essays/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/pages/gear</loc>
 </url>
 <url>
