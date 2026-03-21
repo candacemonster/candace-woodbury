@@ -34,6 +34,7 @@
   margin: 0 auto;
   padding: $spacing-xs $spacing-sm;
   gap: $spacing-sm;
+  flex-wrap: nowrap;
 
   @media (min-width: $breakpoint-tablet) {
     padding: $spacing-xs $spacing-md;
@@ -58,8 +59,8 @@
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-xs;
+  flex-wrap: nowrap;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -70,9 +71,10 @@
     font-size: $font-size-xs;
     font-weight: $font-weight-medium;
     color: $color-text-light;
-    letter-spacing: $letter-spacing-widest;
+    letter-spacing: $letter-spacing-wide;
     text-transform: uppercase;
     text-decoration: none;
+    white-space: nowrap;
     padding: $spacing-2xs $spacing-xs;
     border-radius: $radius-sm;
     transition: color $transition-base, background-color $transition-base;
@@ -460,13 +462,23 @@
 // ─── Responsive ──────────────────────────────────────────────────────────────
 @media (max-width: $breakpoint-mobile) {
   .site-nav {
-    flex-wrap: wrap;
-    gap: $spacing-xs;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-2xs;
+    padding: $spacing-xs $spacing-sm;
   }
 
   .nav-links {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2px;
+
+    a {
+      font-size: 10px;
+      padding: $spacing-2xs 6px;
+      letter-spacing: 0.05em;
+    }
   }
 
   .post-navigation {
