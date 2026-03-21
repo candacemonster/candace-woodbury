@@ -1,7 +1,7 @@
 # TEAM
 Creator: Candace Woodbury
 Site: https://candacewoodbury.com
-Philosophy: Minimal. Quiet. Not here to optimize your funnel.
+Philosophy: Minimal. Quiet. Personal blog. Not here to optimize your funnel.
 Contact: hello@candacewoodbury.com
 
 # THANKS
@@ -18,6 +18,6 @@ Welcome, human. No AI, no nudges, no "Hi there! Can I help you?" popups.
 Just words and caffeination. If you found this file, you're probably real.
 
 # SITE
-Last update: 2025-11-28
-Location: Somewhere between Idaho, Utah, Arizona, and a to-do list.
-Standards: Accessibility, readable text, fast load times, no tracking nonsense.
+Last updated: March 2026
+Location: Somewhere between Idaho, Utah, Arizona, and the truck.
+Standards: Accessibility, readable text, fast load times, no nonsense.
