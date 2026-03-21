@@ -4,51 +4,42 @@ title: about & contact
 permalink: /pages/connect
 ---
 
-## about
+i'm candace. customer success manager for enterprise tourism and outdoor brands by day; introvert who goes outside on purpose the rest of the time.
 
-i juggle enterprise software, desert trails, mountain weather, and a medical chart that reads like a plot twist.  
-this site is the notebook: essays, field notes, gear that actually works, and whatever else survives my attention span.
+i split my time between idaho/montana, nevada/arizona, and the long beach peninsula in washington state. the common thread is that none of those places have a lot of meetings.
 
-i split time between idaho/montana, nevada/arizona, and the long beach peninsula in washington. the theme is “far from malls, close to weather.”
+i have a medical chart that reads like a plot twist — vasculitis, hashimoto's, anemia, and a subglottic stenosis that keeps things interesting. i see doctors at mayo clinic and take the whole thing about as seriously as it deserves, which is: seriously, but without drama.
+
+this site is my notebook. essays, field notes from hikes and paddles and bike rides, gear that actually earned its place, books i'm reading, shows i'm watching, and whatever else survives my attention span long enough to get written down. my husband and our dog are frequent supporting characters.
+
+i turn 40 this year. i have no particular feelings about this that i'm willing to share yet.
 
 ---
 
 ## how to reach me
 
 if we actually know each other, text or call.  
-everyone else: email first. replies are thoughtful, not instant.
+everyone else: email. replies are thoughtful, not instant.
 
-### email
-
-[hello@candacewoodbury.com](mailto:hello@candacewoodbury.com){:target="_blank" rel="noopener"}
+**email:** [hello@candacewoodbury.com](mailto:hello@candacewoodbury.com)
 
 ---
 
-## where i allegedly exist online
+## where i technically exist online
 
 i have accounts. i do not have a posting schedule.
 
-### linkedin
+[linkedin](https://linkedin.com/in/candacewoodbury) — for work things and proof i do them
 
-[linkedin.com/in/candacewoodbury](https://linkedin.com/in/candacewoodbury){:target="_blank" rel="noopener"}  
-for work, career experiments, and proof i still do things indoors.
+[youtube](https://www.youtube.com/@candacewoodbury) — slow, imperfect, increasingly real
 
-### youtube
+[instagram](https://www.instagram.com/candaceafter40) — evidence of life, not influence
 
-[@candacewoodbury](https://www.youtube.com/@candacewoodbury){:target="_blank" rel="noopener"}  
-slow, imperfect, and mostly about the parts of life that are not a screen.
+[tiktok](https://www.tiktok.com/@candaceafter40) — rare sightings
 
-### x
+[facebook](https://www.facebook.com/profile.php?id=61586385055437) — even less occasionally
 
-[@candaceafter40](https://x.com/candaceafter40){:target="_blank" rel="noopener"}  
-used occasionally, like a fire alarm.
+[x / twitter](https://x.com/candaceafter40) — used like a fire alarm
 
-### facebook
-
-[candaceafter40](https://www.facebook.com/profile.php?id=61586385055437){:target="_blank" rel="noopener"}  
-even less occasionally.
-
----
-
-instagram and tiktok exist, but “presence” is a generous word.  
-if you actually want to talk to me, email or text. everything else is background noise.
+if you want to actually reach me, email or text.  
+everything else is background noise with a login screen.

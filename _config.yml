@@ -27,8 +27,6 @@ navigation:
     url: /pages/connect
   - title: notebook
     url: /blog/
-  - title: gear & resources
-    url: /pages/gear
   - title: policies
     url: /pages/policies
 
