@@ -17,11 +17,24 @@ layout: default
         </span>
         {% endif %}
       </p>
+
+      {% if page.disclosure %}
+      <p class="post-disclosure">
+        {{ page.disclosure }}
+      </p>
+      {% endif %}
     </header>
     
     <div class="post-content">
       {{ content }}
     </div>
+
+    {% if page.notes %}
+    <section class="post-notes">
+      <h2>notes</h2>
+      {{ page.notes }}
+    </section>
+    {% endif %}
     
     <footer class="post-footer">
       <nav class="post-navigation">

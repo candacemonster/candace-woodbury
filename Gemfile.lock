@@ -163,11 +163,11 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.3)
-  jekyll-feed
+  jekyll-feed (~> 0.17)
   jekyll-sass-converter (~> 3.0)
-  jekyll-seo-tag
-  jekyll-sitemap
-  logger
+  jekyll-seo-tag (~> 2.8)
+  jekyll-sitemap (~> 1.4)
+  logger (~> 1.7)
   webrick (~> 1.8)
 
 BUNDLED WITH

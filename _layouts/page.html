@@ -11,5 +11,11 @@ layout: default
     <div class="page-content">
       {{ content }}
     </div>
+
+    {% if page.notes %}
+    <footer class="page-notes">
+      {{ page.notes }}
+    </footer>
+    {% endif %}
   </div>
 </article>

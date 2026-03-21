@@ -1,6 +1,6 @@
 # Site settings
 title: candace woodbury
-description: field notes, gear lists, and essays by candace woodbury
+description: essays, field notes, and gear from an introvert outside on purpose
 url: "https://candacewoodbury.com"
 baseurl: ""
 
@@ -23,14 +23,14 @@ plugins:
 
 # Navigation
 navigation:
-  - title: connect
+  - title: about & contact
     url: /pages/connect
-  - title: creatives
-    url: /pages/creatives
-  - title: field notes
+  - title: notebook
     url: /blog
-  - title: gear
+  - title: gear & resources
     url: /pages/gear
+  - title: policies
+    url: /pages/policies
 
 # Exclude from build
 exclude:
@@ -38,7 +38,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - .jekyll-cache
-    - .htaccess
+  - .htaccess
 
 sass:
   style: compressed
