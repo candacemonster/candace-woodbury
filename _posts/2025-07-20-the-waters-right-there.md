@@ -3,50 +3,45 @@ layout: post
 title: "the water's right there"
 date: 2025-07-20
 tags: [field-notes, paddle, outdoors]
+disclosure: some links may be affiliate links. i only recommend things i actually use.
+notes: |
+  **sources & end notes**  
+  - onx backcountry: https://share-backcountry.onxmaps.com/exwods8oaVb
 ---
 
-*everything's ready. still haven't gone.*
+*everything’s ready. still haven’t gone.*
 
-## where i am
+location: reservoir edge. car pointed at the water like that counts.  
+conditions: still, warm, a few strangers existing quietly in my peripheral vision.  
+energy level: stuck in neutral. nothing wrong, nothing moving.
 
-location: reservoir edge, parked with a water view and no real excuse.  
-conditions: still. warm. strangers present but minding their business.  
-energy level: stalled. that familiar static.
+the board is inflated.  
+the gear is packed.  
+the water is calm.  
+the day is open.
 
-## what i'm working with
+i’m not scared of the paddling part. i’m stuck on the part where i walk past people alone, carrying a board that looks bigger than i am, then push off and keep being alone where everyone can see it.
 
-- board: inflated  
-- gear: packed  
-- water: calm  
-- day: open  
+if there were a dock, i’d already be gone.  
+if someone said “let’s go,” i would’ve.
 
-not scared. just stuck on the part where i walk past a few people, alone. then be out there, still alone. even if i like it.
+### the small obsessions
 
-if there were a dock, i'd already be gone.  
-if someone said "let's go," i would've.
+i bought [onx backcountry](https://share-backcountry.onxmaps.com/exwods8oaVb), not for the trails—though it can absolutely handle those—but for the edges.  
+property lines. public access. where it’s okay to walk in with a board and where it’s technically “someone’s lawn.”
 
-## what i noticed
+also: to track paddles. to make little digital lines that prove i did, in fact, move. collecting map-shaped evidence that i went outside on purpose.
 
-- bought [onx backcountry](https://share-backcountry.onxmaps.com/exwods8oaVb). not for the trails (though it does those), but for property lines. water access. land boundaries.  
-- also: to track paddles. to feel like i'm collecting something useful—or at least map-shaped.
+### what actually happened
 
-## trail, read, listen
+no trail today. stayed parked.  
+no reading. just scrolling maps and excuses.  
+no playlist. the reservoir already had its own background noise.
 
-**trail**  
-none today. stayed parked.
+### tiny adjustments
 
-**reading**  
-—
+- do more of: walking past people with the board anyway.  
+- do less of: treating “alone” like a problem instead of the point.  
+- try tomorrow: same reservoir, same board, less thinking about what anyone else sees.
 
-**playlist**  
-—
-
-## tiny adjustments
-
-- do more of: just going, even without the dock or the invite.  
-- do less of: writing about it instead of doing it.  
-- try tomorrow: maybe tomorrow.
-
----
-
-field note filed. wrote this instead of paddling. at least it's honest.
+field note filed: today i wrote about paddling instead of paddling. tomorrow, ideally, i do both.

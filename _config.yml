@@ -26,7 +26,7 @@ navigation:
   - title: about & contact
     url: /pages/connect
   - title: notebook
-    url: /blog
+    url: /blog/
   - title: gear & resources
     url: /pages/gear
   - title: policies

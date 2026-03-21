@@ -3,49 +3,34 @@ layout: post
 title: "autumn equinox, monitor tan"
 date: 2025-09-27
 tags: [field-notes, seasons, work]
+disclosure: some links may be affiliate links. i only recommend things i actually use.
+notes: |
+  **sources & end notes**  
+  - mackay, idaho: one late-summer trip, not nearly enough.
 ---
 
 *i blinked and the equinox was here.*
 
-## where i am
-
-location: inside, mostly. actual trail: rare.  
-conditions: dusk sneaking in earlier. grass gold, bikes colder.  
+location: inside, mostly. the actual trail has been more rumor than reality.  
+conditions: dusk sneaking in earlier, grass going gold, bikes getting colder by the day.  
 energy level: guilty. monitor-tanned.
 
-## what i'm working with
+summer apparently happened. i saw it out the window between meetings.
 
-summer? i heard rumors. apparently it happened.
+what did i actually do? worked. watched my bikes and paddle board wait in the corner, collecting dust and side-eye. my computer got all my best hours.
 
-what did i do? worked. watched my bikes and paddle board wait, gathering dust—no love, just guilt. my computer got all my best hours.
+the dogs and my husband got a few walks, a handful of sunsets, and three bonfires if i’m padding the stats. most weeks it was “just one more thing” on the screen instead of “just one more trail.”
 
-the dogs and my husband: a few walks. a handful of sunsets. three bonfires, if i'm padding the stats.
+### what i noticed
 
-most weeks it was "just one more thing" on the screen, instead of "just one more trail."
+- not a crisis, just the slow regret of choosing logins over laces.  
+- i’m not getting younger. these dogs, these mountains, this body—none of them are either.  
+- we made it up to mackay once, chasing sparks and dusk. it could’ve been weekly. it wasn’t.
 
-## what i noticed
+### tiny adjustments
 
-- not proud. not dramatic. just wishing i'd chosen laces over logins, sweat over spreadsheets.  
-- i'm not getting younger. these dogs, these mountains—deserve more than cameo appearances.  
-- at least we made it up to mackay, chasing sparks and dusk. could've been weekly. was barely a season.  
+- do more of: dog daylight, trail daylight, any daylight that isn’t backlit.  
+- do less of: “just one more thing” on the laptop after i already said i was done.  
+- try tomorrow: shoes on before inbox open.
 
-## trail, read, listen
-
-**trail**  
-mackay. once. should've been more.
-
-**reading**  
-—
-
-**playlist**  
-—
-
-## tiny adjustments
-
-- do more of: dog daylight. trail daylight. any daylight that isn't screen-shaped.  
-- do less of: "just one more thing" on the laptop.  
-- try tomorrow: laces before logins.
-
----
-
-field note filed. here's to autumn: maybe more memory, less inbox.
+field note filed. autumn’s here; maybe this season gets more memory and less inbox.
