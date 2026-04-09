@@ -1,43 +1,31 @@
-# Site settings
 title: candace woodbury
-description: essays, field notes, and gear from an introvert outside on purpose
+description: dispatches from someone who'd rather be outside.
 url: "https://candacewoodbury.com"
 baseurl: ""
 
-# Author
 author:
   name: candace woodbury
   email: hello@candacewoodbury.com
-  linkedin: candacewoodbury
-  youtube: candacewoodbury
 
-# Build settings
+google_analytics: G-XXXXXXXXXX
+
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Navigation
 navigation:
-  - title: about & contact
-    url: /pages/connect
-  - title: notebook
-    url: /blog/
-  - title: policies
-    url: /pages/policies
+  - title: dispatches
+    url: /dispatches/
+  - title: privacy
+    url: /pages/privacy/
 
-# Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - .jekyll-cache
   - .htaccess
-
-sass:
-  style: compressed
-  sass_dir: _sass
