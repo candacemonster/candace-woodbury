@@ -1,0 +1,334 @@
+---
+layout: default
+title: "404"
+permalink: /404.html
+---
+
+<style>
+  .lost-page {
+    max-width: 600px;
+    margin-inline: auto;
+    padding: clamp(4rem, 12vw, 8rem) var(--space-6) var(--space-24);
+    text-align: center;
+  }
+
+  .lost-page h1 {
+    font-style: italic;
+    margin-bottom: var(--space-4);
+  }
+
+  .lost-page .subtitle {
+    color: var(--color-text-muted);
+    margin-inline: auto;
+    margin-bottom: var(--space-8);
+  }
+
+  .home-link {
+    display: inline-block;
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-text-muted);
+  }
+  .home-link:hover { color: var(--color-text); }
+
+  /* ── Game ── */
+  #game-zone {
+    display: none;
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-divider);
+  }
+
+  #game-zone.visible { display: block; }
+
+  .game-prompt {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+    color: var(--color-text-muted);
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 420px;
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .choice-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition);
+  }
+  .choice-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+    background: rgba(122, 140, 42, 0.05);
+  }
+
+  .game-result {
+    display: none;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-6);
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .game-result.visible { display: block; }
+
+  .play-again {
+    display: none;
+    margin-top: var(--space-4);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .play-again:hover { color: var(--color-text-muted); }
+  .play-again.visible { display: inline-block; }
+
+  /* ── Book form ── */
+  #book-zone {
+    display: none;
+    margin-top: var(--space-16);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-divider);
+  }
+  #book-zone.visible { display: block; }
+
+  .book-intro {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    font-style: italic;
+  }
+
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 400px;
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .book-form label {
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    display: block;
+    margin-bottom: var(--space-1);
+  }
+
+  .book-form input,
+  .book-form textarea {
+    width: 100%;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 300;
+    color: var(--color-text);
+    transition: border-color var(--transition);
+  }
+  .book-form input:focus,
+  .book-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+  .book-form textarea { resize: vertical; min-height: 80px; }
+
+  .book-submit {
+    align-self: flex-start;
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-4);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .book-submit:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .form-thanks {
+    display: none;
+    font-size: var(--text-sm);
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-top: var(--space-4);
+  }
+  .form-thanks.visible { display: block; }
+</style>
+
+<div class="lost-page">
+  <h1>nothing here.</h1>
+  <p class="subtitle">
+    whatever you were looking for had the good sense to leave.<br>
+    can't say i blame it.
+  </p>
+  <a href="/" class="home-link">← go home</a>
+
+  <!-- Game — appears after 5 seconds -->
+  <div id="game-zone">
+    <p class="game-prompt" id="game-question"></p>
+    <div class="choices" id="choices-container"></div>
+    <p class="game-result" id="game-result"></p>
+    <button class="play-again" id="play-again-btn" onclick="nextQuestion()">another one</button>
+  </div>
+
+  <!-- Book rec form — appears after game loads -->
+  <div id="book-zone">
+    <p class="book-intro">
+      since you're here and clearly not in a hurry —<br>
+      tell me what i should read next.
+    </p>
+    <form class="book-form" id="book-form" action="https://formspree.io/f/mbdpnroe" method="POST">
+      <div>
+        <label for="book-title">title & author</label>
+        <input type="text" id="book-title" name="book" placeholder="e.g. Slouching Towards Bethlehem, Joan Didion" required>
+      </div>
+      <div>
+        <label for="book-reason">why (optional)</label>
+        <textarea id="book-reason" name="reason" placeholder="one sentence is fine. i don't need an essay."></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit" class="book-submit">send it</button>
+    </form>
+    <p class="form-thanks" id="form-thanks">noted. no promises, but noted.</p>
+  </div>
+</div>
+
+<script>
+  const questions = [
+    {
+      q: "you're lost. what do you do?",
+      choices: [
+        { text: "retrace my steps methodically", result: "admirable. deeply boring, but admirable." },
+        { text: "wander further and see what happens", result: "chaotic. but at least you'll have something to talk about later." },
+        { text: "sit down and wait for someone else to fix it", result: "a bold strategy. statistically not great." },
+        { text: "open my phone and pretend i meant to be here", result: "the correct answer, actually." }
+      ]
+    },
+    {
+      q: "a book falls off a shelf and lands open to a random page. you:",
+      choices: [
+        { text: "read the page", result: "the universe is trying to tell you something. it's probably not that important." },
+        { text: "pick it up and put it back without looking", result: "a person of iron discipline and zero curiosity. impressive and sad." },
+        { text: "leave it on the floor", result: "somewhere a librarian just felt a chill." },
+        { text: "buy a copy immediately", result: "the book industry thanks you." }
+      ]
+    },
+    {
+      q: "it's 6am. you are:",
+      choices: [
+        { text: "awake, annoyingly cheerful, already on a walk", result: "we cannot be friends. i respect you completely." },
+        { text: "awake, miserable, questioning my choices", result: "a person of discernment." },
+        { text: "asleep", result: "the objectively correct answer." },
+        { text: "still awake from the night before", result: "i'm not judging. i'm a little concerned, but i'm not judging." }
+      ]
+    },
+    {
+      q: "someone asks 'how are you?' you say:",
+      choices: [
+        { text: "'great, thanks!' and mean it", result: "either deeply healthy or deeply repressed. i genuinely can't tell." },
+        { text: "'fine' with a tone that implies the opposite", result: "the national language of the introverted." },
+        { text: "something honest and watch them regret asking", result: "a service, honestly." },
+        { text: "nothing. you've already walked away.", result: "efficient. antisocial. i understand completely." }
+      ]
+    },
+    {
+      q: "your ideal saturday involves:",
+      choices: [
+        { text: "being outside, alone or nearly", result: "correct. no notes." },
+        { text: "a long book and nowhere to be", result: "also correct." },
+        { text: "plans, activities, people", result: "we are different people and that's okay." },
+        { text: "all of the above somehow", result: "you'll have to let me know how that goes." }
+      ]
+    }
+  ];
+
+  let usedIndexes = [];
+
+  function getUnusedQuestion() {
+    if (usedIndexes.length === questions.length) usedIndexes = [];
+    let idx;
+    do { idx = Math.floor(Math.random() * questions.length); }
+    while (usedIndexes.includes(idx));
+    usedIndexes.push(idx);
+    return questions[idx];
+  }
+
+  function nextQuestion() {
+    const q = getUnusedQuestion();
+    document.getElementById('game-question').textContent = q.q;
+    document.getElementById('game-result').classList.remove('visible');
+    document.getElementById('play-again-btn').classList.remove('visible');
+
+    const container = document.getElementById('choices-container');
+    container.innerHTML = '';
+    q.choices.forEach(c => {
+      const btn = document.createElement('button');
+      btn.className = 'choice-btn';
+      btn.textContent = c.text;
+      btn.onclick = () => {
+        document.getElementById('game-result').textContent = c.result;
+        document.getElementById('game-result').classList.add('visible');
+        document.getElementById('play-again-btn').classList.add('visible');
+        container.querySelectorAll('.choice-btn').forEach(b => b.disabled = true);
+      };
+      container.appendChild(btn);
+    });
+  }
+
+  // Show game after 5 seconds
+  setTimeout(() => {
+    document.getElementById('game-zone').classList.add('visible');
+    nextQuestion();
+    // Show book form 1 second after game appears
+    setTimeout(() => {
+      document.getElementById('book-zone').classList.add('visible');
+    }, 1000);
+  }, 5000);
+
+  // Handle book form
+  const form = document.getElementById('book-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('form-thanks').classList.add('visible');
+    }
+  });
+</script>
