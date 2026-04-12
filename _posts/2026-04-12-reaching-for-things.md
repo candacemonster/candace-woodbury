@@ -68,6 +68,10 @@ sally is ready to go. she does this thing where she comes and stands very close 
 
 closing the book. going home. same loop tomorrow.
 
+[follow me on fable](https://fable.co/fabler/candace-569856504199)
+
 [^1]: *lab girl* — hope jahren — [borrow from a library](https://search.worldcat.org/title/951948195) or [buy a copy](https://bookshop.org/a/381/9781101873724)
 [^2]: *the language of trees* — katie holten — [borrow from a library](https://search.worldcat.org/title/1366126454) or [buy a copy](https://bookshop.org/a/381/9781959030782)
 [^3]: *dopamine nation* — anna lembke — [borrow from a library](https://search.worldcat.org/title/1200834183) or [buy a copy](https://bookshop.org/a/381/9780525541562)
+
+
