@@ -8,20 +8,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Epilogue:wght@300..700&display=swap');
 
 :root {
-  /* Surfaces */
-  --color-bg:       #f8f5f0;
-  --color-surface:  #f3ede6;
-  --color-border:   rgba(30, 24, 16, 0.12);
-  --color-divider:  rgba(30, 24, 16, 0.08);
+  --color-bg:       #faf6f2;
+  --color-surface:  #f4eeea;
+  --color-border:   rgba(52, 42, 36, 0.10);
+  --color-divider:  rgba(52, 42, 36, 0.06);
 
-  /* Text */
-  --color-text:       #1a1612;
-  --color-text-muted: #6b6358;
-  --color-text-faint: #b0a89e;
+  --color-text:       #231c18;
+  --color-text-muted: #756a63;
+  --color-text-faint: #b9aea7;
 
-  /* Accent — dusty chartreuse, used on links only */
-  --color-accent:       #7a8c2a;
-  --color-accent-hover: #5c6b1a;
+  --color-accent:       #b5878f;
+  --color-accent-hover: #986b74;
+}
 
   /* Typography */
   --font-display: 'Instrument Serif', Georgia, serif;
