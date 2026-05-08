@@ -1,5 +1,5 @@
 title: candace woodbury
-description: dispatches from someone who'd rather be outside.
+description: essays and short stories from someone who'd rather be outside.
 url: "https://candacewoodbury.com"
 baseurl: ""
 
@@ -18,8 +18,10 @@ plugins:
   - jekyll-sitemap
 
 navigation:
-  - title: dispatches
-    url: /dispatches/
+  - title: essays
+    url: /essays/
+  - title: short stories
+    url: /short-stories/
   - title: privacy
     url: /pages/privacy/
 
