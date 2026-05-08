@@ -4,12 +4,10 @@ title: about
 permalink: /about/
 ---
 
-candace woodbury
+a little note on me. 
 
-I live with my husband and our dog, trying to figure out what comes after forty, two big losses, and a career in software for the travel industry. I like quiet trails, library stacks, and long bike rides that take all afternoon to go nowhere in particular. I am still learning how to live with grief and how to let myself have a life that isn't entirely defined by work.
+I live with my husband and our dog, somewhere between where we were supposed to settle down and wherever we end up next. I’ve spent years in travel software and have the work–life balance to prove it, which is part of why I’m here trying to remember what else I’m for. There were two Norwegian elkhounds at the center of my world; now there’s Sally, an adoptee who also lost her person, and more quiet than I know what to do with.
 
-This site is where I put the essays and short stories that come out of all of that. You'll find pieces about dogs, marriage, travel, the outdoors, work, and the uneasy feeling of having a good life on paper and still wanting something you can't quite name. I don't post on a schedule and I'm not trying to build a brand; I'm just trying to pay attention and write it down.
+This is where the essays and short stories go when I don’t know where else to put them. You’ll find pieces about dogs, marriage, travel, the outdoors, work, and that uneasy space between “this looks fine” and “this can’t be it.” There’s no posting schedule, no personal brand strategy, just a person with a website and a stubborn habit of paying attention.
 
-I have social media accounts, but I'm rarely there. If I'm not answering a message, I'm probably outside or reading on the couch with the dog. The best way to spend time with me is to read something here.
-
-If you want, you can send me a note at hello@candacewoodbury.com, but there is no newsletter, no funnel, just a person with a website.
+I technically exist on social media, but I’m rarely there. If I’m slow to answer a message, assume I’m outside or reading with the dog. If you really need me, hello@candacewoodbury.com usually works.
