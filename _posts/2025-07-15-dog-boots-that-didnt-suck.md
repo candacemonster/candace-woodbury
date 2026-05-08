@@ -3,6 +3,8 @@ layout: post
 title: "dog boots that didn't suck"
 date: 2025-07-15
 affiliates: false
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *finally. boots that stayed on.*

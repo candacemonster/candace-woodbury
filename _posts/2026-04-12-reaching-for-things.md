@@ -3,6 +3,8 @@ layout: post
 title: "reaching for things"
 date: 2026-04-12
 affiliates: true
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *three books. one dog. the same loop, twice a day.*

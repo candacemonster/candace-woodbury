@@ -1,7 +1,7 @@
 # TEAM
 Creator: candace woodbury
 Site: https://candacewoodbury.com
-Philosophy: minimal. quiet. dispatches from someone who'd rather be outside.
+Philosophy: minimal. quiet. essays and short stories from someone who'd rather be outside.
 Contact: hello@candacewoodbury.com
 
 # THANKS
@@ -18,6 +18,6 @@ welcome, human. No AI, no nudges, no "Hi there! Can I help you?" popups.
 just words and caffeination. if you found this file, you're probably real.
 
 # SITE
-last updated: april 2026
-location: somwhere in NW, Arizona. for now.
+last updated: may 2026
+location: still in Arizona.
 standards: accessibility, readable text, fast load times, no nonsense.

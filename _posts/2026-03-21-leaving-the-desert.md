@@ -3,6 +3,8 @@ layout: post
 title: "leaving the desert"
 date: 2026-03-21
 affiliates: false
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *not ready. going anyway.*

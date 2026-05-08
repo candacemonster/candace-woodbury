@@ -3,6 +3,8 @@ layout: post
 title: "autumn equinox, monitor tan"
 date: 2025-09-27
 affiliates: false
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *i blinked and the equinox was here.*

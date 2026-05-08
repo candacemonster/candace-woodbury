@@ -10,20 +10,19 @@ author:
 google_analytics: G-SC80GDW5EE
 
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title/
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 navigation:
   - title: essays
     url: /essays/
   - title: short stories
     url: /short-stories/
-  - title: privacy
-    url: /pages/privacy/
 
 exclude:
   - Gemfile

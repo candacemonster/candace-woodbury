@@ -3,6 +3,8 @@ layout: post
 title: "high point trail – last stretch"
 date: 2025-11-05
 affiliates: false
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *sometimes the last hike looks like an ordinary morning.*

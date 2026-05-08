@@ -1,4 +1,10 @@
-minimal jekyll site. field notes, gear lists, no fluff.
+essays and short stories from someone who'd rather be outside.
+
+## categories
+
+- essays
+- short stories
+- archive (older posts)
 
 ## run locally
 

@@ -3,6 +3,8 @@ layout: post
 title: "the water's right there"
 date: 2025-07-20
 affiliates: false
+category: archive
+redirect_from: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.slug }}/"
 ---
 
 *everything's ready. still haven't gone.*
