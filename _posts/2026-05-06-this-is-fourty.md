@@ -7,7 +7,9 @@ affiliates: false
 ---
 
 
+
 I always thought forty would feel like something.
+
 
 
 I turned forty at 5:35 p.m. on May 6, exactly forty years after my mother finished an eighteen–hour argument with my existence. I like to think we've both been tired ever since. There were no big parties, no surprise trips, no "Welcome to your fabulous forties!" banners. Just the quiet click of another decade sliding into place.
@@ -18,7 +20,7 @@ What I do know is that I'm arriving here with a few chronic conditions, a long h
 
 Some of what I imagined for the last decade simply didn't happen. I don't have kids. A few humans came close to existing, but none stuck around long enough to be mine. I used to joke about having a little Peruvian coffee bean baby, my husband being half Andean, as if the universe were a barista taking custom orders. That joke aged badly. The wanting didn't disappear, but it moved from the foreground to the background, like a song you can't quite turn off. Forty is me learning how to live with that.
 
-On the plus side, my husband got me what might be the best birthday gift I've ever received: a book about perimenopause and a card explaining that he loves me in every version I've already been and every one I'm becoming. It felt like permission to take all of my hormones, old and new symptoms and new aches seriously, instead of treating my body like an inconvenient side quest to my inbox. I'll probably write more about what I'm learning as I go, but for now, if you are a woman roughly my age and any of this sounds familiar, go look at [thepauselife.com][^1].
+On the plus side, my husband got me what might be the best birthday gift I've ever received: a book about perimenopause and a card explaining that he loves me in every version I've already been and every one I'm becoming. It felt like permission to take all of my hormones, old and new symptoms and new aches seriously, instead of treating my body like an inconvenient side quest to my inbox. I'll probably write more about what I'm learning as I go, but for now, if you are a woman roughly my age and any of this sounds familiar, go look at [thepauselife.com](https://thepauselife.com)[^1].
 
 There are other lives here, too. There's Mr. J, who still makes me laugh when I'm determined not to. Sally, our rescue dog, who lost her person too and now supervises our weird little household. There's the twenty–two–year–old I get to play mom to as she heads toward college, the kind of parenting that comes with more cheering and less homework. There are days when I ride my bike, or sit outside, or read on the couch, and think: this is enough. Then there are days when it isn't.
 
@@ -28,5 +30,4 @@ Until then, I'll keep loving my husband, walking the dog, maybe finding her a li
 
 
 
-
-[^1]: **The 'Pause Life by Dr. Mary Claire Haver** – A wellness resource for women in perimenopause, menopause, and beyond. Founded by gynecologic surgeon Dr. Mary Claire Haver, MD, the site offers science-backed information on midlife health, including lab test checklists, hormone therapy guidance, nutrition support, and a free community. Visit https://thepauselife.com
+[^1]: **The 'Pause Life by Dr. Mary Claire Haver** – A wellness resource for women in perimenopause, menopause, and beyond, founded by Dr. Mary Claire Haver, MD, a board‑certified OB‑GYN and Certified Menopause Practitioner who offers a lifestyle‑focused menopause toolkit, education, and community support.[web:9] Visit [https://thepauselife.com](https://thepauselife.com).[web:9]
