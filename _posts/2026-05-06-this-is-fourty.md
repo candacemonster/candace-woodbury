@@ -30,4 +30,4 @@ Until then, I'll keep loving my husband, walking the dog, maybe finding her a li
 
 
 
-[^1]: **The 'Pause Life by Dr. Mary Claire Haver** – A wellness resource for women in perimenopause, menopause, and beyond, founded by Dr. Mary Claire Haver, MD, a board‑certified OB‑GYN and Certified Menopause Practitioner who offers a lifestyle‑focused menopause toolkit, education, and community support.[web:9] Visit [https://thepauselife.com](https://thepauselife.com).[web:9]
+[^1]: **The 'Pause Life by Dr. Mary Claire Haver** – A wellness resource for women in perimenopause, menopause, and beyond, founded by Dr. Mary Claire Haver, MD, a board‑certified OB‑GYN and Certified Menopause Practitioner who offers a lifestyle‑focused menopause toolkit, education, and community support. Visit [https://thepauselife.com](https://thepauselife.com).
