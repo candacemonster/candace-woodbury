@@ -1,11 +1,12 @@
 /* ─── Art direction ───────────────────────────────────────────────
-   Tone: dry literary, unhurried, sardonic field notes
-   Palette: warm off-white, near-black, muted sage accent
-   Typography: Instrument Serif (display) + Epilogue (body)
-   Density: spacious — confidence through restraint
+   Tone: quiet literary, observant, dryly funny, field-journal calm
+   Palette: warm paper, charcoal, muted sage, soft weathered neutrals
+   Typography: Instrument Serif for titles + Source Sans 3 for text
+   Density: spacious and restrained — editorial clarity over decoration
+   Mood: a small essay journal shaped by landscape, adulthood, and interior weather
    ─────────────────────────────────────────────────────────────── */
 
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Epilogue:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap");
 
 :root {
   --color-bg: #faf6f2;
@@ -21,18 +22,16 @@
   --color-accent-hover: #566351;
 
   --font-display: "Instrument Serif", Georgia, serif;
-  --font-body: "Epilogue", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 
-  /* Type scale */
   --text-xs: 13px;
   --text-sm: 15px;
-  --text-base: 17px;
+  --text-base: 18px;
   --text-lg: 24px;
   --text-xl: 36px;
   --text-2xl: 48px;
   --text-hero: 72px;
 
-  /* Spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -43,19 +42,15 @@
   --space-16: 64px;
   --space-24: 96px;
 
-  /* Layout */
   --content-narrow: 640px;
   --content-default: 720px;
 
-  /* Radius */
   --radius-sm: 3px;
   --radius-md: 6px;
 
-  /* Transitions */
   --transition: 160ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ─── Reset ─────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -114,7 +109,6 @@ li {
   max-width: 68ch;
 }
 
-/* ─── Typography ────────────────────────────────────────────────── */
 h1,
 h2,
 h3 {
@@ -224,7 +218,6 @@ sup {
   vertical-align: super;
 }
 
-/* Footnotes */
 .footnotes {
   margin-top: var(--space-16);
   padding-top: var(--space-8);
@@ -257,7 +250,6 @@ sup {
   }
 }
 
-/* ─── Layout ────────────────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--content-default);
@@ -269,7 +261,6 @@ sup {
   max-width: var(--content-narrow);
 }
 
-/* ─── Header ────────────────────────────────────────────────────── */
 .site-header {
   position: sticky;
   top: 0;
@@ -313,7 +304,7 @@ sup {
 .nav-links a {
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   text-transform: none;
   color: var(--color-text-muted);
   text-decoration: none;
@@ -325,7 +316,6 @@ sup {
   color: var(--color-text);
 }
 
-/* ─── Footer ────────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: var(--space-8) var(--space-6);
@@ -354,7 +344,6 @@ sup {
   color: var(--color-text-muted);
 }
 
-/* ─── Home Page ─────────────────────────────────────────────────── */
 .home-hero {
   padding: 96px 24px 48px;
   max-width: var(--content-default);
@@ -396,7 +385,6 @@ sup {
   border-radius: var(--radius-sm);
 }
 
-/* ─── Post Index ────────────────────────────────────────────────── */
 .page-content {
   padding: 64px 24px;
   max-width: var(--content-default);
@@ -451,7 +439,6 @@ sup {
   color: var(--color-accent);
 }
 
-/* ─── Post ──────────────────────────────────────────────────────── */
 .post-header {
   padding: 64px 24px 32px;
   max-width: var(--content-default);
@@ -503,7 +490,6 @@ sup {
   font-style: italic;
 }
 
-/* Post nav (prev/next) */
 .post-nav {
   display: flex;
   justify-content: space-between;
@@ -525,7 +511,6 @@ sup {
   color: var(--color-text);
 }
 
-/* ─── Page (privacy, static) ────────────────────────────────────── */
 .static-page {
   padding: 64px 24px 96px;
   max-width: var(--content-narrow);
@@ -561,7 +546,6 @@ sup {
   border: 0;
 }
 
-/* ─── Category / Password Pages ─────────────────────────────────── */
 .password-protection {
   padding: 64px 24px;
   max-width: var(--content-default);
@@ -615,7 +599,7 @@ sup {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   text-transform: none;
   color: var(--color-bg);
   background-color: var(--color-accent);
@@ -640,7 +624,6 @@ sup {
   transform: scale(0.98);
 }
 
-/* ─── GPA Resources Page ────────────────────────────────────────── */
 .page-header {
   margin-bottom: var(--space-8);
 }
@@ -695,9 +678,10 @@ sup {
   color: var(--color-text-muted);
 }
 
-/* ─── Mobile ────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   :root {
+    --text-xs: 13px;
+    --text-sm: 14px;
     --text-base: 16px;
     --text-lg: 22px;
     --text-xl: 30px;
@@ -720,7 +704,7 @@ sup {
 
   .nav-links a {
     font-size: 14px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
   }
 
   .home-hero {
