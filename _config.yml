@@ -1,5 +1,5 @@
 title: candace woodbury
-description: essays and short stories from someone who'd rather be outside.
+description: essays from the ongoing experiment of being alive and slightly unconvinced by it.
 url: "https://candacewoodbury.com"
 baseurl: ""
 
@@ -21,8 +21,6 @@ plugins:
 navigation:
   - title: essays
     url: /essays/
-  - title: short stories
-    url: /short-stories/
 
 exclude:
   - Gemfile

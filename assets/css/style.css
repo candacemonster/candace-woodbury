@@ -1,12 +1,12 @@
 /* ─── Art direction ───────────────────────────────────────────────
    Tone: quiet literary, observant, dryly funny, field-journal calm
    Palette: warm paper, charcoal, muted sage, soft weathered neutrals
-   Typography: Instrument Serif for titles + Source Sans 3 for text
+   Typography: Newsreader for titles + Source Sans 3 for text
    Density: spacious and restrained — editorial clarity over decoration
    Mood: a small essay journal shaped by landscape, adulthood, and interior weather
    ─────────────────────────────────────────────────────────────── */
 
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..700&family=Source+Sans+3:wght@400;500;600&display=swap");
 
 :root {
   --color-bg: #faf6f2;
@@ -21,7 +21,7 @@
   --color-accent: #6f7f6b;
   --color-accent-hover: #566351;
 
-  --font-display: "Instrument Serif", Georgia, serif;
+  --font-display: "Newsreader", Georgia, serif;
   --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 
   --text-xs: 13px;
@@ -30,7 +30,7 @@
   --text-lg: 24px;
   --text-xl: 36px;
   --text-2xl: 48px;
-  --text-hero: 72px;
+  --text-hero: 68px;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -51,6 +51,7 @@
   --transition: 160ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ─── Reset ─────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -109,12 +110,13 @@ li {
   max-width: 68ch;
 }
 
+/* ─── Typography ────────────────────────────────────────────────── */
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
   color: var(--color-text);
 }
 
@@ -152,10 +154,8 @@ p:last-child {
 
 a {
   color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color var(--transition);
+  text-decoration: none;
+  transition: color var(--transition), opacity var(--transition);
 }
 
 a:hover {
@@ -176,6 +176,18 @@ b {
 em,
 i {
   font-style: italic;
+}
+
+.post-body a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 127, 107, 0.35);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.post-body a:hover {
+  color: var(--color-accent-hover);
+  border-bottom-color: rgba(86, 99, 81, 0.5);
 }
 
 blockquote {
@@ -250,6 +262,7 @@ sup {
   }
 }
 
+/* ─── Layout ────────────────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--content-default);
@@ -261,6 +274,7 @@ sup {
   max-width: var(--content-narrow);
 }
 
+/* ─── Header ────────────────────────────────────────────────────── */
 .site-header {
   position: sticky;
   top: 0;
@@ -282,9 +296,8 @@ sup {
 
 .site-title {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: 28px;
   font-weight: 400;
-  letter-spacing: 0.2px;
   color: var(--color-text);
   text-decoration: none;
   line-height: 1;
@@ -304,7 +317,7 @@ sup {
 .nav-links a {
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   text-transform: none;
   color: var(--color-text-muted);
   text-decoration: none;
@@ -316,6 +329,7 @@ sup {
   color: var(--color-text);
 }
 
+/* ─── Footer ────────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: var(--space-8) var(--space-6);
@@ -344,6 +358,7 @@ sup {
   color: var(--color-text-muted);
 }
 
+/* ─── Home ──────────────────────────────────────────────────────── */
 .home-hero {
   padding: 96px 24px 48px;
   max-width: var(--content-default);
@@ -355,7 +370,7 @@ sup {
   font-family: var(--font-display);
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
   line-height: 1.02;
   margin-bottom: var(--space-6);
   color: var(--color-text);
@@ -365,7 +380,7 @@ sup {
   font-size: 18px;
   color: var(--color-text-muted);
   font-weight: 400;
-  max-width: 680px;
+  max-width: 540px;
   line-height: 1.7;
 }
 
@@ -385,6 +400,7 @@ sup {
   border-radius: var(--radius-sm);
 }
 
+/* ─── Essays Index ──────────────────────────────────────────────── */
 .page-content {
   padding: 64px 24px;
   max-width: var(--content-default);
@@ -428,7 +444,7 @@ sup {
 
 .post-list a {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: 26px;
   font-style: italic;
   color: var(--color-text);
   text-decoration: none;
@@ -439,6 +455,7 @@ sup {
   color: var(--color-accent);
 }
 
+/* ─── Post ──────────────────────────────────────────────────────── */
 .post-header {
   padding: 64px 24px 32px;
   max-width: var(--content-default);
@@ -511,6 +528,7 @@ sup {
   color: var(--color-text);
 }
 
+/* ─── Static Pages ──────────────────────────────────────────────── */
 .static-page {
   padding: 64px 24px 96px;
   max-width: var(--content-narrow);
@@ -546,6 +564,7 @@ sup {
   border: 0;
 }
 
+/* ─── Password / Utility ────────────────────────────────────────── */
 .password-protection {
   padding: 64px 24px;
   max-width: var(--content-default);
@@ -599,7 +618,7 @@ sup {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   text-transform: none;
   color: var(--color-bg);
   background-color: var(--color-accent);
@@ -624,6 +643,7 @@ sup {
   transform: scale(0.98);
 }
 
+/* ─── Misc Existing Content ─────────────────────────────────────── */
 .page-header {
   margin-bottom: var(--space-8);
 }
@@ -678,6 +698,7 @@ sup {
   color: var(--color-text-muted);
 }
 
+/* ─── Mobile ────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   :root {
     --text-xs: 13px;
@@ -686,7 +707,7 @@ sup {
     --text-lg: 22px;
     --text-xl: 30px;
     --text-2xl: 38px;
-    --text-hero: 48px;
+    --text-hero: 46px;
   }
 
   .site-nav {
@@ -695,7 +716,7 @@ sup {
   }
 
   .site-title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .nav-links {
@@ -704,7 +725,7 @@ sup {
 
   .nav-links a {
     font-size: 14px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
   }
 
   .home-hero {
@@ -714,6 +735,7 @@ sup {
   .home-tagline {
     font-size: 16px;
     line-height: 1.7;
+    max-width: 100%;
   }
 
   .page-content,
@@ -734,6 +756,10 @@ sup {
     display: block;
     margin-bottom: 4px;
     font-size: var(--text-xs);
+  }
+
+  .post-list a {
+    font-size: 23px;
   }
 
   .post-body p,
