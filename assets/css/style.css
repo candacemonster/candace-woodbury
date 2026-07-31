@@ -1,6 +1,6 @@
 /* ─── Art direction ───────────────────────────────────────────────
    Tone: dry literary, unhurried, sardonic field notes
-   Palette: warm off-white, near-black, dusty chartreuse accent
+   Palette: warm off-white, near-black, muted sage accent
    Typography: Instrument Serif (display) + Epilogue (body)
    Density: spacious — confidence through restraint
    ─────────────────────────────────────────────────────────────── */
@@ -10,39 +10,38 @@
 :root {
   --color-bg: #faf6f2;
   --color-surface: #f4eeea;
-  --color-border: rgba(52, 42, 36, 0.1);
+  --color-border: rgba(52, 42, 36, 0.10);
   --color-divider: rgba(52, 42, 36, 0.06);
 
   --color-text: #231c18;
   --color-text-muted: #756a63;
   --color-text-faint: #b9aea7;
 
-  --color-accent: #b5878f;
-  --color-accent-hover: #986b74;
+  --color-accent: #6f7f6b;
+  --color-accent-hover: #566351;
 
-  /* Typography */
   --font-display: "Instrument Serif", Georgia, serif;
-  --font-body: "Epilogue", "Helvetica Neue", sans-serif;
+  --font-body: "Epilogue", "Helvetica Neue", Arial, sans-serif;
 
   /* Type scale */
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-  --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
-  --text-hero: clamp(2.5rem, 1rem + 4vw, 5rem);
+  --text-xs: 13px;
+  --text-sm: 15px;
+  --text-base: 17px;
+  --text-lg: 24px;
+  --text-xl: 36px;
+  --text-2xl: 48px;
+  --text-hero: 72px;
 
   /* Spacing */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-24: 6rem;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
 
   /* Layout */
   --content-narrow: 640px;
@@ -79,8 +78,8 @@ body {
   flex-direction: column;
   font-family: var(--font-body);
   font-size: var(--text-base);
-  font-weight: 300;
-  line-height: 1.7;
+  font-weight: 400;
+  line-height: 1.75;
   color: var(--color-text);
   background-color: var(--color-bg);
 }
@@ -88,6 +87,7 @@ body {
 main {
   flex: 1;
 }
+
 img,
 picture,
 video,
@@ -97,6 +97,7 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
 h1,
 h2,
 h3,
@@ -104,8 +105,9 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  line-height: 1.15;
+  line-height: 1.12;
 }
+
 p,
 li {
   text-wrap: pretty;
@@ -118,7 +120,7 @@ h2,
 h3 {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.3px;
   color: var(--color-text);
 }
 
@@ -126,19 +128,22 @@ h1 {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-4);
 }
+
 h2 {
   font-size: var(--text-xl);
   margin-top: var(--space-8);
   margin-bottom: var(--space-3);
 }
+
 h3 {
   font-size: var(--text-lg);
   margin-top: var(--space-6);
   margin-bottom: var(--space-2);
 }
+
 h4 {
   font-size: var(--text-base);
-  font-weight: 500;
+  font-weight: 600;
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
 }
@@ -146,6 +151,7 @@ h4 {
 p {
   margin-bottom: var(--space-4);
 }
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -157,9 +163,11 @@ a {
   text-decoration-thickness: 1px;
   transition: color var(--transition);
 }
+
 a:hover {
   color: var(--color-accent-hover);
 }
+
 a:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
@@ -170,19 +178,32 @@ strong,
 b {
   font-weight: 600;
 }
+
 em,
 i {
   font-style: italic;
 }
 
 blockquote {
+  position: relative;
   margin: var(--space-8) 0;
-  padding: var(--space-4) var(--space-6);
-  border-left: 2px solid var(--color-border);
+  padding: var(--space-6) 0 var(--space-6) var(--space-4);
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-style: italic;
+  line-height: 1.45;
   color: var(--color-text-muted);
+  border-left: none;
+}
+
+blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--color-divider);
 }
 
 hr {
@@ -195,11 +216,11 @@ small,
 .meta {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.3px;
 }
 
 sup {
-  font-size: 0.7em;
+  font-size: 11px;
   vertical-align: super;
 }
 
@@ -211,16 +232,18 @@ sup {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
 }
+
 .footnotes ol {
   margin-left: var(--space-4);
 }
+
 .footnotes li {
   margin-bottom: var(--space-2);
   line-height: 1.5;
 }
 
 ::selection {
-  background: rgba(122, 140, 42, 0.18);
+  background: rgba(111, 127, 107, 0.20);
   color: var(--color-text);
 }
 
@@ -268,12 +291,14 @@ sup {
 
 .site-title {
   font-family: var(--font-display);
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2px;
   color: var(--color-text);
   text-decoration: none;
+  line-height: 1;
 }
+
 .site-title:hover {
   color: var(--color-text-muted);
 }
@@ -286,14 +311,15 @@ sup {
 }
 
 .nav-links a {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-transform: none;
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color var(--transition);
 }
+
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--color-text);
@@ -316,21 +342,21 @@ sup {
   flex-wrap: wrap;
   font-size: var(--text-xs);
   color: var(--color-text-faint);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.3px;
 }
 
 .site-footer a {
   color: var(--color-text-faint);
   text-decoration: none;
 }
+
 .site-footer a:hover {
   color: var(--color-text-muted);
 }
 
 /* ─── Home Page ─────────────────────────────────────────────────── */
 .home-hero {
-  padding: clamp(var(--space-16), 12vw, var(--space-24)) var(--space-6)
-    var(--space-12);
+  padding: 96px 24px 48px;
   max-width: var(--content-default);
   margin-inline: auto;
 }
@@ -340,18 +366,18 @@ sup {
   font-family: var(--font-display);
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  letter-spacing: -0.8px;
+  line-height: 1.02;
   margin-bottom: var(--space-6);
   color: var(--color-text);
 }
 
 .home-tagline {
-  font-size: var(--text-base);
+  font-size: 18px;
   color: var(--color-text-muted);
-  font-weight: 300;
-  max-width: 44ch;
-  line-height: 1.6;
+  font-weight: 400;
+  max-width: 680px;
+  line-height: 1.7;
 }
 
 .home-title-link {
@@ -370,9 +396,9 @@ sup {
   border-radius: var(--radius-sm);
 }
 
-/* ─── Post Index (Dispatches) ───────────────────────────────────── */
+/* ─── Post Index ────────────────────────────────────────────────── */
 .page-content {
-  padding: clamp(var(--space-8), 6vw, var(--space-16)) var(--space-6);
+  padding: 64px 24px;
   max-width: var(--content-default);
   margin-inline: auto;
 }
@@ -391,7 +417,7 @@ sup {
 
 .post-list li {
   display: grid;
-  grid-template-columns: 5rem 1fr;
+  grid-template-columns: 80px 1fr;
   gap: var(--space-4);
   align-items: baseline;
   padding: var(--space-4) 0;
@@ -405,11 +431,11 @@ sup {
 
 .post-date {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.3px;
   white-space: nowrap;
-  padding-top: 0.15em;
+  padding-top: 2px;
 }
 
 .post-list a {
@@ -420,14 +446,14 @@ sup {
   text-decoration: none;
   transition: color var(--transition);
 }
+
 .post-list a:hover {
   color: var(--color-accent);
 }
 
 /* ─── Post ──────────────────────────────────────────────────────── */
 .post-header {
-  padding: clamp(var(--space-8), 6vw, var(--space-16)) var(--space-6)
-    var(--space-8);
+  padding: 64px 24px 32px;
   max-width: var(--content-default);
   margin-inline: auto;
 }
@@ -435,7 +461,7 @@ sup {
 .post-header h1 {
   font-size: var(--text-2xl);
   font-style: italic;
-  line-height: 1.1;
+  line-height: 1.08;
   margin-bottom: var(--space-4);
 }
 
@@ -443,21 +469,21 @@ sup {
   display: flex;
   gap: var(--space-4);
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
-  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
 .post-body {
-  padding: 0 var(--space-6) var(--space-16);
+  padding: 0 24px 64px;
   max-width: var(--content-default);
   margin-inline: auto;
 }
 
 .post-body p,
 .post-body li {
-  font-size: var(--text-base);
-  line-height: 1.75;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .post-body figure {
@@ -471,7 +497,7 @@ sup {
 
 .post-body figcaption {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   text-align: center;
   margin-top: var(--space-2);
   font-style: italic;
@@ -486,21 +512,22 @@ sup {
   padding-top: var(--space-8);
   border-top: 1px solid var(--color-divider);
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
-  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  letter-spacing: 0.3px;
 }
+
 .post-nav a {
   color: var(--color-text-muted);
   text-decoration: none;
 }
+
 .post-nav a:hover {
   color: var(--color-text);
 }
 
 /* ─── Page (privacy, static) ────────────────────────────────────── */
 .static-page {
-  padding: clamp(var(--space-8), 6vw, var(--space-16)) var(--space-6)
-    var(--space-24);
+  padding: 64px 24px 96px;
   max-width: var(--content-narrow);
   margin-inline: auto;
 }
@@ -512,10 +539,9 @@ sup {
 }
 
 .static-page h2 {
-  font-size: var(--text-base);
   font-family: var(--font-body);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -535,9 +561,9 @@ sup {
   border: 0;
 }
 
-/* ─── Category Pages (Essays, Short Stories) ───────────────────── */
+/* ─── Category / Password Pages ─────────────────────────────────── */
 .password-protection {
-  padding: clamp(var(--space-8), 6vw, var(--space-16)) var(--space-6);
+  padding: 64px 24px;
   max-width: var(--content-default);
   margin-inline: auto;
 }
@@ -547,7 +573,7 @@ sup {
   color: var(--color-text-muted);
   margin-bottom: var(--space-8);
   max-width: 60ch;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .password-form {
@@ -564,7 +590,7 @@ sup {
 .password-input-group input {
   flex: 1;
   min-width: 200px;
-  padding: var(--space-3) var(--space-4);
+  padding: 12px 16px;
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-text);
@@ -585,12 +611,12 @@ sup {
 }
 
 .password-submit {
-  padding: var(--space-3) var(--space-6);
+  padding: 12px 24px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-transform: none;
   color: var(--color-bg);
   background-color: var(--color-accent);
   border: 1px solid var(--color-accent);
@@ -626,10 +652,22 @@ sup {
 }
 
 .disclaimer {
+  position: relative;
   background: var(--color-surface);
-  padding: var(--space-4);
-  border-left: 3px solid var(--color-accent);
+  padding: 16px 16px 16px 20px;
   margin-bottom: var(--space-6);
+  border-left: none;
+  border-radius: var(--radius-md);
+}
+
+.disclaimer::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--color-divider);
 }
 
 .local-nav {
@@ -659,31 +697,80 @@ sup {
 
 /* ─── Mobile ────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
+  :root {
+    --text-base: 16px;
+    --text-lg: 22px;
+    --text-xl: 30px;
+    --text-2xl: 38px;
+    --text-hero: 48px;
+  }
+
   .site-nav {
-    padding: var(--space-3) var(--space-4);
+    padding: 12px 16px;
+    gap: 16px;
   }
+
+  .site-title {
+    font-size: 22px;
+  }
+
   .nav-links {
-    gap: var(--space-4);
+    gap: 16px;
   }
+
+  .nav-links a {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+
+  .home-hero {
+    padding: 72px 24px 40px;
+  }
+
+  .home-tagline {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .page-content,
+  .post-header,
+  .post-body,
+  .static-page,
+  .password-protection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .post-list li {
     grid-template-columns: 1fr;
-    gap: var(--space-1);
+    gap: 4px;
   }
+
   .post-date {
     display: block;
-    margin-bottom: var(--space-1);
+    margin-bottom: 4px;
     font-size: var(--text-xs);
   }
+
+  .post-body p,
+  .post-body li {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
   .password-input-group {
     flex-direction: column;
   }
+
   .password-input-group input {
     min-width: unset;
     width: 100%;
   }
+
   .password-submit {
     width: 100%;
   }
+
   .password-message {
     font-size: var(--text-base);
   }
