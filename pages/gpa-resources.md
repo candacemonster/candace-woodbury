@@ -6,7 +6,7 @@ permalink: /gpa-resources/
 
 <section id="opening">
   <p>
-    This is a page I created for myself after being diagnosed with Granulomatosis with Polyangiitis in 2019. GPA is a rare autoimmune disease, and when you get diagnosed with something you've never heard of, you end up with a dozen browser tabs, scattered research papers, and a growing collection of acronyms you can't quite remember. This page is my attempt to keep everything in one place—trustworthy information, research updates, and resources I actually use.
+    This is a page I created for myself after being diagnosed with Granulomatosis with Polyangiitis in 2019. GPA is a rare autoimmune disease, and when you get diagnosed with something you've never heard of, you end up with a dozen browser tabs, scattered research papers, and a growing collection of acronyms you can't quite remember. This page is my attempt to keep everything in one place—trustworthy information, research updates, and resources I actually use myself.
   </p>
   <p>
     I'm sharing it because I know how isolating and confusing it can be when you're newly diagnosed or trying to make sense of what living with GPA actually means. Maybe it'll be useful to someone else figuring this out too.
@@ -64,7 +64,7 @@ permalink: /gpa-resources/
 <section id="living-with-gpa">
   <h2>Living with GPA</h2>
   <p>
-    GPA is not just lab results and imaging reports; it’s the daily reality of fatigue, uncertainty, and figuring out what “normal” looks like now. This is the human side of living with a rare, chronic illness.
+    GPA is not just lab results and imaging reports; it’s the daily reality of fatigue, uncertainty, and figuring out what “normal” looks like now.
   </p>
   <p>
     I’m collecting gentle, practical resources about coping, pacing, and staying present while handling medical appointments, tests, and treatment side effects.
@@ -98,7 +98,7 @@ permalink: /gpa-resources/
     <p>
       Summary coming soon. I’ll add a short, person‑friendly explanation of what the study looked at, what it found, and what it might mean for people living with GPA.
     </p>
-    <p><strong>Why it matters:</strong> This section will explain, in one or two sentences, why someone with GPA might care about this research.</p>
+    <p><strong>Why it matters:</strong> I’ll explain in one or two sentences why someone with GPA might care about this research.</p>
     <p>
       <span class="source-label">Source:</span>
       I’ll link to PubMed, journal articles, and lay explanations once I’ve written the summary.
@@ -125,6 +125,9 @@ permalink: /gpa-resources/
 
 <section id="treatment-overview">
   <h2>Treatment Options Overview</h2>
+  <p>
+    This section is meant to give a high-level overview of common treatment approaches so you have some context for conversations with your care team. It is not medical advice.
+  </p>
   <p>
     Rituximab (Rituxan) has become the standard treatment for GPA, particularly for relapsing disease, and is more effective than azathioprine in maintaining remission. Studies show that major relapse occurred in only 3% of rituximab patients versus 29% of azathioprine patients at 28 months. However, rituximab does carry risks including increased infection rates and infusion-related reactions, particularly during the first infusion.
   </p>
