@@ -21,6 +21,8 @@ plugins:
 navigation:
   - title: essays
     url: /essays/
+  - title: short stories
+    url: /short-stories/
 
 exclude:
   - Gemfile

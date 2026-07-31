@@ -2,13 +2,11 @@
 layout: post
 title: "this is forty, apparently"
 date: 2026-05-06
-category: essays
+categories: [essays]
 affiliates: false
 ---
 
-
 I always thought forty would feel like something.
-
 
 I turned forty at 5:35 p.m. on May 6, exactly forty years after my mother finished an eighteen-hour argument with my existence. We’ve both been tired since.
 
@@ -22,9 +20,9 @@ I know people who say they were excited and loved turning forty. I believe them.
 
 What I do know is that I’m arriving here with a few chronic conditions, a long habit of putting work ahead of my body, and the stubborn belief that I’d like to make it to one hundred. Not just technically alive, but reasonably intact. Walking my own dog. Remembering why I walked into a room.
 
-Lately, some old symptoms have started circling back, the kind I used to bulldoze past. For now I’m tracking them, making notes, trying to stay curious instead of spiraling while I wait out a rescheduled appointment that keeps drifting further into the future. At least we will only have to make one summer trip to AZ for medical appointments and to drop our girl off at Uni.
+Lately, some old symptoms have started circling back, the kind I used to bulldoze past. For now I’m tracking them, making notes, trying to stay curious instead of spiraling while I wait out a rescheduled appointment that keeps drifting further into the future. At least we only have to make one summer trip to Arizona: Mayo for appointments, then dropping our girl off at college, because apparently August likes an itinerary.
 
-I don’t know if I can get from here to one hundred, but I’d like to try. Which means life after forty can’t look exactly like life before it. I don’t know what that change looks like yet. I just know it’s not optional.
+I don’t know if I can get from here to one hundred, but I’d like to try. Which means life after forty probably can’t just be my thirties with more prescriptions and worse stamina. I don’t know what the change is yet. I just know I don’t get to opt out of it.
 
 Some of what I imagined for the last decade didn’t happen. I don’t have kids. A few almost existed, but none stuck around long enough to be mine. I used to joke about having a little Peruvian coffee bean baby, my husband being half Andean, as if the universe were a barista taking custom orders. That joke did not age well.
 
@@ -50,6 +48,4 @@ Until then, I’ll keep loving my husband, walking the dog, maybe adopting anoth
 
 Forty doesn’t feel like a grand arrival. It feels like standing on a trail I didn’t entirely mean to hike, taking a breath, and deciding to keep going anyway.
 
-
-
-[^1]: The 'Pause Life by Dr. Mary Claire Haver is a wellness resource for women in perimenopause, menopause, and beyond, founded by Dr. Mary Claire Haver, MD, a board-certified OB-GYN and Menopause Society Certified Practitioner who offers a lifestyle-focused menopause toolkit, education, and community support.
+[^1]: The Pause Life is Dr. Mary Claire Haver’s menopause and perimenopause resource. It’s practical, smart, and less insane-making than trying to piece this together from the internet one symptom at a time.
