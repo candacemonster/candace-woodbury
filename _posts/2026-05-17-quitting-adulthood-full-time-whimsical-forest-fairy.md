@@ -2,9 +2,10 @@
 layout: post
 title: "on quitting adulthood to be a full-time whimsical forest fairy"
 date: 2026-05-17
-tags: [essays]
+category: essays
 affiliates: false
 ---
+
 
 I would like to formally resign from adulthood and take up my true vocation: full-time whimsical forest fairy with a garden, a stack of library books, good coffee, and too many dogs, fully funded by my husband.
 
