@@ -10,4 +10,6 @@ I live with my husband and our dog, somewhere between where we were supposed to 
 
 This is where the essays and short stories go when I don’t know where else to put them. You’ll find pieces about dogs, marriage, travel, the outdoors, work, and that uneasy space between “this looks fine” and “this can’t be it.” There’s no posting schedule, no personal brand strategy, just a person with a website and a stubborn habit of paying attention.
 
+If you’re here because of Granulomatosis with Polyangiitis, I keep a living list of plain‑language research summaries and trustworthy links on my <a href="/gpa-resources/">GPA Resources</a> page.
+
 I technically exist on social media, but I’m rarely there. If I’m slow to answer a message, assume I’m outside or reading with the dog. If you really need me, hello@candacewoodbury.com usually works.

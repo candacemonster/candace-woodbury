@@ -614,6 +614,49 @@ sup {
   transform: scale(0.98);
 }
 
+/* ─── GPA Resources Page ────────────────────────────────────────── */
+.page-header {
+  margin-bottom: var(--space-8);
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.disclaimer {
+  background: var(--color-surface);
+  padding: var(--space-4);
+  border-left: 3px solid var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+
+.local-nav {
+  margin-bottom: var(--space-8);
+}
+
+.local-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.local-nav li {
+  margin-bottom: var(--space-2);
+}
+
+.update-card {
+  background: var(--color-surface);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.source-label {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
 /* ─── Mobile ────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .site-nav {
