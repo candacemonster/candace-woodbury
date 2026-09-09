@@ -8,25 +8,25 @@ affiliates: false
 
 I always thought forty would feel like something.
 
-I turned forty at 5:35 p.m. on May 6, exactly forty years after my mother finished an eighteen-hour argument with my existence. We’ve both been tired since.
+Not fireworks, exactly. More like a quiet click, the way a seatbelt settles into place when you finally stop fighting it. A signal that now we’re really doing this.
 
-There were no big parties, no surprise trips, no “Welcome to your fabulous forties!” banners. Just the quiet click of another decade sliding into place.
+I turned forty at 5:35 p.m. on May 6, precisely forty years after my mother finished an eighteen-hour argument with my existence. We’ve both been tired ever since.
 
-I thought when I turned forty I would feel wiser. Or at least more decisive about my skincare routine. Instead I woke up feeling like myself, just with a number that seems to belong to other people.
+There were no big parties, no surprise trips, no “Welcome to your fabulous forties!” banners. Just the ordinary hum of a Tuesday, and the knowledge that another decade had slid into position whether I was ready or not.
 
-Do I feel forty? I don’t know what that’s supposed to feel like. My dad says he turned forty and was just pissed off. My husband spent his fortieth year having what we now politely call “a rough time.”
+I thought when I turned forty I would feel wiser. Or at least more decisive about my skincare routine. Instead I woke up feeling like myself, just with a number that seems to belong to other people. The kind of people who say things like “forty is the new thirty” and genuinely mean it.
 
-I know people who say they were excited and loved turning forty. I believe them. I’m just not one of them.
+Do I feel forty? I don’t know what that’s supposed to feel like. My dad says he turned forty and was just pissed off. My husband spent his fortieth year having what we now politely call “a rough time.” I know people who say they were excited and loved turning forty. I believe them. I’m just not one of them.
 
-What I do know is that I’m arriving here with a few chronic conditions, a long habit of putting work ahead of my body, and the stubborn belief that I’d like to make it to one hundred. Not just technically alive, but reasonably intact. Walking my own dog. Remembering why I walked into a room.
+What I do know is that I’m arriving here with a few chronic conditions, a long habit of putting work ahead of my body, and the stubborn belief that I’d like to make it to one hundred. Not just technically alive, but reasonably intact. Walking my own dog. Remembering why I walked into a room. Not needing a flowchart to explain my own medication schedule.
 
-Lately, some old symptoms have started circling back, the kind I used to bulldoze past. For now I’m tracking them, making notes, trying to stay curious instead of spiraling while I wait out a rescheduled appointment that keeps drifting further into the future. At least we only have to make one summer trip to Arizona: Mayo for appointments, then dropping our girl off at college, because apparently August likes an itinerary.
+Lately, some old symptoms have started circling back, the kind I used to bulldoze past with caffeine and sheer will. For now I’m tracking them, making notes, trying to stay curious instead of spiraling while I wait out a rescheduled appointment that keeps drifting further into the future. At least we only have to make one summer trip to Arizona: Mayo for appointments, then dropping our girl off at college, because apparently August likes an itinerary.
 
 I don’t know if I can get from here to one hundred, but I’d like to try. Which means life after forty probably can’t just be my thirties with more prescriptions and worse stamina. I don’t know what the change is yet. I just know I don’t get to opt out of it.
 
 Some of what I imagined for the last decade didn’t happen. I don’t have kids. A few almost existed, but none stuck around long enough to be mine. I used to joke about having a little Peruvian coffee bean baby, my husband being half Andean, as if the universe were a barista taking custom orders. That joke did not age well.
 
-The wanting didn’t disappear. It just moved. It’s background noise now, like a song I don’t love but can’t quite turn off. Forty is learning how to live with that.
+The wanting didn’t disappear. It just moved. It’s background noise now, like a song I don’t love but can’t quite turn off. Forty is learning how to live with that. Not fixing it, not solving it, just making enough space around it that it doesn’t run the whole show.
 
 Back to my birthday. My husband got me what might be the best gift I’ve ever received: a book about perimenopause and a card explaining that he loves me in every version I’ve been and every one I’m becoming.
 
@@ -34,15 +34,15 @@ It felt less like a gift and more like permission. Permission to take my body se
 
 There are other lives here, too. There’s my Mr. J, who still makes me laugh when I’m actively trying not to. Sally, our rescue dog, who lost her person around the time we all lost Sigrun. With Tove gone, Sally now supervises our weird little household, which frankly feels right.
 
-There’s also a twenty-two-year-old I get to play mom to as she heads off to university this fall. It’s parenting with more cheering and less homework, which suits me.
+There’s also a twenty-two-year-old I get to play mom to as she heads off to university this fall. It’s parenting with more cheering and less homework, which suits me. I get to show up for the big moments without having to argue about laundry every day.
 
-Some days I ride my bike, or sit outside, or read on the couch and think, this is enough. Other days, it isn’t.
+Some days I ride my bike, or sit outside, or read on the couch and think, this is enough. Other days, it isn’t. Some days forty feels like arriving somewhere. Other days it feels like standing in the middle of a room and forgetting what I came in here for, which, honestly, tracks.
 
 So this is forty, apparently. A little grief-heavy. A little tired. Still too entangled with work. But also curious.
 
 I don’t have a five-year plan. I have a question: what if the second half of my life didn’t look anything like the first?
 
-I don’t have the answer. I suspect it starts small. Paying attention to my body. My days. The things that make me want to stick around.
+I don’t have the answer. I suspect it starts small. Paying attention to my body. My days. The things that make me want to stick around. The moments where I remember that I’m not just keeping a machine running, but actually living inside a life.
 
 Until then, I’ll keep loving my husband, walking the dog, maybe adopting another. I’ll show up for the two young adults in our life as they start building their lives in a world that doesn’t make it easy. And I’ll work on not taking mine so seriously that I forget to actually enjoy it.
 

@@ -4,20 +4,22 @@ title: GPA Resources
 permalink: /gpa-resources/
 ---
 
+
 <section id="opening">
   <p>
-    This is a page I created for myself after being diagnosed with Granulomatosis with Polyangiitis in 2019. GPA is a rare autoimmune disease, and when you get diagnosed with something you've never heard of, you end up with a dozen browser tabs, scattered research papers, and a growing collection of acronyms you can't quite remember. This page is my attempt to keep everything in one place—trustworthy information, research updates, and resources I actually use myself.
+    I created this page for myself after being diagnosed with Granulomatosis with Polyangiitis in 2019. GPA is a rare autoimmune disease, and when you get diagnosed with something you’ve never heard of, you end up with a dozen browser tabs, scattered research papers, and a growing collection of acronyms you can’t quite remember. This page is my attempt to keep everything in one place—trustworthy information, research updates, and resources I actually use myself.
   </p>
   <p>
-    I'm sharing it because I know how isolating and confusing it can be when you're newly diagnosed or trying to make sense of what living with GPA actually means. Maybe it'll be useful to someone else figuring this out too.
+    I’m sharing it because I know how isolating and confusing it can be when you’re newly diagnosed or trying to make sense of what living with GPA actually means. Maybe it’ll be useful to someone else figuring this out too.
   </p>
   <p>
     I am not a doctor, researcher, or medical professional. I use tools like my GPA Updates & News research space to help me find and summarize information, but every decision about your health belongs with you and your healthcare team. This page is for informational and educational purposes only.
   </p>
   <p>
-    (In the future, I plan to share more about my diagnosis story through a video, likely after my appointment in August 2026.)
+    (In the future, I might share more about my diagnosis story, likely after my appointment in August 2026.)
   </p>
 </section>
+
 
 <nav class="local-nav">
   <p>On this page:</p>
@@ -32,6 +34,7 @@ permalink: /gpa-resources/
   </ul>
 </nav>
 
+
 <section id="what-is-gpa">
   <h2>What is GPA?</h2>
   <p>
@@ -44,6 +47,7 @@ permalink: /gpa-resources/
     <li><a href="https://rarediseases.org/rare-diseases/granulomatosis-with-polyangiitis/" target="_blank" rel="noopener noreferrer">NORD: rare disease overview for GPA</a></li>
   </ul>
 </section>
+
 
 <section id="patient-support">
   <h2>Patient Organizations and Support</h2>
@@ -61,6 +65,7 @@ permalink: /gpa-resources/
   </ul>
 </section>
 
+
 <section id="living-with-gpa">
   <h2>Living with GPA</h2>
   <p>
@@ -69,6 +74,7 @@ permalink: /gpa-resources/
   <p>
     I’m collecting gentle, practical resources about coping, pacing, and staying present while handling medical appointments, tests, and treatment side effects.
   </p>
+
 
   <h3>Patient Experiences</h3>
   <p>
@@ -87,11 +93,13 @@ permalink: /gpa-resources/
   </ul>
 </section>
 
+
 <section id="news-research">
   <h2>News &amp; research updates</h2>
   <p>
     I use my GPA Updates &amp; News research space to track new studies, guidelines, and trustworthy articles. This is where I keep a running list of the research I want to revisit and summarize.
   </p>
+
 
   <article class="update-card">
     <h3>2026: New study on long‑term outcomes with rituximab in GPA</h3>
@@ -105,6 +113,7 @@ permalink: /gpa-resources/
     </p>
   </article>
 </section>
+
 
 <section id="research-guidelines">
   <h2>Research and Clinical Guidelines</h2>
@@ -122,6 +131,7 @@ permalink: /gpa-resources/
     <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK557827/" target="_blank" rel="noopener noreferrer">StatPearls GPA Overview (Medical Reference)</a></li>
   </ul>
 </section>
+
 
 <section id="treatment-overview">
   <h2>Treatment Options Overview</h2>
@@ -141,8 +151,10 @@ permalink: /gpa-resources/
   </ul>
 </section>
 
+
 <section id="resources">
   <h2>Trusted resources</h2>
+
 
   <h3>Medical overviews and education</h3>
   <ul>
