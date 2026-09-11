@@ -9,7 +9,7 @@ personal writing and field notes from someone who'd rather be outside.
 ## run locally
 
 bundle install
-
+bundle exec jekyll serve
 
 To rebuild from scratch:
 

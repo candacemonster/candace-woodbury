@@ -5,7 +5,10 @@
   links:
     - label: "WorldCat"
       url: "https://search.worldcat.org/search?q=9780593736616"
+      rel: "noopener noreferrer"
     - label: "Bookshop"
       url: "https://bookshop.org/a/381/9780593736616"
+      rel: "sponsored noopener noreferrer"
     - label: "Amazon"
       url: "https://amzn.to/4cFb0Ov"
+      rel: "sponsored noopener noreferrer"

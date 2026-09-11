@@ -28,5 +28,15 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script>
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      if (link.getAttribute('href').startsWith('#')) return;
+      link.target = '_blank';
+      var rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+      rel.add('noopener');
+      rel.add('noreferrer');
+      link.setAttribute('rel', Array.from(rel).join(' '));
+    });
+  </script>
 </body>
 </html>

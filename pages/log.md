@@ -28,7 +28,7 @@ permalink: /log/
       {% if item.links %}
         <p class="log-links">
           {% for link in item.links %}
-            <a href="{{ link.url }}" rel="noopener noreferrer">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
+            <a href="{{ link.url }}" rel="{{ link.rel | default: 'noopener noreferrer' }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
           {% endfor %}
         </p>
         <p class="log-disclosure">WorldCat is informational. Bookshop and Amazon links are affiliate links; I may earn a small commission if you buy through them, at no extra cost to you.</p>
