@@ -2,7 +2,6 @@
 layout: post
 title: "working title"
 date: 2026-04-10
-categories: [essays]
 tags: []
 affiliates: false
 ---

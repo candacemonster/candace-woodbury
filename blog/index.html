@@ -1,0 +1,26 @@
+---
+layout: default
+title: Writing & Essays
+permalink: /blog/
+---
+
+<div class="blog-page">
+  <h1>Writing</h1>
+
+  <div class="blog-feed">
+  {% for post in site.posts %}
+    <article class="blog-entry">
+      <header class="blog-header">
+        <span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+      </header>
+
+      <h2 class="blog-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="blog-body">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    </article>
+    <hr class="blog-divider">
+  {% endfor %}
+  </div>
+</div>

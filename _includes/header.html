@@ -1,15 +1,8 @@
 <header class="site-header" role="banner">
   <nav class="site-nav" aria-label="main navigation">
-    <a href="{{ '/' | relative_url }}" class="site-title">candace woodbury</a>
-    <ul class="nav-links" role="list">
-      {% for item in site.navigation %}
-      <li>
-        <a href="{{ item.url | relative_url }}"
-           {% if page.url == item.url or page.url contains item.url %}class="active" aria-current="page"{% endif %}>
-          {{ item.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="Home">
+      <img src="{{ '/assets/images/favicon.png' | relative_url }}" alt="" class="header-icon">
+    </a>
+    {% include navigation.html %}
   </nav>
 </header>

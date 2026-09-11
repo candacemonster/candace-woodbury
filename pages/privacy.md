@@ -1,7 +1,7 @@
 ---
 layout: page
 title: privacy & disclosures
-permalink: /pages/privacy/
+permalink: /privacy/
 ---
 
 ## analytics

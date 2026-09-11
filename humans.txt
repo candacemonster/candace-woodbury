@@ -1,7 +1,7 @@
 # TEAM
 Creator: candace woodbury
 Site: https://candacewoodbury.com
-Philosophy: minimal. quiet. essays and short stories from someone who'd rather be outside.
+Philosophy: minimal. quiet. personal writing and field notes from someone who'd rather be outside.
 Contact: hello@candacewoodbury.com
 
 # THANKS
@@ -14,10 +14,10 @@ hosting: GitHub Pages. uptime may exceed ambition.
 tools: VS Code, Git, terminal windows, and mild cynicism.
 
 # GREETINGS
-welcome, human. No AI, no nudges, no "Hi there! Can I help you?" popups.
+welcome, human. no ai, no nudges, no "hi there! can i help you?" popups.
 just words and caffeination. if you found this file, you're probably real.
 
 # SITE
-last updated: may 2026
-location: still in Arizona.
+last updated: september 2026
+location: utah.
 standards: accessibility, readable text, fast load times, no nonsense.
