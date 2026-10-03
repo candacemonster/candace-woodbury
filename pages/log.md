@@ -24,7 +24,7 @@ permalink: /log/
         <h2 class="log-title">{{ item.title }}</h2>
       {% endif %}
 
-      <p class="log-body">{{ item.entry }}</p>
+      <div class="log-body">{{ item.entry | markdownify }}</div>
       {% if item.links %}
         <p class="log-links">
           {% for link in item.links %}
