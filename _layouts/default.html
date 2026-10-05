@@ -29,8 +29,11 @@
   </main>
   {% include footer.html %}
   <script>
+    var siteOrigin = new URL('{{ site.url }}').origin;
     document.querySelectorAll('a[href]').forEach(function (link) {
-      if (link.getAttribute('href').startsWith('#')) return;
+      var url = new URL(link.href, window.location.href);
+      if (!['http:', 'https:'].includes(url.protocol)) return;
+      if (url.origin === window.location.origin || url.origin === siteOrigin) return;
       link.target = '_blank';
       var rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
       rel.add('noopener');
