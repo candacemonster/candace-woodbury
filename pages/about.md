@@ -12,6 +12,8 @@ This repository exists because I decided some of my thoughts need a home. There 
 
 If you’re here specifically for Granulomatosis with Polyangiitis, I maintain a list of plain-language research and reliable links on my [GPA Resources](/gpa-resources/) page.
 
+i keep the books i love at [candid nook](https://candacewoodbury.com/candid-nook/), my little bookshop. drink coffee, read books, ride bikes.
+
 ### contact
 
 I technically exist on social media, but I treat it with the neglect it deserves. If you need to reach me and don't have my digits for a quick text message, an email to [hello@candacewoodbury.com](mailto:hello@candacewoodbury.com) works best. Assuming I’m not outside, at a clinic, or being held hostage by a dog.

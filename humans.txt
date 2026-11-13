@@ -18,6 +18,6 @@ welcome, human. no ai, no nudges, no "hi there! can i help you?" popups.
 just words and caffeination. if you found this file, you're probably real.
 
 # SITE
-last updated: september 2026
-location: utah.
+last updated: november 2026
+location: idaho.
 standards: accessibility, readable text, fast load times, no nonsense.

@@ -6,11 +6,17 @@ permalink: /privacy/
 
 ## analytics
 
-This site uses Google Analytics 4 to understand how pages are read — things like which posts get traffic and where readers come from. No personally identifiable information is collected. IP addresses are anonymized. You can opt out using the [Google Analytics opt-out browser add-on](https://tools.google.com/dlpage/gaoptout).
+This site uses Google Analytics 4 to understand how pages are read, including which posts get traffic and where readers come from. No personally identifiable information is collected. IP addresses are anonymized. You can opt out using the [Google Analytics opt-out browser add-on](https://tools.google.com/dlpage/gaoptout).
 
 ## affiliate links
 
-Occasionally I link to products or services using affiliate links, meaning I may earn a small commission if you purchase through them. This costs you nothing extra. Affiliate links are disclosed in post footnotes. I only link things I've actually used.
+some links on this site are affiliate links. if you buy through them, i may earn a small commission at no extra cost to you.
+
+As an Amazon Associate I earn from qualifying purchases.
+
+bookshop.org links also earn a commission, and bookshop supports independent bookstores.
+
+i only link to things i actually use or love. i never handle orders, payments, or returns. amazon handles its own, and bookshop handles its own.
 
 ## cookies
 

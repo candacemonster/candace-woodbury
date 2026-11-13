@@ -12,7 +12,8 @@ permalink: /log/
   <hr>
 
   <div class="travelers-log">
-  {% for item in site.data.log %}
+  {% assign log_entries = site.data.log | sort: "date" | reverse %}
+  {% for item in log_entries %}
     <article class="log-entry">
       <header class="log-header">
         <span class="log-date">{{ item.date | date: "%B %d, %Y" }}</span>
@@ -31,7 +32,7 @@ permalink: /log/
             <a href="{{ link.url }}" rel="{{ link.rel | default: 'noopener noreferrer' }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
           {% endfor %}
         </p>
-        <p class="log-disclosure">WorldCat is informational. Bookshop and Amazon links are affiliate links; I may earn a small commission if you buy through them, at no extra cost to you.</p>
+        <p class="log-disclosure">worldcat is informational. bookshop and amazon links are affiliate links; i may earn a small commission if you buy through them, at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
       {% endif %}
     </article>
     <hr class="log-divider">

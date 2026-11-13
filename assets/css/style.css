@@ -2,7 +2,7 @@
    Tone: quiet literary, observant, dryly funny, field-journal calm
   Palette: warm off-white, licorice, delft blue, taupe gray, sunset accents
    Typography: Newsreader for titles + Source Sans 3 for text
-   Density: spacious and restrained — editorial clarity over decoration
+   Density: spacious and restrained, with editorial clarity over decoration
    Mood: a small essay journal shaped by landscape, adulthood, and interior weather
    ─────────────────────────────────────────────────────────────── */
 
@@ -373,6 +373,13 @@ sup {
 .site-footer a {
   color: var(--color-text-faint);
   text-decoration: none;
+}
+
+.site-footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
 }
 
 .site-footer-links {
